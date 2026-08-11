@@ -44,7 +44,7 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 - **Unidad agregada (dominio):** grupo de unidades con características comunes para análisis comparativo.  
   *Ejemplo:* Semestres, género, tipo de turno (mañana/tarde/noche).
 
-![Unidades estadísticas](fig/cobertura.png)
+![Unidades estadísticas](fig/unidades.png)
 
 ## Fuentes de información
 
