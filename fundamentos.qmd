@@ -22,6 +22,8 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 
 *Ejemplo:* Todos los estudiantes matriculados en Psicología en Bolivia en 2025.
 
+![Población Objetivo](fig/po.png)
+
 ## Coberturas estadísticas
 
 - **Cobertura geográfica** (*¿dónde?*): territorio o ámbito institucional del estudio.  
@@ -31,6 +33,8 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 - **Cobertura temática** (*¿qué?*): variables o fenómenos a medir.  
   *Ejemplo:* Estrés académico, satisfacción con la carrera y rendimiento.
 
+![Coberturas estadísticas](fig/cobertura.png)
+
 ## Unidades estadísticas
 
 - **Unidad de análisis/investigación:** elemento sobre el que se analizan los datos.  
@@ -39,6 +43,8 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
   *Ejemplo:* Un padre/madre como informante sobre hábitos de sueño de su hijo.
 - **Unidad agregada (dominio):** grupo de unidades con características comunes para análisis comparativo.  
   *Ejemplo:* Semestres, género, tipo de turno (mañana/tarde/noche).
+
+![Unidades estadísticas](fig/cobertura.png)
 
 ## Fuentes de información
 
