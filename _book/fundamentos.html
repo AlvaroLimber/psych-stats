@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Diseño estadístico – Psicoestadística</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-43634426a2b20f70ebab780d1f5449e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7ad11678a5bbd983cb93c979fd3d6443.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="twitter:title" content="1&nbsp; Diseño estadístico – Psicoestadística">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamentos.html">Parte I: Diseño estadístico y estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./fundamentos.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Psicoestadística</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/psych-stats/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Psicoestadística.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I: Diseño estadístico y estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#qué-es-la-estadística" id="toc-qué-es-la-estadística" class="nav-link active" data-scroll-target="#qué-es-la-estadística"><span class="header-section-number">1.1</span> ¿Qué es la estadística?</a></li>
+  <li><a href="#población-objetivo-po-universo" id="toc-población-objetivo-po-universo" class="nav-link" data-scroll-target="#población-objetivo-po-universo"><span class="header-section-number">1.2</span> Población Objetivo (PO) — Universo</a></li>
+  <li><a href="#coberturas-estadísticas" id="toc-coberturas-estadísticas" class="nav-link" data-scroll-target="#coberturas-estadísticas"><span class="header-section-number">1.3</span> Coberturas estadísticas</a></li>
+  <li><a href="#unidades-estadísticas" id="toc-unidades-estadísticas" class="nav-link" data-scroll-target="#unidades-estadísticas"><span class="header-section-number">1.4</span> Unidades estadísticas</a></li>
+  <li><a href="#fuentes-de-información" id="toc-fuentes-de-información" class="nav-link" data-scroll-target="#fuentes-de-información"><span class="header-section-number">1.5</span> Fuentes de información</a></li>
+  <li><a href="#enfoques-para-el-análisis" id="toc-enfoques-para-el-análisis" class="nav-link" data-scroll-target="#enfoques-para-el-análisis"><span class="header-section-number">1.6</span> Enfoques para el análisis</a>
+  <ul class="collapse">
+  <li><a href="#fuentes-de-información-enfoques-de-análisis" id="toc-fuentes-de-información-enfoques-de-análisis" class="nav-link" data-scroll-target="#fuentes-de-información-enfoques-de-análisis"><span class="header-section-number">1.6.1</span> Fuentes de información × Enfoques de análisis</a></li>
+  </ul></li>
+  <li><a href="#validez-interna-y-externa" id="toc-validez-interna-y-externa" class="nav-link" data-scroll-target="#validez-interna-y-externa"><span class="header-section-number">1.7</span> Validez interna y externa</a>
+  <ul class="collapse">
+  <li><a href="#fuentes-de-información-tipos-de-validez" id="toc-fuentes-de-información-tipos-de-validez" class="nav-link" data-scroll-target="#fuentes-de-información-tipos-de-validez"><span class="header-section-number">1.7.1</span> Fuentes de información × Tipos de validez</a></li>
+  </ul></li>
+  <li><a href="#sesgos-posibles-en-la-producción-de-datos" id="toc-sesgos-posibles-en-la-producción-de-datos" class="nav-link" data-scroll-target="#sesgos-posibles-en-la-producción-de-datos"><span class="header-section-number">1.8</span> Sesgos posibles en la producción de datos</a>
+  <ul class="collapse">
+  <li><a href="#fuentes-de-información-sesgos-más-probables" id="toc-fuentes-de-información-sesgos-más-probables" class="nav-link" data-scroll-target="#fuentes-de-información-sesgos-más-probables"><span class="header-section-number">1.8.1</span> Fuentes de información × Sesgos más probables</a></li>
+  </ul></li>
+  <li><a href="#variables-y-tipología" id="toc-variables-y-tipología" class="nav-link" data-scroll-target="#variables-y-tipología"><span class="header-section-number">1.9</span> Variables y tipología</a></li>
+  <li><a href="#medición" id="toc-medición" class="nav-link" data-scroll-target="#medición"><span class="header-section-number">1.10</span> Medición</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamentos.html">Parte I: Diseño estadístico y estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./fundamentos.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="qué-es-la-estadística" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="qué-es-la-estadística"><span class="header-section-number">1.1</span> ¿Qué es la estadística?</h2>
+<p>La <strong>estadística</strong> ha sido definida de distintas maneras según el enfoque y el contexto de aplicación:</p>
+<ol type="1">
+<li><strong>Enfoque formal:</strong> la estadística es la ciencia que trata con la recolección, análisis, interpretación y presentación de datos <span class="citation" data-cites="Wackerly2008">(<a href="references.html#ref-Wackerly2008" role="doc-biblioref">Wackerly et al. 2008</a>)</span>.<br>
+</li>
+<li><strong>Enfoque aplicado:</strong> conjunto de métodos para planificar estudios, obtener datos y analizarlos con el propósito de tomar decisiones y resolver problemas <span class="citation" data-cites="MontgomeryRunger2014">(<a href="references.html#ref-MontgomeryRunger2014" role="doc-biblioref">Montgomery and Runger 2014</a>)</span>.<br>
+</li>
+<li><strong>Enfoque comunicativo:</strong> el arte de <strong>contar una historia con datos</strong>, enfatizando la comunicación clara y contextualizada de resultados <span class="citation" data-cites="GelmanNolan2017">(<a href="references.html#ref-GelmanNolan2017" role="doc-biblioref">Gelman and Nolan 2017</a>)</span>.</li>
+</ol>
+<p><em>Ejemplo:</em> Analizar datos de un cuestionario de bienestar psicológico para comparar niveles de estrés entre grupos (p.&nbsp;ej., por semestre o género) y comunicar hallazgos que orienten intervenciones.</p>
+</section>
+<section id="población-objetivo-po-universo" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="población-objetivo-po-universo"><span class="header-section-number">1.2</span> Población Objetivo (PO) — Universo</h2>
+<p>Definición:</p>
+<p><span class="math display">\[
+U=\{u_1, u_2, \ldots, u_N\}
+\]</span></p>
+<p>Donde <span class="math inline">\(N\)</span> es el tamaño del universo o la PO. Es el <strong>conjunto total de elementos o individuos</strong> sobre los que se quiere obtener información.</p>
+<p><em>Ejemplo:</em> Todos los estudiantes matriculados en Psicología en Bolivia en 2025.</p>
+</section>
+<section id="coberturas-estadísticas" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="coberturas-estadísticas"><span class="header-section-number">1.3</span> Coberturas estadísticas</h2>
+<ul>
+<li><strong>Cobertura geográfica</strong> (<em>¿dónde?</em>): territorio o ámbito institucional del estudio.<br>
+<em>Ejemplo:</em> Universidades de La Paz.</li>
+<li><strong>Cobertura temporal</strong> (<em>¿cuándo?</em>): periodo de referencia.<br>
+<em>Ejemplo:</em> Marzo–junio de 2025.</li>
+<li><strong>Cobertura temática</strong> (<em>¿qué?</em>): variables o fenómenos a medir.<br>
+<em>Ejemplo:</em> Estrés académico, satisfacción con la carrera y rendimiento.</li>
+</ul>
+</section>
+<section id="unidades-estadísticas" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="unidades-estadísticas"><span class="header-section-number">1.4</span> Unidades estadísticas</h2>
+<ul>
+<li><strong>Unidad de análisis/investigación:</strong> elemento sobre el que se analizan los datos.<br>
+<em>Ejemplo:</em> Un estudiante.</li>
+<li><strong>Unidad de información:</strong> quien proporciona los datos (puede coincidir o no con la unidad de análisis).<br>
+<em>Ejemplo:</em> Un padre/madre como informante sobre hábitos de sueño de su hijo.</li>
+<li><strong>Unidad agregada (dominio):</strong> grupo de unidades con características comunes para análisis comparativo.<br>
+<em>Ejemplo:</em> Semestres, género, tipo de turno (mañana/tarde/noche).</li>
+</ul>
+</section>
+<section id="fuentes-de-información" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="fuentes-de-información"><span class="header-section-number">1.5</span> Fuentes de información</h2>
+<ul>
+<li><strong>Censo:</strong> recuento completo de la población objetivo.<br>
+<em>Ejemplo:</em> Censo de población y vivienda para estimar la distribución etaria.</li>
+<li><strong>Encuesta por muestreo:</strong> medición de una parte de la población seleccionada mediante técnicas probabilísticas.<br>
+<em>Ejemplo:</em> Encuesta nacional de salud mental en estudiantes.</li>
+<li><strong>Estudio experimental:</strong> recolección de datos bajo condiciones controladas para probar hipótesis y estimar efectos.<br>
+<em>Ejemplo:</em> Ensayo controlado sobre el impacto de mindfulness en ansiedad.</li>
+<li><strong>Estudio observacional:</strong> registro sistemático sin manipulación de variables, en contextos naturales.<br>
+<em>Ejemplo:</em> Observación del uso de redes sociales y su asociación con bienestar.</li>
+<li><strong>Registro administrativo:</strong> datos reunidos por instituciones en el curso de sus funciones.<br>
+<em>Ejemplo:</em> Historias clínicas o registros de atención psicológica.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Nota: Estos pueden ser de fuente primaria (se es parte de la recolección) o secundaria (se recurre a datos ya existentes en algún lado)</p>
+</blockquote>
+</section>
+<section id="enfoques-para-el-análisis" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="enfoques-para-el-análisis"><span class="header-section-number">1.6</span> Enfoques para el análisis</h2>
+<ul>
+<li><strong>Descriptivo:</strong> resume y presenta información observada.<br>
+<em>Ejemplo:</em> Distribución de niveles de ansiedad y medidas de tendencia central.</li>
+<li><strong>Relacional/diagnóstico:</strong> identifica asociaciones o perfiles entre variables.<br>
+<em>Ejemplo:</em> Correlación entre horas de sueño y rendimiento académico.</li>
+<li><strong>Predictivo:</strong> estima valores futuros o clasifica casos.<br>
+<em>Ejemplo:</em> Modelo para predecir riesgo de depresión a partir de ítems de un test.</li>
+<li><strong>Causal:</strong> evalúa el efecto de una intervención o exposición sobre un resultado, bajo supuestos de validez interna.<br>
+<em>Ejemplo:</em> Efecto de una técnica de estudio en la memoria de corto plazo.</li>
+</ul>
+<section id="fuentes-de-información-enfoques-de-análisis" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="fuentes-de-información-enfoques-de-análisis"><span class="header-section-number">1.6.1</span> Fuentes de información × Enfoques de análisis</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 15%">
+<col style="width: 28%">
+<col style="width: 14%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fuente / Enfoque</th>
+<th style="text-align: center;">Descriptivo</th>
+<th style="text-align: center;">Relacional/Diagnóstico</th>
+<th style="text-align: center;">Predictivo</th>
+<th style="text-align: center;">Causal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Censo</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Limitado*</td>
+</tr>
+<tr class="even">
+<td>Encuesta por muestreo</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Limitado**</td>
+</tr>
+<tr class="odd">
+<td>Estudio experimental</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+</tr>
+<tr class="even">
+<td>Estudio observacional</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Limitado***</td>
+</tr>
+<tr class="odd">
+<td>Registro administrativo</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Limitado***</td>
+</tr>
+</tbody>
+</table>
+<p>* Sin manipulación, requiere supuestos fuertes para inferir causalidad.<br>
+** Posible mediante diseños cuasi-experimentales (p.&nbsp;ej., pareamiento, IV, DiD) si la calidad del diseño/datos lo permite.<br>
+*** Depende del control de confusión y de la estrategia de identificación.</p>
+</section>
+</section>
+<section id="validez-interna-y-externa" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="validez-interna-y-externa"><span class="header-section-number">1.7</span> Validez interna y externa</h2>
+<ul>
+<li><p><strong>Validez interna:</strong> indica en qué medida los resultados de un estudio son correctos y válidos <strong>para el conjunto específico de unidades, condiciones y periodo observados</strong>.<br>
+Una alta validez interna significa que la relación observada entre variables refleja de forma precisa el fenómeno estudiado en ese contexto, sin distorsiones por factores no controlados <span class="citation" data-cites="Shadish2002">(<a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et al. 2002</a>)</span>.<br>
+No implica necesariamente que los resultados puedan extrapolarse a otros contextos.<br>
+<em>Ejemplo:</em> Un experimento controlado en un laboratorio que evalúa el efecto de una intervención psicológica en un grupo concreto de estudiantes.</p></li>
+<li><p><strong>Validez externa:</strong> se refiere a la <strong>capacidad de generalizar</strong> los resultados más allá de las condiciones del estudio, hacia otras poblaciones, contextos o momentos en el tiempo.<br>
+Depende de la representatividad de la muestra, de la cobertura geográfica y temporal, y de la similitud entre el contexto del estudio y el contexto al que se quiere generalizar <span class="citation" data-cites="Kish1995 Shadish2002">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et al. 2002</a>)</span>.<br>
+<em>Ejemplo:</em> Un estudio representativo a nivel nacional sobre depresión en adolescentes que permite inferir resultados para toda la población adolescente del país.</p></li>
+</ul>
+<section id="fuentes-de-información-tipos-de-validez" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="fuentes-de-información-tipos-de-validez"><span class="header-section-number">1.7.1</span> Fuentes de información × Tipos de validez</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 58%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fuente / Validez</th>
+<th style="text-align: center;">Interna</th>
+<th style="text-align: center;">Externa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Censo</td>
+<td style="text-align: center;">Limitada</td>
+<td style="text-align: center;">Alta (cobertura poblacional)</td>
+</tr>
+<tr class="even">
+<td>Encuesta por muestreo</td>
+<td style="text-align: center;">Limitada</td>
+<td style="text-align: center;">Alta si el muestreo es representativo</td>
+</tr>
+<tr class="odd">
+<td>Estudio experimental</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: center;">Variable (puede ser limitada por entornos artificiales)</td>
+</tr>
+<tr class="even">
+<td>Estudio observacional</td>
+<td style="text-align: center;">Limitada</td>
+<td style="text-align: center;">Buena si el diseño y la muestra son adecuados</td>
+</tr>
+<tr class="odd">
+<td>Registro administrativo</td>
+<td style="text-align: center;">Variable</td>
+<td style="text-align: center;">Buena si la cobertura y la consistencia son altas</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sesgos-posibles-en-la-producción-de-datos" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="sesgos-posibles-en-la-producción-de-datos"><span class="header-section-number">1.8</span> Sesgos posibles en la producción de datos</h2>
+<p>En todo proceso estadístico pueden introducirse <strong>sesgos</strong> que afectan la validez de los resultados. Un sesgo es un error sistemático que produce estimaciones que se apartan consistentemente del valor real <span class="citation" data-cites="Kish1995 Groves2009">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et al. 2009</a>)</span>.</p>
+<ol type="1">
+<li><p><strong>Sesgo de cobertura</strong><br>
+Ocurre cuando ciertas unidades de la población objetivo no tienen posibilidad de ser incluidas en el marco muestral <span class="citation" data-cites="Kish1995">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>)</span>.<br>
+<em>Ejemplo:</em> Encuesta en línea que excluye a personas sin acceso a internet.</p></li>
+<li><p><strong>Sesgo de no respuesta</strong><br>
+Se produce cuando las personas seleccionadas para participar no responden, y su ausencia está relacionada con la variable de interés <span class="citation" data-cites="Groves2009">(<a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et al. 2009</a>)</span>.<br>
+<em>Ejemplo:</em> Personas con alta carga laboral no responden cuestionarios sobre estrés.</p></li>
+<li><p><strong>Sesgo de medición</strong><br>
+Proviene de errores en la forma de recolectar la información, ya sea por el instrumento, el entrevistador o el encuestado <span class="citation" data-cites="Groves2009">(<a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et al. 2009</a>)</span>.<br>
+<em>Ejemplo:</em> Preguntas mal redactadas que inducen una respuesta.</p></li>
+<li><p><strong>Sesgo de recuerdo</strong><br>
+Aparece cuando el encuestado no recuerda con precisión eventos pasados.<br>
+<em>Ejemplo:</em> Preguntar cuántas veces visitó un psicólogo en el último año.</p></li>
+<li><p><strong>Sesgo de selección</strong><br>
+Surge cuando la selección de participantes no es aleatoria y está asociada con el fenómeno de interés <span class="citation" data-cites="Shadish2002">(<a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et al. 2002</a>)</span>.<br>
+<em>Ejemplo:</em> Seleccionar voluntarios para un experimento sobre motivación.</p></li>
+<li><p><strong>Sesgo del observador</strong><br>
+Influencia que ejerce el investigador en la medición u observación del fenómeno.<br>
+<em>Ejemplo:</em> Un psicólogo que evalúa de forma diferente a pacientes según su propia expectativa.</p></li>
+<li><p><strong>Sesgo de procesamiento</strong><br>
+Introducido durante la codificación, digitación o análisis de los datos.<br>
+<em>Ejemplo:</em> Errores de digitación que cambian el valor de una variable clave.</p></li>
+</ol>
+<section id="fuentes-de-información-sesgos-más-probables" class="level3" data-number="1.8.1">
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="fuentes-de-información-sesgos-más-probables"><span class="header-section-number">1.8.1</span> Fuentes de información × Sesgos más probables</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fuente / Sesgo</th>
+<th style="text-align: center;">Cobertura</th>
+<th style="text-align: center;">No respuesta</th>
+<th style="text-align: center;">Medición</th>
+<th style="text-align: center;">Recuerdo</th>
+<th style="text-align: center;">Selección</th>
+<th style="text-align: center;">Observador</th>
+<th style="text-align: center;">Procesamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Censo</strong></td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Medio</td>
+</tr>
+<tr class="even">
+<td><strong>Encuesta por muestreo</strong></td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Medio</td>
+</tr>
+<tr class="odd">
+<td><strong>Estudio experimental</strong></td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Medio</td>
+</tr>
+<tr class="even">
+<td><strong>Estudio observacional</strong></td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Medio</td>
+</tr>
+<tr class="odd">
+<td><strong>Registro administrativo</strong></td>
+<td style="text-align: center;">Alto</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Medio</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Bajo</td>
+<td style="text-align: center;">Alto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas:</strong><br>
+- <strong>Alto</strong>: el sesgo es frecuente y debe controlarse activamente.<br>
+- <strong>Medio</strong>: el sesgo es posible y su impacto depende del diseño y la implementación.<br>
+- <strong>Bajo</strong>: el sesgo es poco probable si se siguen protocolos adecuados.</p>
+</section>
+</section>
+<section id="variables-y-tipología" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="variables-y-tipología"><span class="header-section-number">1.9</span> Variables y tipología</h2>
+<p>Cada unidad del universo estadístico <span class="math inline">\(u_i \in U\)</span> posee una serie de <strong>características</strong> o <strong>atributos</strong> que pueden observarse o medirse <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.<br>
+En estadística, estas características se denominan <strong>variables</strong> y constituyen la base de la información que se analiza.</p>
+<p>Una variable es una propiedad que puede tomar distintos valores entre unidades de la población o a lo largo del tiempo <span class="citation" data-cites="Kish1995 LSJ2025">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.<br>
+Según su naturaleza y el tipo de análisis que permiten, las variables pueden clasificarse en:</p>
+<ul>
+<li><strong>Cualitativas o categóricas</strong>: expresan atributos o categorías sin magnitud numérica intrínseca.
+<ul>
+<li><em>Nominales</em>: categorías sin orden (p.&nbsp;ej., sexo, tipo de terapia).<br>
+</li>
+<li><em>Ordinales</em>: categorías con un orden definido, pero sin distancias numéricas uniformes (p.&nbsp;ej., nivel educativo, escala de satisfacción).</li>
+</ul></li>
+<li><strong>Cuantitativas o numéricas</strong>: expresan magnitudes numéricas y permiten operaciones aritméticas. Se subdividen en:
+<ul>
+<li><em>Discretas</em>: toman valores enteros, generalmente resultado de un conteo (p.&nbsp;ej., número de hijos, cantidad de sesiones de terapia).<br>
+</li>
+<li><em>Continuas (decimales)</em>: pueden tomar cualquier valor en un rango, incluyendo decimales, resultado de una medición (p.&nbsp;ej., peso en kg, tiempo de reacción en segundos).</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>La tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.</p>
+</blockquote>
+</section>
+<section id="medición" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="medición"><span class="header-section-number">1.10</span> Medición</h2>
+<p>La <strong>medición</strong> es el proceso de asignar valores o categorías a las variables observadas en las unidades de análisis, siguiendo reglas previamente definidas y aceptadas <span class="citation" data-cites="LSJ2025 Stevens1946">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>; <a href="references.html#ref-Stevens1946" role="doc-biblioref">Stevens 1946</a>)</span>.<br>
+Su objetivo es representar un fenómeno de forma cuantitativa o cualitativa para su análisis estadístico, asegurando comparabilidad, consistencia y validez de la información recogida.</p>
+<p>Pasos clave en la medición: 1. <strong>Definir el constructo</strong> o fenómeno de interés (p.&nbsp;ej., ansiedad).<br>
+2. <strong>Seleccionar o desarrollar un instrumento</strong> de medición (cuestionario, escala, test, observación).<br>
+3. <strong>Determinar el nivel de medición</strong> de cada variable (nominal, ordinal, intervalo, razón) <span class="citation" data-cites="Stevens1946">(<a href="references.html#ref-Stevens1946" role="doc-biblioref">Stevens 1946</a>)</span>.<br>
+4. <strong>Estandarizar los procedimientos</strong> de recolección para minimizar sesgos y garantizar la calidad de los datos <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.</p>
+<p><em>Ejemplo:</em> Medir el estrés académico en estudiantes universitarios utilizando una escala validada, aplicada bajo las mismas condiciones para todos los participantes y con un protocolo claro de codificación.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-GelmanNolan2017" class="csl-entry" role="listitem">
+Gelman, Andrew, and Deborah Nolan. 2017. <em>Teaching Statistics: A Bag of Tricks</em>. 2nd ed. Oxford University Press.
+</div>
+<div id="ref-Groves2009" class="csl-entry" role="listitem">
+Groves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski, Eleanor Singer, and Roger Tourangeau. 2009. <em>Survey Methodology</em>. 2nd ed. Wiley.
+</div>
+<div id="ref-Kish1995" class="csl-entry" role="listitem">
+Kish, Leslie. 1995. <em>Survey Sampling</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-MontgomeryRunger2014" class="csl-entry" role="listitem">
+Montgomery, Douglas C., and George C. Runger. 2014. <em>Applied Statistics and Probability for Engineers</em>. 6th ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-LSJ2025" class="csl-entry" role="listitem">
+Navarro, Danielle J., David R. Foxcroft, and Thomas J. Faulkenberry. 2025. <em>Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</em>. <a href="https://learnstatswithjasp.com">https://learnstatswithjasp.com</a>.
+</div>
+<div id="ref-Shadish2002" class="csl-entry" role="listitem">
+Shadish, William R., Thomas D. Cook, and Donald T. Campbell. 2002. <em>Experimental and Quasi-Experimental Designs for Generalized Causal Inference</em>. Houghton Mifflin.
+</div>
+<div id="ref-Stevens1946" class="csl-entry" role="listitem">
+Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science</em> 103 (2684): 677–80.
+</div>
+<div id="ref-Wackerly2008" class="csl-entry" role="listitem">
+Wackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008. <em>Mathematical Statistics with Applications</em>. 7th ed. Thomson Brooks/Cole.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/alvarolimber\.github\.io\/psych-stats\/_book");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026, Alvaro Chirino</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/">
+      <i class="bi bi-bluesky" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

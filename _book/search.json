@@ -1,0 +1,143 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Psicoestadística",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html",
+    "href": "fundamentos.html",
+    "title": "1  Diseño estadístico",
+    "section": "",
+    "text": "1.1 ¿Qué es la estadística?\nLa estadística ha sido definida de distintas maneras según el enfoque y el contexto de aplicación:\nEjemplo: Analizar datos de un cuestionario de bienestar psicológico para comparar niveles de estrés entre grupos (p. ej., por semestre o género) y comunicar hallazgos que orienten intervenciones.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#qué-es-la-estadística",
+    "href": "fundamentos.html#qué-es-la-estadística",
+    "title": "1  Diseño estadístico",
+    "section": "",
+    "text": "Enfoque formal: la estadística es la ciencia que trata con la recolección, análisis, interpretación y presentación de datos (Wackerly et al. 2008).\n\nEnfoque aplicado: conjunto de métodos para planificar estudios, obtener datos y analizarlos con el propósito de tomar decisiones y resolver problemas (Montgomery and Runger 2014).\n\nEnfoque comunicativo: el arte de contar una historia con datos, enfatizando la comunicación clara y contextualizada de resultados (Gelman and Nolan 2017).",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#población-objetivo-po-universo",
+    "href": "fundamentos.html#población-objetivo-po-universo",
+    "title": "1  Diseño estadístico",
+    "section": "1.2 Población Objetivo (PO) — Universo",
+    "text": "1.2 Población Objetivo (PO) — Universo\nDefinición:\n\\[\nU=\\{u_1, u_2, \\ldots, u_N\\}\n\\]\nDonde \\(N\\) es el tamaño del universo o la PO. Es el conjunto total de elementos o individuos sobre los que se quiere obtener información.\nEjemplo: Todos los estudiantes matriculados en Psicología en Bolivia en 2025.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#coberturas-estadísticas",
+    "href": "fundamentos.html#coberturas-estadísticas",
+    "title": "1  Diseño estadístico",
+    "section": "1.3 Coberturas estadísticas",
+    "text": "1.3 Coberturas estadísticas\n\nCobertura geográfica (¿dónde?): territorio o ámbito institucional del estudio.\nEjemplo: Universidades de La Paz.\nCobertura temporal (¿cuándo?): periodo de referencia.\nEjemplo: Marzo–junio de 2025.\nCobertura temática (¿qué?): variables o fenómenos a medir.\nEjemplo: Estrés académico, satisfacción con la carrera y rendimiento.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#unidades-estadísticas",
+    "href": "fundamentos.html#unidades-estadísticas",
+    "title": "1  Diseño estadístico",
+    "section": "1.4 Unidades estadísticas",
+    "text": "1.4 Unidades estadísticas\n\nUnidad de análisis/investigación: elemento sobre el que se analizan los datos.\nEjemplo: Un estudiante.\nUnidad de información: quien proporciona los datos (puede coincidir o no con la unidad de análisis).\nEjemplo: Un padre/madre como informante sobre hábitos de sueño de su hijo.\nUnidad agregada (dominio): grupo de unidades con características comunes para análisis comparativo.\nEjemplo: Semestres, género, tipo de turno (mañana/tarde/noche).",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#fuentes-de-información",
+    "href": "fundamentos.html#fuentes-de-información",
+    "title": "1  Diseño estadístico",
+    "section": "1.5 Fuentes de información",
+    "text": "1.5 Fuentes de información\n\nCenso: recuento completo de la población objetivo.\nEjemplo: Censo de población y vivienda para estimar la distribución etaria.\nEncuesta por muestreo: medición de una parte de la población seleccionada mediante técnicas probabilísticas.\nEjemplo: Encuesta nacional de salud mental en estudiantes.\nEstudio experimental: recolección de datos bajo condiciones controladas para probar hipótesis y estimar efectos.\nEjemplo: Ensayo controlado sobre el impacto de mindfulness en ansiedad.\nEstudio observacional: registro sistemático sin manipulación de variables, en contextos naturales.\nEjemplo: Observación del uso de redes sociales y su asociación con bienestar.\nRegistro administrativo: datos reunidos por instituciones en el curso de sus funciones.\nEjemplo: Historias clínicas o registros de atención psicológica.\n\n\nNota: Estos pueden ser de fuente primaria (se es parte de la recolección) o secundaria (se recurre a datos ya existentes en algún lado)",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#enfoques-para-el-análisis",
+    "href": "fundamentos.html#enfoques-para-el-análisis",
+    "title": "1  Diseño estadístico",
+    "section": "1.6 Enfoques para el análisis",
+    "text": "1.6 Enfoques para el análisis\n\nDescriptivo: resume y presenta información observada.\nEjemplo: Distribución de niveles de ansiedad y medidas de tendencia central.\nRelacional/diagnóstico: identifica asociaciones o perfiles entre variables.\nEjemplo: Correlación entre horas de sueño y rendimiento académico.\nPredictivo: estima valores futuros o clasifica casos.\nEjemplo: Modelo para predecir riesgo de depresión a partir de ítems de un test.\nCausal: evalúa el efecto de una intervención o exposición sobre un resultado, bajo supuestos de validez interna.\nEjemplo: Efecto de una técnica de estudio en la memoria de corto plazo.\n\n\n1.6.1 Fuentes de información × Enfoques de análisis\n\n\n\n\n\n\n\n\n\n\nFuente / Enfoque\nDescriptivo\nRelacional/Diagnóstico\nPredictivo\nCausal\n\n\n\n\nCenso\nSí\nSí\nSí\nLimitado*\n\n\nEncuesta por muestreo\nSí\nSí\nSí\nLimitado**\n\n\nEstudio experimental\nSí\nSí\nSí\nSí\n\n\nEstudio observacional\nSí\nSí\nSí\nLimitado***\n\n\nRegistro administrativo\nSí\nSí\nSí\nLimitado***\n\n\n\n* Sin manipulación, requiere supuestos fuertes para inferir causalidad.\n** Posible mediante diseños cuasi-experimentales (p. ej., pareamiento, IV, DiD) si la calidad del diseño/datos lo permite.\n*** Depende del control de confusión y de la estrategia de identificación.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#validez-interna-y-externa",
+    "href": "fundamentos.html#validez-interna-y-externa",
+    "title": "1  Diseño estadístico",
+    "section": "1.7 Validez interna y externa",
+    "text": "1.7 Validez interna y externa\n\nValidez interna: indica en qué medida los resultados de un estudio son correctos y válidos para el conjunto específico de unidades, condiciones y periodo observados.\nUna alta validez interna significa que la relación observada entre variables refleja de forma precisa el fenómeno estudiado en ese contexto, sin distorsiones por factores no controlados (Shadish et al. 2002).\nNo implica necesariamente que los resultados puedan extrapolarse a otros contextos.\nEjemplo: Un experimento controlado en un laboratorio que evalúa el efecto de una intervención psicológica en un grupo concreto de estudiantes.\nValidez externa: se refiere a la capacidad de generalizar los resultados más allá de las condiciones del estudio, hacia otras poblaciones, contextos o momentos en el tiempo.\nDepende de la representatividad de la muestra, de la cobertura geográfica y temporal, y de la similitud entre el contexto del estudio y el contexto al que se quiere generalizar (Kish 1995; Shadish et al. 2002).\nEjemplo: Un estudio representativo a nivel nacional sobre depresión en adolescentes que permite inferir resultados para toda la población adolescente del país.\n\n\n1.7.1 Fuentes de información × Tipos de validez\n\n\n\n\n\n\n\n\nFuente / Validez\nInterna\nExterna\n\n\n\n\nCenso\nLimitada\nAlta (cobertura poblacional)\n\n\nEncuesta por muestreo\nLimitada\nAlta si el muestreo es representativo\n\n\nEstudio experimental\nAlta\nVariable (puede ser limitada por entornos artificiales)\n\n\nEstudio observacional\nLimitada\nBuena si el diseño y la muestra son adecuados\n\n\nRegistro administrativo\nVariable\nBuena si la cobertura y la consistencia son altas",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#sesgos-posibles-en-la-producción-de-datos",
+    "href": "fundamentos.html#sesgos-posibles-en-la-producción-de-datos",
+    "title": "1  Diseño estadístico",
+    "section": "1.8 Sesgos posibles en la producción de datos",
+    "text": "1.8 Sesgos posibles en la producción de datos\nEn todo proceso estadístico pueden introducirse sesgos que afectan la validez de los resultados. Un sesgo es un error sistemático que produce estimaciones que se apartan consistentemente del valor real (Kish 1995; Groves et al. 2009).\n\nSesgo de cobertura\nOcurre cuando ciertas unidades de la población objetivo no tienen posibilidad de ser incluidas en el marco muestral (Kish 1995).\nEjemplo: Encuesta en línea que excluye a personas sin acceso a internet.\nSesgo de no respuesta\nSe produce cuando las personas seleccionadas para participar no responden, y su ausencia está relacionada con la variable de interés (Groves et al. 2009).\nEjemplo: Personas con alta carga laboral no responden cuestionarios sobre estrés.\nSesgo de medición\nProviene de errores en la forma de recolectar la información, ya sea por el instrumento, el entrevistador o el encuestado (Groves et al. 2009).\nEjemplo: Preguntas mal redactadas que inducen una respuesta.\nSesgo de recuerdo\nAparece cuando el encuestado no recuerda con precisión eventos pasados.\nEjemplo: Preguntar cuántas veces visitó un psicólogo en el último año.\nSesgo de selección\nSurge cuando la selección de participantes no es aleatoria y está asociada con el fenómeno de interés (Shadish et al. 2002).\nEjemplo: Seleccionar voluntarios para un experimento sobre motivación.\nSesgo del observador\nInfluencia que ejerce el investigador en la medición u observación del fenómeno.\nEjemplo: Un psicólogo que evalúa de forma diferente a pacientes según su propia expectativa.\nSesgo de procesamiento\nIntroducido durante la codificación, digitación o análisis de los datos.\nEjemplo: Errores de digitación que cambian el valor de una variable clave.\n\n\n1.8.1 Fuentes de información × Sesgos más probables\n\n\n\n\n\n\n\n\n\n\n\n\n\nFuente / Sesgo\nCobertura\nNo respuesta\nMedición\nRecuerdo\nSelección\nObservador\nProcesamiento\n\n\n\n\nCenso\nMedio\nAlto\nMedio\nBajo\nBajo\nBajo\nMedio\n\n\nEncuesta por muestreo\nAlto\nAlto\nMedio\nMedio\nMedio\nBajo\nMedio\n\n\nEstudio experimental\nBajo\nMedio\nMedio\nBajo\nAlto\nMedio\nMedio\n\n\nEstudio observacional\nMedio\nMedio\nAlto\nMedio\nMedio\nAlto\nMedio\n\n\nRegistro administrativo\nAlto\nBajo\nMedio\nBajo\nBajo\nBajo\nAlto\n\n\n\nNotas:\n- Alto: el sesgo es frecuente y debe controlarse activamente.\n- Medio: el sesgo es posible y su impacto depende del diseño y la implementación.\n- Bajo: el sesgo es poco probable si se siguen protocolos adecuados.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#variables-y-tipología",
+    "href": "fundamentos.html#variables-y-tipología",
+    "title": "1  Diseño estadístico",
+    "section": "1.9 Variables y tipología",
+    "text": "1.9 Variables y tipología\nCada unidad del universo estadístico \\(u_i \\in U\\) posee una serie de características o atributos que pueden observarse o medirse (Navarro et al. 2025).\nEn estadística, estas características se denominan variables y constituyen la base de la información que se analiza.\nUna variable es una propiedad que puede tomar distintos valores entre unidades de la población o a lo largo del tiempo (Kish 1995; Navarro et al. 2025).\nSegún su naturaleza y el tipo de análisis que permiten, las variables pueden clasificarse en:\n\nCualitativas o categóricas: expresan atributos o categorías sin magnitud numérica intrínseca.\n\nNominales: categorías sin orden (p. ej., sexo, tipo de terapia).\n\nOrdinales: categorías con un orden definido, pero sin distancias numéricas uniformes (p. ej., nivel educativo, escala de satisfacción).\n\nCuantitativas o numéricas: expresan magnitudes numéricas y permiten operaciones aritméticas. Se subdividen en:\n\nDiscretas: toman valores enteros, generalmente resultado de un conteo (p. ej., número de hijos, cantidad de sesiones de terapia).\n\nContinuas (decimales): pueden tomar cualquier valor en un rango, incluyendo decimales, resultado de una medición (p. ej., peso en kg, tiempo de reacción en segundos).\n\n\n\nLa tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias (Navarro et al. 2025).",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamentos.html#medición",
+    "href": "fundamentos.html#medición",
+    "title": "1  Diseño estadístico",
+    "section": "1.10 Medición",
+    "text": "1.10 Medición\nLa medición es el proceso de asignar valores o categorías a las variables observadas en las unidades de análisis, siguiendo reglas previamente definidas y aceptadas (Navarro et al. 2025; Stevens 1946).\nSu objetivo es representar un fenómeno de forma cuantitativa o cualitativa para su análisis estadístico, asegurando comparabilidad, consistencia y validez de la información recogida.\nPasos clave en la medición: 1. Definir el constructo o fenómeno de interés (p. ej., ansiedad).\n2. Seleccionar o desarrollar un instrumento de medición (cuestionario, escala, test, observación).\n3. Determinar el nivel de medición de cada variable (nominal, ordinal, intervalo, razón) (Stevens 1946).\n4. Estandarizar los procedimientos de recolección para minimizar sesgos y garantizar la calidad de los datos (Navarro et al. 2025).\nEjemplo: Medir el estrés académico en estudiantes universitarios utilizando una escala validada, aplicada bajo las mismas condiciones para todos los participantes y con un protocolo claro de codificación.\n\n\n\n\nGelman, Andrew, and Deborah Nolan. 2017. Teaching Statistics: A Bag of Tricks. 2nd ed. Oxford University Press.\n\n\nGroves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski, Eleanor Singer, and Roger Tourangeau. 2009. Survey Methodology. 2nd ed. Wiley.\n\n\nKish, Leslie. 1995. Survey Sampling. John Wiley & Sons.\n\n\nMontgomery, Douglas C., and George C. Runger. 2014. Applied Statistics and Probability for Engineers. 6th ed. John Wiley & Sons.\n\n\nNavarro, Danielle J., David R. Foxcroft, and Thomas J. Faulkenberry. 2025. Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners. https://learnstatswithjasp.com.\n\n\nShadish, William R., Thomas D. Cook, and Donald T. Campbell. 2002. Experimental and Quasi-Experimental Designs for Generalized Causal Inference. Houghton Mifflin.\n\n\nStevens, S. S. 1946. “On the Theory of Scales of Measurement.” Science 103 (2684): 677–80.\n\n\nWackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008. Mathematical Statistics with Applications. 7th ed. Thomson Brooks/Cole.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Diseño estadístico</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Gelman, Andrew, and Deborah Nolan. 2017. Teaching Statistics: A Bag\nof Tricks. 2nd ed. Oxford University Press.\n\n\nGroves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski,\nEleanor Singer, and Roger Tourangeau. 2009. Survey Methodology.\n2nd ed. Wiley.\n\n\nKish, Leslie. 1995. Survey Sampling. John Wiley & Sons.\n\n\nMontgomery, Douglas C., and George C. Runger. 2014. Applied\nStatistics and Probability for Engineers. 6th ed. John Wiley &\nSons.\n\n\nNavarro, Danielle J., David R. Foxcroft, and Thomas J. Faulkenberry.\n2025. Learning Statistics with JASP: A Tutorial for Psychology\nStudents and Other Beginners. https://learnstatswithjasp.com.\n\n\nShadish, William R., Thomas D. Cook, and Donald T. Campbell. 2002.\nExperimental and Quasi-Experimental Designs for Generalized Causal\nInference. Houghton Mifflin.\n\n\nStevens, S. S. 1946. “On the Theory of Scales of\nMeasurement.” Science 103 (2684): 677–80.\n\n\nWackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008.\nMathematical Statistics with Applications. 7th ed. Thomson\nBrooks/Cole.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

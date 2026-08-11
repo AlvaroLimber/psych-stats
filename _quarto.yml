@@ -1,0 +1,43 @@
+project:
+  type: book
+
+book:
+  title: "Psicoestadística"
+  author: "Alvaro Chirino Gutierrez"
+  date: "2026-01-01"
+  date-format: "YYYY"
+  #favicon: logo.png
+  twitter-card: true
+  site-url: https://alvarolimber.github.io/psych-stats/_book
+  search: true
+  repo-url: https://github.com/psych-stats/
+  downloads: [pdf]
+  sharing: [twitter, facebook]
+  cover-image: cover.png
+  page-footer: 
+    left: "Copyright 2026, Alvaro Chirino" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: bluesky 
+        href: https://bsky.app/ 
+  chapters:
+    - index.qmd # Prefacio / Introducción general
+    - part: "Parte I: Diseño estadístico y estadística descriptiva"
+      chapters: 
+        - fundamentos.qmd
+        #- r.qmd
+        #- scrape.qmd
+    #- part: "Parte II: Modelado Múltiple"
+     # chapters:
+        #- analisis_exploratorio.qmd
+        #- modelos.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      dark: darkly
+      light: flatly
