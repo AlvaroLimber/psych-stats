@@ -8,6 +8,7 @@ book:
   date-format: "YYYY"
   #favicon: logo.png
   twitter-card: true
+  reader-mode: true
   site-url: https://alvarolimber.github.io/psych-stats/_book
   search: true
   repo-url: https://github.com/psych-stats/
