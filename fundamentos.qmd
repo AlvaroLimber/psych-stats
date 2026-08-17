@@ -10,6 +10,12 @@ La **estadística** ha sido definida de distintas maneras según el enfoque y el
 
 *Ejemplo:* Analizar datos de un cuestionario de bienestar psicológico para comparar niveles de estrés entre grupos (p. ej., por semestre o género) y comunicar hallazgos que orienten intervenciones.
 
+::: {.callout-note}
+### Actividad: Contando una historia con datos (5 min)
+
+En parejas, busquen una noticia o dato estadístico reciente que hayan visto en redes sociales o medios. Identifiquen cuál de los tres enfoques predomina en esa información: **formal** (recolección/análisis), **aplicado** (toma de decisiones) o **comunicativo** (arte de contar una historia). Compartan por qué creen que se eligió ese enfoque para el público general.
+:::
+
 ## Población Objetivo (PO) — Universo
 
 Definición:
@@ -24,6 +30,11 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 
 ![Población Objetivo](fig/po.png)
 
+::: {.callout-note}
+### Actividad: Definiendo el Universo (5 min)
+Imaginen que desean investigar el nivel de motivación en la carrera de Psicología. Definan con precisión la **Población Objetivo (U)** para este estudio en el contexto de la Universidad Católica Boliviana. Asegúrense de que el conjunto sea total y no deje dudas sobre quiénes forman parte de él.
+:::
+
 ## Coberturas estadísticas
 
 - **Cobertura geográfica** (*¿dónde?*): territorio o ámbito institucional del estudio.  
@@ -35,6 +46,15 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 
 ![Coberturas estadísticas](fig/cobertura.png)
 
+::: {.callout-note}
+### Actividad: El mapa del estudio (7 min)
+Para el estudio de "Motivación en Psicología" definido anteriormente, redacten en una hoja:
+
+1. **Cobertura geográfica:** ¿En qué sedes o campus?
+2. **Cobertura temporal:** ¿Qué meses del año 2025 o 2026?
+3. **Cobertura temática:** ¿Qué variables específicas medirán (ej. horas de sueño, promedio académico, interés por la clínica)?.
+:::
+
 ## Unidades estadísticas
 
 - **Unidad de análisis/investigación:** elemento sobre el que se analizan los datos.  
@@ -45,6 +65,16 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
   *Ejemplo:* Semestres, género, tipo de turno (mañana/tarde/noche).
 
 ![Unidades estadísticas](fig/unidades.png)
+
+::: {.callout-note}
+### Actividad: ¿Quién es quién? (5 min)
+
+En el siguiente caso: *"Se entrevista a los directores de colegios de La Paz para analizar el rendimiento académico de los estudiantes de primaria"*, identifiquen:
+
+- La **Unidad de análisis**.
+- La **Unidad de información**.
+- Una posible **Unidad agregada** (dominio).
+:::
 
 ## Fuentes de información
 
@@ -60,6 +90,16 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
   *Ejemplo:* Historias clínicas o registros de atención psicológica.
   
 > Nota: Estos pueden ser de fuente primaria (se es parte de la recolección) o secundaria (se recurre a datos ya existentes en algún lado)
+
+::: {.callout-note}
+### Actividad: Selección de fuente (10 min)
+Propongan qué fuente de información sería la más adecuada para los siguientes objetivos y justifiquen su elección:
+
+- Conocer cuántos psicólogos hay en todo Bolivia.
+- Saber si una nueva técnica de relajación reduce el ritmo cardíaco en tiempo real.
+- Analizar la evolución de diagnósticos de depresión en un hospital público durante los últimos 10 años.
+:::
+
 
 ## Enfoques para el análisis
 
@@ -86,6 +126,15 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 \*\* Posible mediante diseños cuasi-experimentales (p. ej., pareamiento, IV, DiD) si la calidad del diseño/datos lo permite.  
 \*\*\* Depende del control de confusión y de la estrategia de identificación.
 
+::: {.callout-note}
+### Actividad: Clasificación de objetivos (8 min)
+Clasifiquen los siguientes objetivos de investigación según el enfoque de análisis (**Descriptivo, Relacional, Predictivo o Causal**):
+
+1. Determinar si el consumo de café *causa* una mejora en la memoria de corto plazo.
+2. Estimar el riesgo de deserción escolar a partir de un test de aptitud.
+3. Reportar el promedio de notas de los estudiantes de primer semestre.
+:::
+
 ## Validez interna y externa
 
 - **Validez interna:** indica en qué medida los resultados de un estudio son correctos y válidos **para el conjunto específico de unidades, condiciones y periodo observados**.  
@@ -107,6 +156,14 @@ Donde $N$ es el tamaño del universo o la PO. Es el **conjunto total de elemento
 | Estudio observacional   | Limitada | Buena si el diseño y la muestra son adecuados |
 | Registro administrativo | Variable | Buena si la cobertura y la consistencia son altas |
 
+![](fig/val.png)
+
+::: {.callout-note}
+### Actividad: El dilema del laboratorio (10 min)
+Discutan en grupos: Un experimento realizado con 20 voluntarios en una sala con ambiente controlado en la UCB tiene una **alta validez interna** pero una **baja validez externa**. 
+- ¿Por qué el control ayuda a la validez interna?
+- ¿Qué le falta para que los resultados se puedan generalizar a todos los jóvenes de Bolivia?.
+:::
 
 ## Sesgos posibles en la producción de datos
 
@@ -155,6 +212,13 @@ En todo proceso estadístico pueden introducirse **sesgos** que afectan la valid
 - **Medio**: el sesgo es posible y su impacto depende del diseño y la implementación.  
 - **Bajo**: el sesgo es poco probable si se siguen protocolos adecuados.
 
+![Sesgos](fig/sesgo.png)
+
+::: {.callout-note}
+### Actividad: Cacería de sesgos (10 min)
+Para una encuesta sobre "Hábitos de consumo de alcohol" realizada exclusivamente por Instagram a las 3:00 AM de un sábado, identifiquen al menos tres posibles **sesgos** que podrían invalidar los resultados.
+:::
+
 ## Variables y tipología
 
 Cada unidad del universo estadístico $u_i \in U$ posee una serie de **características** o **atributos** que pueden observarse o medirse [@LSJ2025].  
@@ -167,10 +231,24 @@ Según su naturaleza y el tipo de análisis que permiten, las variables pueden c
   - *Nominales*: categorías sin orden (p. ej., sexo, tipo de terapia).  
   - *Ordinales*: categorías con un orden definido, pero sin distancias numéricas uniformes (p. ej., nivel educativo, escala de satisfacción).
 - **Cuantitativas o numéricas**: expresan magnitudes numéricas y permiten operaciones aritméticas. Se subdividen en:  
-  - *Discretas*: toman valores enteros, generalmente resultado de un conteo (p. ej., número de hijos, cantidad de sesiones de terapia).  
+  - *Discretas*: toman valores enteros, generalmente resultado de un conteo (p. ej., número de hijos, cantidad de sesiones de terapia).
   - *Continuas (decimales)*: pueden tomar cualquier valor en un rango, incluyendo decimales, resultado de una medición (p. ej., peso en kg, tiempo de reacción en segundos).
 
-> La tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias [@LSJ2025].
+::: .callout-tip
+La tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias [@LSJ2025].
+:::
+
+![Variables](fig/var.png)
+
+::: {.callout-note}
+### Actividad: Identificación relámpago (5 min)
+Clasifiquen rápidamente las siguientes variables según su naturaleza (Cualitativa nominal/ordinal o Cuantitativa discreta/continua):
+
+- Nivel de satisfacción (Bajo, Medio, Alto).
+- Número de pacientes atendidos hoy.
+- Tiempo que tarda un ratón en salir de un laberinto.
+- Especialidad psicológica preferida.
+:::
 
 ## Medición
 
@@ -178,9 +256,21 @@ La **medición** es el proceso de asignar valores o categorías a las variables 
 Su objetivo es representar un fenómeno de forma cuantitativa o cualitativa para su análisis estadístico, asegurando comparabilidad, consistencia y validez de la información recogida.
 
 Pasos clave en la medición:
+
 1. **Definir el constructo** o fenómeno de interés (p. ej., ansiedad).  
 2. **Seleccionar o desarrollar un instrumento** de medición (cuestionario, escala, test, observación).  
 3. **Determinar el nivel de medición** de cada variable (nominal, ordinal, intervalo, razón) [@Stevens1946].  
 4. **Estandarizar los procedimientos** de recolección para minimizar sesgos y garantizar la calidad de los datos [@LSJ2025].
 
 *Ejemplo:* Medir el estrés académico en estudiantes universitarios utilizando una escala validada, aplicada bajo las mismas condiciones para todos los participantes y con un protocolo claro de codificación.
+
+![Medición](fig/med.png)
+
+::: {.callout-note}
+### Actividad: Operacionalizando el constructo (10 min)
+Elijan un constructo psicológico complejo. Siguiendo los pasos de medición:
+
+1. Definan el constructo.
+2. Sugieran un instrumento (test, observación, etc.).
+3. Determinen el nivel de medición de la escala resultante (¿Será ordinal o de razón?).
+:::

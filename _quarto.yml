@@ -42,4 +42,4 @@ format:
     theme:
       dark: darkly
       light: flatly
-    toc: false
+    toc: true
