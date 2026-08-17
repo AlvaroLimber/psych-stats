@@ -89,7 +89,9 @@ En el siguiente caso: *"Se entrevista a los directores de colegios de La Paz par
 - **Registro administrativo:** datos reunidos por instituciones en el curso de sus funciones.  
   *Ejemplo:* Historias clínicas o registros de atención psicológica.
   
-> Nota: Estos pueden ser de fuente primaria (se es parte de la recolección) o secundaria (se recurre a datos ya existentes en algún lado)
+::: .callout-tip 
+Nota: Estos pueden ser de fuente primaria (se es parte de la recolección) o secundaria (se recurre a datos ya existentes en algún lado)
+:::
 
 ::: {.callout-note}
 ### Actividad: Selección de fuente (10 min)
@@ -161,6 +163,7 @@ Clasifiquen los siguientes objetivos de investigación según el enfoque de aná
 ::: {.callout-note}
 ### Actividad: El dilema del laboratorio (10 min)
 Discutan en grupos: Un experimento realizado con 20 voluntarios en una sala con ambiente controlado en la UCB tiene una **alta validez interna** pero una **baja validez externa**. 
+
 - ¿Por qué el control ayuda a la validez interna?
 - ¿Qué le falta para que los resultados se puedan generalizar a todos los jóvenes de Bolivia?.
 :::
