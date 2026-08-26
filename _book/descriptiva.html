@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Estadística Descriptiva – Psicoestadística</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./fundamentos.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b9f2f07ae5a8812bc508e625fed73b25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ba8e73a601a383a97ed8429bc770149b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="twitter:title" content="2&nbsp; Estadística Descriptiva – Psicoestadística">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://alvarolimber.github.io/psych-stats/_book/fig/cuali.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar floating quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamentos.html">Parte I: Diseño estadístico y estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./descriptiva.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estadística Descriptiva</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Psicoestadística</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/psych-stats/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Psicoestadística.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I: Diseño estadístico y estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./descriptiva.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estadística Descriptiva</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#ordenación-de-los-datos" id="toc-ordenación-de-los-datos" class="nav-link active" data-scroll-target="#ordenación-de-los-datos"><span class="header-section-number">2.1</span> Ordenación de los datos</a></li>
+  <li><a href="#estadísticas-para-variables-cualitativas" id="toc-estadísticas-para-variables-cualitativas" class="nav-link" data-scroll-target="#estadísticas-para-variables-cualitativas"><span class="header-section-number">2.2</span> Estadísticas para variables cualitativas</a></li>
+  <li><a href="#medidas-de-resumen-tendencia-central" id="toc-medidas-de-resumen-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-resumen-tendencia-central"><span class="header-section-number">2.3</span> Medidas de resumen (Tendencia central)</a></li>
+  <li><a href="#medidas-de-posición-cuantiles" id="toc-medidas-de-posición-cuantiles" class="nav-link" data-scroll-target="#medidas-de-posición-cuantiles"><span class="header-section-number">2.4</span> Medidas de posición: Cuantiles</a></li>
+  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="header-section-number">2.5</span> Medidas de dispersión</a></li>
+  <li><a href="#medidas-de-forma" id="toc-medidas-de-forma" class="nav-link" data-scroll-target="#medidas-de-forma"><span class="header-section-number">2.6</span> Medidas de forma</a></li>
+  <li><a href="#visualización-univariante" id="toc-visualización-univariante" class="nav-link" data-scroll-target="#visualización-univariante"><span class="header-section-number">2.7</span> Visualización univariante</a>
+  <ul class="collapse">
+  <li><a href="#gráficos-recomendados-para-variables-cualitativas" id="toc-gráficos-recomendados-para-variables-cualitativas" class="nav-link" data-scroll-target="#gráficos-recomendados-para-variables-cualitativas"><span class="header-section-number">2.7.1</span> Gráficos recomendados para variables cualitativas</a></li>
+  <li><a href="#gráficos-recomendados-para-variables-cuantitativas" id="toc-gráficos-recomendados-para-variables-cuantitativas" class="nav-link" data-scroll-target="#gráficos-recomendados-para-variables-cuantitativas"><span class="header-section-number">2.7.2</span> Gráficos recomendados para variables cuantitativas</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamentos.html">Parte I: Diseño estadístico y estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./descriptiva.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estadística Descriptiva</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estadística Descriptiva</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>La <strong>estadística descriptiva</strong> se ocupa de resumir, organizar y presentar la información de un conjunto de datos, sin pretender hacer inferencias sobre una población mayor. Sus herramientas permiten transformar datos brutos en información comprensible a través de <strong>tablas, medidas numéricas y representaciones gráficas</strong>.</p>
+<section id="ordenación-de-los-datos" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="ordenación-de-los-datos"><span class="header-section-number">2.1</span> Ordenación de los datos</h2>
+<p>El primer paso en la estadística descriptiva es la <strong>organización de los datos</strong>, es decir, cómo se disponen en una estructura clara que permita analizarlos. El enfoque más común es el <strong>enfoque tabular</strong>, que dispone la información en:</p>
+<ul>
+<li><strong>Filas:</strong> Cada fila corresponde a una <strong>unidad de análisis</strong> (por ejemplo, un estudiante, un paciente, una observación experimental).</li>
+<li><strong>Columnas:</strong> Cada columna corresponde a una <strong>variable</strong> (por ejemplo, edad, sexo, puntaje en una escala).</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Actividad en el Aula: El Tablero Humano (5 - 7 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucciones:</strong> Formen grupos de 4 personas. En una hoja de papel, diseñen una pequeña tabla con la siguiente estructura:</p>
+<ul>
+<li><strong>Filas:</strong> Los nombres de los integrantes del grupo (unidades de análisis).</li>
+<li><strong>Columnas:</strong> Tres variables cualitativas o cuantitativas de su vida universitaria (ej. <em>Método de transporte a la UCB</em>, <em>Horas de sueño anoche</em>, <em>Nivel de estrés percibido de 1 a 5</em>).</li>
+</ul>
+<p>Llenen la tabla con datos reales de su grupo. Al finalizar, identifiquen cuál es la <strong>unidad de análisis</strong> y cuáles son las <strong>variables</strong> de su pequeña base de datos.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Conexión JASP: Carga de Datos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para comenzar cualquier análisis en JASP, el formato preferido es el archivo de valores separados por comas <strong>(.csv)</strong>. Puedes exportar tu hoja de cálculo desde Excel como <code>.csv</code> y luego abrirla en JASP usando el menú principal: <code>Open -&gt; Computer -&gt; Browse</code>. Una vez cargado, JASP identificará automáticamente tus columnas como variables y tus filas como casos.</p>
+</div>
+</div>
+</section>
+<section id="estadísticas-para-variables-cualitativas" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="estadísticas-para-variables-cualitativas"><span class="header-section-number">2.2</span> Estadísticas para variables cualitativas</h2>
+<p>Cuando los datos son cualitativos o categóricos (expresan atributos sin magnitud numérica intrínseca), los resúmenes estadísticos se enfocan en contar y comparar las categorías.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Definición</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Notación</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Ejemplo Numérico</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Para resumir variables cualitativas, utilizamos los siguientes tipos de medidas de resumen:</p>
+<ol type="1">
+<li><strong>Conteos absolutos (frecuencias absolutas):</strong> Es el número de casos que caen en cada categoría.</li>
+<li><strong>Frecuencias relativas (proporciones o porcentajes):</strong> Es la relación de cada categoría respecto al total de la muestra (<span class="math inline">\(n\)</span>).</li>
+<li><strong>Razones:</strong> Es el cociente directo entre frecuencias de dos categorías distintas dentro de una misma variable (indica cuántos elementos hay de la categoría A por cada elemento de la categoría B).</li>
+<li><strong>Tasas:</strong> Es la relación entre un número de casos ocurridos y la población expuesta a ese fenómeno en un periodo de tiempo determinado.</li>
+<li><strong>Índices:</strong> Valores compuestos que resumen múltiples indicadores complejos en una sola medida.</li>
+</ol>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Establecemos la diferenciación de tamaños y conteos bajo la notación estándar:</p>
+<ul>
+<li><strong>Tamaño total de la población (<span class="math inline">\(N\)</span>):</strong> El número de elementos en el universo o población objetivo.</li>
+<li><strong>Tamaño total de la muestra (<span class="math inline">\(n\)</span>):</strong> El número de unidades observadas en el estudio.</li>
+<li><strong>Frecuencia absoluta (<span class="math inline">\(f_i\)</span>):</strong> El conteo de casos en una categoría específica <span class="math inline">\(i\)</span>.</li>
+<li><strong>Frecuencia relativa o proporción (<span class="math inline">\(r_i\)</span>):</strong> <span class="math display">\[r_i = \frac{f_i}{n}\]</span></li>
+<li><strong>Porcentaje (<span class="math inline">\(\%\)</span>):</strong> <span class="math display">\[\% = r_i \times 100\]</span></li>
+<li><strong>Razón (<span class="math inline">\(R\)</span>):</strong> <span class="math display">\[R = \frac{f_A}{f_B}\]</span></li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Imaginemos el estudio de preferencias en una comunidad <strong>Z</strong>, donde se evaluaron los datos de una muestra de <strong><span class="math inline">\(n = 180\)</span> sujetos</strong> (<span class="math inline">\(f_{\text{hombres}} = 93\)</span> y <span class="math inline">\(f_{\text{mujeres}} = 87\)</span>):</p>
+<ul>
+<li><strong>Frecuencias absolutas (<span class="math inline">\(f_i\)</span>):</strong>
+<ul>
+<li><span class="math inline">\(f_{\text{hombres}} = 93\)</span></li>
+<li><span class="math inline">\(f_{\text{mujeres}} = 87\)</span></li>
+<li><span class="math inline">\(n = 180\)</span></li>
+</ul></li>
+<li><strong>Frecuencias relativas / proporciones (<span class="math inline">\(r_i\)</span>) y porcentajes (<span class="math inline">\(\%\)</span>):</strong>
+<ul>
+<li>Proporción de hombres: <span class="math inline">\(r_{\text{humanos}} = \frac{93}{180} = 0.517\)</span> (equivalente al <span class="math inline">\(51.7\%\)</span>)</li>
+<li>Proporción de mujeres: <span class="math inline">\(r_{\text{robots}} = \frac{87}{180} = 0.483\)</span> (equivalente al <span class="math inline">\(48.3\%\)</span>)</li>
+</ul></li>
+<li><strong>Razón (<span class="math inline">\(R\)</span>):</strong>
+<ul>
+<li>Razón hombre/mujer: <span class="math inline">\(R = \frac{93}{87} = 1.07\)</span></li>
+<li><em>Interpretación:</em> Hay <strong>1.07 hombres por cada mujer</strong> en esta muestra de la comunidad Z.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Actividad Práctica: Calculadora Humana de Razones (8 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucciones:</strong></p>
+<ol type="1">
+<li>Realicen un conteo rápido y visual de cuántas mujeres y cuántos hombres hay hoy presentes en el aula de Psicoestadística.</li>
+<li>Usando sus calculadoras, determinen:
+<ul>
+<li>El <strong>porcentaje</strong> de mujeres y hombres en el aula.</li>
+<li>La <strong>razón</strong> de mujeres por cada hombre (o viceversa).</li>
+</ul></li>
+<li>Reflexionen en parejas: Si quisiéramos comparar la deserción académica en la UCB este semestre, ¿por qué una <em>tasa</em> sería más útil que reportar únicamente el <em>conteo absoluto</em> de abandonos?.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Frecuencias Cualitativas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para generar tablas de frecuencias cualitativas en JASP:</p>
+<ol type="1">
+<li>Haz clic en <code>Descriptives -&gt; Descriptive Statistics</code>.</li>
+<li>Pasa tu variable cualitativa al cuadro <code>Variables</code>.</li>
+<li>Despliega la opción <code>Tables</code> en el panel de control izquierdo y marca la casilla <strong><code>Frequency tables</code></strong>. JASP creará una tabla con la frecuencia absoluta (<span class="math inline">\(f_i\)</span>), el porcentaje (%) y el porcentaje acumulado para tu variable.</li>
+</ol>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/cuali.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Medidas Cualitativas</figcaption>
+</figure>
+</div>
+</section>
+<section id="medidas-de-resumen-tendencia-central" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="medidas-de-resumen-tendencia-central"><span class="header-section-number">2.3</span> Medidas de resumen (Tendencia central)</h2>
+<p>Las <strong>medidas de tendencia central</strong> resumen en un solo valor el “centro” o el valor más representativo y típico de la distribución de los datos.</p>
+<ul>
+<li><strong>Media (<span class="math inline">\(\bar{X}\)</span> o <span class="math inline">\(\mu\)</span>):</strong> Es el promedio aritmético de los datos. Se calcula sumando todos los valores de la variable y dividiendo esta suma entre el tamaño del grupo.
+<ul>
+<li><em>Fórmula muestral (<span class="math inline">\(n\)</span>):</em> <span class="math display">\[\bar{X} = \frac{\sum_{i=1}^{n} X_i}{n}\]</span></li>
+<li><em>Fórmula poblacional (<span class="math inline">\(N\)</span>):</em> <span class="math display">\[\mu = \frac{\sum_{i=1}^{N} X_i}{N}\]</span></li>
+</ul></li>
+<li><strong>Mediana:</strong> Valor que divide el conjunto ordenado de datos en dos mitades de igual tamaño. Es altamente resistente ante la presencia de valores atípicos (<em>outliers</em>).</li>
+<li><strong>Moda:</strong> El valor que ocurre con mayor frecuencia en la muestra. Es la única medida aplicable directamente a variables nominales.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Actividad de Reflexión: El dilema de la Media vs Mediana (5 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucciones:</strong> Lean individualmente la siguiente situación simplificada basada en el efecto de los valores extremos:</p>
+<ul>
+<li><em>En una mesa de la cafetería de la UCB se sientan tres estudiantes de psicología cuyos ingresos mensuales por mesadas son: <strong>Bs. 100</strong>, <strong>Bs. 150</strong> y <strong>Bs. 180</strong> respectivamente. De pronto, se sienta con ellos un empresario paceño muy exitoso que tiene un ingreso mensual de <strong>Bs. 50,000</strong>.</em></li>
+</ul>
+<p>Discutan rápidamente con su compañero de al lado:</p>
+<ol type="1">
+<li>Si calculamos el <strong>promedio (media)</strong> del ingreso de las 4 personas en la mesa, ¿describirá con honestidad la realidad financiera del estudiante típico en esa mesa?</li>
+<li>¿Por qué la <strong>mediana</strong> es mucho más resistente ante este valor extremo (<em>outlier</em>)?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Obtener las Medidas de Tendencia Central
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En JASP, por defecto, se calcula la media al ingresar variables continuas. Si deseas añadir la mediana y la moda:</p>
+<ol type="1">
+<li>Ve al menú de análisis descriptivo.</li>
+<li>Despliega la pestaña <strong><code>Statistics</code></strong>.</li>
+<li>En la sección <strong><code>Central Tendency</code></strong>, selecciona las casillas <strong><code>Median</code></strong> y <strong><code>Mode</code></strong>. JASP actualizará tu tabla descriptiva en tiempo real en el panel derecho.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="medidas-de-posición-cuantiles" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="medidas-de-posición-cuantiles"><span class="header-section-number">2.4</span> Medidas de posición: Cuantiles</h2>
+<p>Los <strong>cuantiles</strong> son puntos de corte que dividen una distribución de datos ordenados en intervalos que contienen la misma proporción de observaciones. Son fundamentales para comprender la posición de una puntuación individual en relación con su grupo de referencia.</p>
+<ul>
+<li><strong>Cuartiles:</strong> Dividen los datos en cuatro partes iguales (cada una contiene el 25% de las observaciones).
+<ul>
+<li><strong>Primer Cuartil (<span class="math inline">\(Q_1\)</span> o Percentil 25):</strong> Deja por debajo al 25% de los datos.</li>
+<li><strong>Segundo Cuartil (<span class="math inline">\(Q_2\)</span>, Percentil 50 o Mediana):</strong> Divide la distribución a la mitad (50% superior y 50% inferior).</li>
+<li><strong>Tercer Cuartil (<span class="math inline">\(Q_3\)</span> o Percentil 75):</strong> Deja por debajo al 75% de las observaciones.</li>
+</ul></li>
+<li><strong>Deciles:</strong> Dividen la distribución en diez partes iguales (del <span class="math inline">\(D_1\)</span> al <span class="math inline">\(D_9\)</span>, representando incrementos de 10%).</li>
+<li><strong>Percentiles:</strong> Dividen la distribución en cien partes iguales (del <span class="math inline">\(P_1\)</span> al <span class="math inline">\(P_{99}\)</span>, representando incrementos de 1%).</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Cálculo de Cuantiles y Rango Intercuartílico (IQR)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para calcular los cuartiles o percentiles específicos en JASP:</p>
+<ol type="1">
+<li>Abre la pestaña descriptiva de la variable cuantitativa.</li>
+<li>Ve a <code>Statistics</code> y busca la sección <strong><code>Quantiles</code></strong>.</li>
+<li>Marca la casilla <strong><code>Quartiles</code></strong> para obtener de manera directa los percentiles 25, 50 y 75.</li>
+<li>Si necesitas percentiles específicos (ej. el percentil 90), marca la casilla <strong><code>Percentiles:</code></strong> y digita el número <code>90</code>.</li>
+<li>Si deseas medir el <strong>rango intercuartílico</strong> (<span class="math inline">\(IQR = Q_3 - Q_1\)</span>), marca la casilla <strong><code>IQR</code></strong> bajo la sección de <strong><code>Dispersion</code></strong>.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="medidas-de-dispersión" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">2.5</span> Medidas de dispersión</h2>
+<p>Las <strong>medidas de dispersión</strong> indican el grado en que los datos se alejan de su centro, permitiendo evaluar la homogeneidad de la muestra.</p>
+<ul>
+<li><strong>Rango:</strong> La diferencia directa entre el valor máximo y el valor mínimo de la variable (<span class="math inline">\(R = X_{\text{max}} - X_{\text{min}}\)</span>). Es muy sensible a valores extremos y poco robusto.</li>
+<li><strong>Varianza (<span class="math inline">\(s^2\)</span>):</strong> Promedio de las desviaciones cuadráticas respecto a la media. En JASP, para corregir el sesgo muestral, se divide entre <span class="math inline">\(n - 1\)</span>: <span class="math display">\[s^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n - 1}\]</span></li>
+<li><strong>Desviación Estándar (<span class="math inline">\(s\)</span>):</strong> Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.</li>
+<li><strong>Coeficiente de Variación (<span class="math inline">\(CV\)</span>):</strong> Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes: <span class="math display">\[CV = \left( \frac{s}{\bar{X}} \right) \times 100\]</span></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Actividad Grupal: Diseñando la Variabilidad (10 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucciones:</strong> Imaginen que están evaluando los niveles de ansiedad clínica (escala de 0 a 50) de dos grupos de pacientes en consulta externa de psicología. Ambos grupos tienen exactamente la misma <strong>media de ansiedad de 25 puntos</strong>. Sin embargo:</p>
+<ul>
+<li>El <strong>Grupo A</strong> tiene una desviación estándar (<span class="math inline">\(s\)</span>) de <strong>2 puntos</strong>.</li>
+<li>El <strong>Grupo B</strong> tiene una desviación estándar (<span class="math inline">\(s\)</span>) de <strong>12 puntos</strong>.</li>
+</ul>
+<p>En su grupo de trabajo, discutan y respondan en una hoja:</p>
+<ol type="1">
+<li>¿Cuál de los dos grupos es más homogéneo y adecuado para realizar una intervención terapéutica grupal estandarizada?</li>
+<li>¿Cómo interpretan el hecho de que en el Grupo B existan pacientes con puntuaciones de ansiedad muy bajas y otros con niveles muy altos a pesar de compartir el mismo promedio con el Grupo A?</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="medidas-de-forma" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="medidas-de-forma"><span class="header-section-number">2.6</span> Medidas de forma</h2>
+<p>La <strong>forma de la distribución</strong> describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra.</p>
+<ul>
+<li><strong>Asimetría (Skewness):</strong> Evalúa el grado de simetría de la distribución de frecuencias respecto a su media.
+<ul>
+<li><strong>Asimetría &gt; 0 (Positiva / Sesgo a la derecha):</strong> La cola larga de la distribución se estira hacia los valores más altos.</li>
+<li><strong>Asimetría &lt; 0 (Negativa / Sesgo a la izquierda):</strong> La cola se extiende hacia los valores más bajos.</li>
+<li><strong>Asimetría ≈ 0:</strong> Distribución simétrica (como la campana de Gauss).</li>
+</ul></li>
+<li><strong>Curtosis (Kurtosis):</strong> Mide el grado de apuntamiento o concentración de valores sobre la zona central de la distribución.
+<ul>
+<li><strong>Curtosis &gt; 0 (Leptocúrtica):</strong> Distribución muy apuntada en el centro y con colas pesadas.</li>
+<li><strong>Curtosis &lt; 0 (Platicúrtica):</strong> Distribución achatada, plana en su zona central.</li>
+<li><strong>Curtosis = 0 (Mesocúrtica):</strong> Grado de apuntamiento idéntico al de una distribución normal.</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Actividad Práctica: Dibujando Distribuciones (8 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucciones:</strong> En una hoja en blanco, dibujen a mano alzada dos curvas de distribución de frecuencias para representar las siguientes situaciones de psicología clínica y educativa:</p>
+<ol type="1">
+<li><strong>Curva 1 (Asimetría Positiva):</strong> Los puntajes de un test de sintomatología depresiva grave aplicado a estudiantes sanos antes de empezar el semestre (donde la gran mayoría tiene puntajes muy bajos, pero hay unos pocos casos graves con puntajes extremadamente altos).</li>
+<li><strong>Curva 2 (Asimetría Negativa):</strong> Las calificaciones de un examen de Psicoestadística extremadamente sencillo, donde casi toda la clase obtuvo notas de aprobación muy altas y solo un par de estudiantes obtuvo notas muy bajas.</li>
+</ol>
+<p>Muestren sus dibujos a su compañero para verificar si las “colas” de las curvas apuntan en la dirección correcta según la teoría.</p>
+</div>
+</div>
+</section>
+<section id="visualización-univariante" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="visualización-univariante"><span class="header-section-number">2.7</span> Visualización univariante</h2>
+<p>La visualización de datos es una de las tareas más importantes del análisis descriptivo. Permite identificar patrones de distribución, valores típicos y detectar posibles valores atípicos (<em>outliers</em>) a simple vista.</p>
+<section id="gráficos-recomendados-para-variables-cualitativas" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="gráficos-recomendados-para-variables-cualitativas"><span class="header-section-number">2.7.1</span> Gráficos recomendados para variables cualitativas</h3>
+<ul>
+<li><strong>Gráfico de barras:</strong> Compara de manera óptima las frecuencias absolutas (<span class="math inline">\(f_i\)</span>) o relativas (<span class="math inline">\(r_i\)</span>) de las distintas categorías de la variable.</li>
+<li><strong>Gráfico de sectores (Torta/Pie chart):</strong> Menos recomendable en el ámbito académico riguroso debido a la dificultad humana de comparar ángulos visualmente, pero de amplio uso en divulgación básica.</li>
+</ul>
+</section>
+<section id="gráficos-recomendados-para-variables-cuantitativas" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="gráficos-recomendados-para-variables-cuantitativas"><span class="header-section-number">2.7.2</span> Gráficos recomendados para variables cuantitativas</h3>
+<ul>
+<li><strong>Histograma:</strong> Divide el rango de datos continuos en intervalos (<em>bins</em>) y grafica la frecuencia de casos dentro de cada uno a través de barras.</li>
+<li><strong>Diagrama de caja (Boxplot):</strong> Es un resumen gráfico potente que muestra la mediana, los cuartiles (<span class="math inline">\(Q_1\)</span> y <span class="math inline">\(Q_3\)</span>), los límites de la distribución y detecta directamente observaciones atípicas (<em>outliers</em>) representadas por puntos aislados.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Actividad Relámpago: Emparejamiento de Gráficos (5 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Instrucciones:</strong> De manera individual y rápida, emparejen mentalmente las siguientes variables con su representación gráfica univariante ideal:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable de Estudio</th>
+<th style="text-align: left;">Gráfico Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>A.</strong> Diagnóstico clínico del DSM-5 (Nominal)</td>
+<td style="text-align: left;"><strong>1.</strong> Histograma o Densidad</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>B.</strong> Tiempos de reacción en milisegundos (Continua)</td>
+<td style="text-align: left;"><strong>2.</strong> Gráfico de Barras</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>C.</strong> Comparación de la dispersión de notas entre paralelos de la UCB</td>
+<td style="text-align: left;"><strong>3.</strong> Diagrama de Caja (Boxplot)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Solución para comprobar en voz alta con la clase: A-2, B-1, C-3.</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Graficando tus Variables
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para generar estos gráficos de manera profesional desde JASP:</p>
+<ol type="1">
+<li>En el menú de Descriptivos, despliega la pestaña <strong><code>Basic plots</code></strong>.</li>
+<li>Selecciona <strong><code>Distribution plots</code></strong> para visualizar histogramas acompañados de su curva de densidad estimada.</li>
+<li>Si deseas generar Boxplots, despliega la pestaña <strong><code>Customizable plots</code></strong> (o activa la sección <strong><code>Boxplots</code></strong>) y marca la casilla <strong><code>Boxplot element</code></strong>.</li>
+<li>Puedes marcar <strong><code>Violin element</code></strong> para fusionar la caja con la forma de la densidad, o <strong><code>Jitter element</code></strong> para ver los puntos reales de tus sujetos esparcidos sobre el gráfico.</li>
+</ol>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/alvarolimber\.github\.io\/psych-stats\/_book");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./fundamentos.html" class="pagination-link" aria-label="Diseño estadístico">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026, Alvaro Chirino</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/">
+      <i class="bi bi-bluesky" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

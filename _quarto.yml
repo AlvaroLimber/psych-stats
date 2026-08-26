@@ -27,12 +27,7 @@ book:
     - part: "Parte I: Diseño estadístico y estadística descriptiva"
       chapters: 
         - fundamentos.qmd
-        #- r.qmd
-        #- scrape.qmd
-    #- part: "Parte II: Modelado Múltiple"
-     # chapters:
-        #- analisis_exploratorio.qmd
-        #- modelos.qmd
+        - descriptiva.qmd
     - references.qmd
 
 bibliography: references.bib

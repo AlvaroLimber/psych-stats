@@ -131,6 +131,94 @@
     ]
   },
   {
+    "objectID": "descriptiva.html",
+    "href": "descriptiva.html",
+    "title": "2  Estadística Descriptiva",
+    "section": "",
+    "text": "2.1 Ordenación de los datos\nLa estadística descriptiva se ocupa de resumir, organizar y presentar la información de un conjunto de datos, sin pretender hacer inferencias sobre una población mayor. Sus herramientas permiten transformar datos brutos en información comprensible a través de tablas, medidas numéricas y representaciones gráficas.\nEl primer paso en la estadística descriptiva es la organización de los datos, es decir, cómo se disponen en una estructura clara que permita analizarlos. El enfoque más común es el enfoque tabular, que dispone la información en:",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#ordenación-de-los-datos",
+    "href": "descriptiva.html#ordenación-de-los-datos",
+    "title": "2  Estadística Descriptiva",
+    "section": "",
+    "text": "Filas: Cada fila corresponde a una unidad de análisis (por ejemplo, un estudiante, un paciente, una observación experimental).\nColumnas: Cada columna corresponde a una variable (por ejemplo, edad, sexo, puntaje en una escala).\n\n\n\n\n\n\n\nNoteActividad en el Aula: El Tablero Humano (5 - 7 min)\n\n\n\nInstrucciones: Formen grupos de 4 personas. En una hoja de papel, diseñen una pequeña tabla con la siguiente estructura:\n\nFilas: Los nombres de los integrantes del grupo (unidades de análisis).\nColumnas: Tres variables cualitativas o cuantitativas de su vida universitaria (ej. Método de transporte a la UCB, Horas de sueño anoche, Nivel de estrés percibido de 1 a 5).\n\nLlenen la tabla con datos reales de su grupo. Al finalizar, identifiquen cuál es la unidad de análisis y cuáles son las variables de su pequeña base de datos.\n\n\n\n\n\n\n\n\nTipConexión JASP: Carga de Datos\n\n\n\nPara comenzar cualquier análisis en JASP, el formato preferido es el archivo de valores separados por comas (.csv). Puedes exportar tu hoja de cálculo desde Excel como .csv y luego abrirla en JASP usando el menú principal: Open -&gt; Computer -&gt; Browse. Una vez cargado, JASP identificará automáticamente tus columnas como variables y tus filas como casos.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#estadísticas-para-variables-cualitativas",
+    "href": "descriptiva.html#estadísticas-para-variables-cualitativas",
+    "title": "2  Estadística Descriptiva",
+    "section": "2.2 Estadísticas para variables cualitativas",
+    "text": "2.2 Estadísticas para variables cualitativas\nCuando los datos son cualitativos o categóricos (expresan atributos sin magnitud numérica intrínseca), los resúmenes estadísticos se enfocan en contar y comparar las categorías.\n\nDefiniciónNotaciónEjemplo Numérico\n\n\nPara resumir variables cualitativas, utilizamos los siguientes tipos de medidas de resumen:\n\nConteos absolutos (frecuencias absolutas): Es el número de casos que caen en cada categoría.\nFrecuencias relativas (proporciones o porcentajes): Es la relación de cada categoría respecto al total de la muestra (\\(n\\)).\nRazones: Es el cociente directo entre frecuencias de dos categorías distintas dentro de una misma variable (indica cuántos elementos hay de la categoría A por cada elemento de la categoría B).\nTasas: Es la relación entre un número de casos ocurridos y la población expuesta a ese fenómeno en un periodo de tiempo determinado.\nÍndices: Valores compuestos que resumen múltiples indicadores complejos en una sola medida.\n\n\n\nEstablecemos la diferenciación de tamaños y conteos bajo la notación estándar:\n\nTamaño total de la población (\\(N\\)): El número de elementos en el universo o población objetivo.\nTamaño total de la muestra (\\(n\\)): El número de unidades observadas en el estudio.\nFrecuencia absoluta (\\(f_i\\)): El conteo de casos en una categoría específica \\(i\\).\nFrecuencia relativa o proporción (\\(r_i\\)): \\[r_i = \\frac{f_i}{n}\\]\nPorcentaje (\\(\\%\\)): \\[\\% = r_i \\times 100\\]\nRazón (\\(R\\)): \\[R = \\frac{f_A}{f_B}\\]\n\n\n\nImaginemos el estudio de preferencias en una comunidad Z, donde se evaluaron los datos de una muestra de \\(n = 180\\) sujetos (\\(f_{\\text{hombres}} = 93\\) y \\(f_{\\text{mujeres}} = 87\\)):\n\nFrecuencias absolutas (\\(f_i\\)):\n\n\\(f_{\\text{hombres}} = 93\\)\n\\(f_{\\text{mujeres}} = 87\\)\n\\(n = 180\\)\n\nFrecuencias relativas / proporciones (\\(r_i\\)) y porcentajes (\\(\\%\\)):\n\nProporción de hombres: \\(r_{\\text{humanos}} = \\frac{93}{180} = 0.517\\) (equivalente al \\(51.7\\%\\))\nProporción de mujeres: \\(r_{\\text{robots}} = \\frac{87}{180} = 0.483\\) (equivalente al \\(48.3\\%\\))\n\nRazón (\\(R\\)):\n\nRazón hombre/mujer: \\(R = \\frac{93}{87} = 1.07\\)\nInterpretación: Hay 1.07 hombres por cada mujer en esta muestra de la comunidad Z.\n\n\n\n\n\n\n\n\n\n\n\nNoteActividad Práctica: Calculadora Humana de Razones (8 min)\n\n\n\nInstrucciones:\n\nRealicen un conteo rápido y visual de cuántas mujeres y cuántos hombres hay hoy presentes en el aula de Psicoestadística.\nUsando sus calculadoras, determinen:\n\nEl porcentaje de mujeres y hombres en el aula.\nLa razón de mujeres por cada hombre (o viceversa).\n\nReflexionen en parejas: Si quisiéramos comparar la deserción académica en la UCB este semestre, ¿por qué una tasa sería más útil que reportar únicamente el conteo absoluto de abandonos?.\n\n\n\n\n\n\n\n\n\nTipJASP Tip: Frecuencias Cualitativas\n\n\n\nPara generar tablas de frecuencias cualitativas en JASP:\n\nHaz clic en Descriptives -&gt; Descriptive Statistics.\nPasa tu variable cualitativa al cuadro Variables.\nDespliega la opción Tables en el panel de control izquierdo y marca la casilla Frequency tables. JASP creará una tabla con la frecuencia absoluta (\\(f_i\\)), el porcentaje (%) y el porcentaje acumulado para tu variable.\n\n\n\n\n\n\nMedidas Cualitativas",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#medidas-de-resumen-tendencia-central",
+    "href": "descriptiva.html#medidas-de-resumen-tendencia-central",
+    "title": "2  Estadística Descriptiva",
+    "section": "2.3 Medidas de resumen (Tendencia central)",
+    "text": "2.3 Medidas de resumen (Tendencia central)\nLas medidas de tendencia central resumen en un solo valor el “centro” o el valor más representativo y típico de la distribución de los datos.\n\nMedia (\\(\\bar{X}\\) o \\(\\mu\\)): Es el promedio aritmético de los datos. Se calcula sumando todos los valores de la variable y dividiendo esta suma entre el tamaño del grupo.\n\nFórmula muestral (\\(n\\)): \\[\\bar{X} = \\frac{\\sum_{i=1}^{n} X_i}{n}\\]\nFórmula poblacional (\\(N\\)): \\[\\mu = \\frac{\\sum_{i=1}^{N} X_i}{N}\\]\n\nMediana: Valor que divide el conjunto ordenado de datos en dos mitades de igual tamaño. Es altamente resistente ante la presencia de valores atípicos (outliers).\nModa: El valor que ocurre con mayor frecuencia en la muestra. Es la única medida aplicable directamente a variables nominales.\n\n\n\n\n\n\n\nNoteActividad de Reflexión: El dilema de la Media vs Mediana (5 min)\n\n\n\nInstrucciones: Lean individualmente la siguiente situación simplificada basada en el efecto de los valores extremos:\n\nEn una mesa de la cafetería de la UCB se sientan tres estudiantes de psicología cuyos ingresos mensuales por mesadas son: Bs. 100, Bs. 150 y Bs. 180 respectivamente. De pronto, se sienta con ellos un empresario paceño muy exitoso que tiene un ingreso mensual de Bs. 50,000.\n\nDiscutan rápidamente con su compañero de al lado:\n\nSi calculamos el promedio (media) del ingreso de las 4 personas en la mesa, ¿describirá con honestidad la realidad financiera del estudiante típico en esa mesa?\n¿Por qué la mediana es mucho más resistente ante este valor extremo (outlier)?\n\n\n\n\n\n\n\n\n\nTipJASP Tip: Obtener las Medidas de Tendencia Central\n\n\n\nEn JASP, por defecto, se calcula la media al ingresar variables continuas. Si deseas añadir la mediana y la moda:\n\nVe al menú de análisis descriptivo.\nDespliega la pestaña Statistics.\nEn la sección Central Tendency, selecciona las casillas Median y Mode. JASP actualizará tu tabla descriptiva en tiempo real en el panel derecho.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#medidas-de-posición-cuantiles",
+    "href": "descriptiva.html#medidas-de-posición-cuantiles",
+    "title": "2  Estadística Descriptiva",
+    "section": "2.4 Medidas de posición: Cuantiles",
+    "text": "2.4 Medidas de posición: Cuantiles\nLos cuantiles son puntos de corte que dividen una distribución de datos ordenados en intervalos que contienen la misma proporción de observaciones. Son fundamentales para comprender la posición de una puntuación individual en relación con su grupo de referencia.\n\nCuartiles: Dividen los datos en cuatro partes iguales (cada una contiene el 25% de las observaciones).\n\nPrimer Cuartil (\\(Q_1\\) o Percentil 25): Deja por debajo al 25% de los datos.\nSegundo Cuartil (\\(Q_2\\), Percentil 50 o Mediana): Divide la distribución a la mitad (50% superior y 50% inferior).\nTercer Cuartil (\\(Q_3\\) o Percentil 75): Deja por debajo al 75% de las observaciones.\n\nDeciles: Dividen la distribución en diez partes iguales (del \\(D_1\\) al \\(D_9\\), representando incrementos de 10%).\nPercentiles: Dividen la distribución en cien partes iguales (del \\(P_1\\) al \\(P_{99}\\), representando incrementos de 1%).\n\n\n\n\n\n\n\nTipJASP Tip: Cálculo de Cuantiles y Rango Intercuartílico (IQR)\n\n\n\nPara calcular los cuartiles o percentiles específicos en JASP:\n\nAbre la pestaña descriptiva de la variable cuantitativa.\nVe a Statistics y busca la sección Quantiles.\nMarca la casilla Quartiles para obtener de manera directa los percentiles 25, 50 y 75.\nSi necesitas percentiles específicos (ej. el percentil 90), marca la casilla Percentiles: y digita el número 90.\nSi deseas medir el rango intercuartílico (\\(IQR = Q_3 - Q_1\\)), marca la casilla IQR bajo la sección de Dispersion.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#medidas-de-dispersión",
+    "href": "descriptiva.html#medidas-de-dispersión",
+    "title": "2  Estadística Descriptiva",
+    "section": "2.5 Medidas de dispersión",
+    "text": "2.5 Medidas de dispersión\nLas medidas de dispersión indican el grado en que los datos se alejan de su centro, permitiendo evaluar la homogeneidad de la muestra.\n\nRango: La diferencia directa entre el valor máximo y el valor mínimo de la variable (\\(R = X_{\\text{max}} - X_{\\text{min}}\\)). Es muy sensible a valores extremos y poco robusto.\nVarianza (\\(s^2\\)): Promedio de las desviaciones cuadráticas respecto a la media. En JASP, para corregir el sesgo muestral, se divide entre \\(n - 1\\): \\[s^2 = \\frac{\\sum_{i=1}^{n} (X_i - \\bar{X})^2}{n - 1}\\]\nDesviación Estándar (\\(s\\)): Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.\nCoeficiente de Variación (\\(CV\\)): Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes: \\[CV = \\left( \\frac{s}{\\bar{X}} \\right) \\times 100\\]\n\n\n\n\n\n\n\nNoteActividad Grupal: Diseñando la Variabilidad (10 min)\n\n\n\nInstrucciones: Imaginen que están evaluando los niveles de ansiedad clínica (escala de 0 a 50) de dos grupos de pacientes en consulta externa de psicología. Ambos grupos tienen exactamente la misma media de ansiedad de 25 puntos. Sin embargo:\n\nEl Grupo A tiene una desviación estándar (\\(s\\)) de 2 puntos.\nEl Grupo B tiene una desviación estándar (\\(s\\)) de 12 puntos.\n\nEn su grupo de trabajo, discutan y respondan en una hoja:\n\n¿Cuál de los dos grupos es más homogéneo y adecuado para realizar una intervención terapéutica grupal estandarizada?\n¿Cómo interpretan el hecho de que en el Grupo B existan pacientes con puntuaciones de ansiedad muy bajas y otros con niveles muy altos a pesar de compartir el mismo promedio con el Grupo A?",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#medidas-de-forma",
+    "href": "descriptiva.html#medidas-de-forma",
+    "title": "2  Estadística Descriptiva",
+    "section": "2.6 Medidas de forma",
+    "text": "2.6 Medidas de forma\nLa forma de la distribución describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra.\n\nAsimetría (Skewness): Evalúa el grado de simetría de la distribución de frecuencias respecto a su media.\n\nAsimetría &gt; 0 (Positiva / Sesgo a la derecha): La cola larga de la distribución se estira hacia los valores más altos.\nAsimetría &lt; 0 (Negativa / Sesgo a la izquierda): La cola se extiende hacia los valores más bajos.\nAsimetría ≈ 0: Distribución simétrica (como la campana de Gauss).\n\nCurtosis (Kurtosis): Mide el grado de apuntamiento o concentración de valores sobre la zona central de la distribución.\n\nCurtosis &gt; 0 (Leptocúrtica): Distribución muy apuntada en el centro y con colas pesadas.\nCurtosis &lt; 0 (Platicúrtica): Distribución achatada, plana en su zona central.\nCurtosis = 0 (Mesocúrtica): Grado de apuntamiento idéntico al de una distribución normal.\n\n\n\n\n\n\n\n\nNoteActividad Práctica: Dibujando Distribuciones (8 min)\n\n\n\nInstrucciones: En una hoja en blanco, dibujen a mano alzada dos curvas de distribución de frecuencias para representar las siguientes situaciones de psicología clínica y educativa:\n\nCurva 1 (Asimetría Positiva): Los puntajes de un test de sintomatología depresiva grave aplicado a estudiantes sanos antes de empezar el semestre (donde la gran mayoría tiene puntajes muy bajos, pero hay unos pocos casos graves con puntajes extremadamente altos).\nCurva 2 (Asimetría Negativa): Las calificaciones de un examen de Psicoestadística extremadamente sencillo, donde casi toda la clase obtuvo notas de aprobación muy altas y solo un par de estudiantes obtuvo notas muy bajas.\n\nMuestren sus dibujos a su compañero para verificar si las “colas” de las curvas apuntan en la dirección correcta según la teoría.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
+    "objectID": "descriptiva.html#visualización-univariante",
+    "href": "descriptiva.html#visualización-univariante",
+    "title": "2  Estadística Descriptiva",
+    "section": "2.7 Visualización univariante",
+    "text": "2.7 Visualización univariante\nLa visualización de datos es una de las tareas más importantes del análisis descriptivo. Permite identificar patrones de distribución, valores típicos y detectar posibles valores atípicos (outliers) a simple vista.\n\n2.7.1 Gráficos recomendados para variables cualitativas\n\nGráfico de barras: Compara de manera óptima las frecuencias absolutas (\\(f_i\\)) o relativas (\\(r_i\\)) de las distintas categorías de la variable.\nGráfico de sectores (Torta/Pie chart): Menos recomendable en el ámbito académico riguroso debido a la dificultad humana de comparar ángulos visualmente, pero de amplio uso en divulgación básica.\n\n\n\n2.7.2 Gráficos recomendados para variables cuantitativas\n\nHistograma: Divide el rango de datos continuos en intervalos (bins) y grafica la frecuencia de casos dentro de cada uno a través de barras.\nDiagrama de caja (Boxplot): Es un resumen gráfico potente que muestra la mediana, los cuartiles (\\(Q_1\\) y \\(Q_3\\)), los límites de la distribución y detecta directamente observaciones atípicas (outliers) representadas por puntos aislados.\n\n\n\n\n\n\n\nNoteActividad Relámpago: Emparejamiento de Gráficos (5 min)\n\n\n\nInstrucciones: De manera individual y rápida, emparejen mentalmente las siguientes variables con su representación gráfica univariante ideal:\n\n\n\n\n\n\n\nVariable de Estudio\nGráfico Recomendado\n\n\n\n\nA. Diagnóstico clínico del DSM-5 (Nominal)\n1. Histograma o Densidad\n\n\nB. Tiempos de reacción en milisegundos (Continua)\n2. Gráfico de Barras\n\n\nC. Comparación de la dispersión de notas entre paralelos de la UCB\n3. Diagrama de Caja (Boxplot)\n\n\n\nSolución para comprobar en voz alta con la clase: A-2, B-1, C-3.\n\n\n\n\n\n\n\n\nTipJASP Tip: Graficando tus Variables\n\n\n\nPara generar estos gráficos de manera profesional desde JASP:\n\nEn el menú de Descriptivos, despliega la pestaña Basic plots.\nSelecciona Distribution plots para visualizar histogramas acompañados de su curva de densidad estimada.\nSi deseas generar Boxplots, despliega la pestaña Customizable plots (o activa la sección Boxplots) y marca la casilla Boxplot element.\nPuedes marcar Violin element para fusionar la caja con la forma de la densidad, o Jitter element para ver los puntos reales de tus sujetos esparcidos sobre el gráfico.",
+    "crumbs": [
+      "Parte I: Diseño estadístico y estadística descriptiva",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Estadística Descriptiva</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
