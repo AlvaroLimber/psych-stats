@@ -125,35 +125,16 @@ En JASP, por defecto, se calcula la media al ingresar variables continuas. Si de
 JASP actualizará tu tabla descriptiva en tiempo real en el panel derecho.
 :::
 
-## Medidas de posición: Cuantiles
-
-Los **cuantiles** son puntos de corte que dividen una distribución de datos ordenados en intervalos que contienen la misma proporción de observaciones. Son fundamentales para comprender la posición de una puntuación individual en relación con su grupo de referencia.
-
-*   **Cuartiles:** Dividen los datos en cuatro partes iguales (cada una contiene el 25% de las observaciones).
-    *   **Primer Cuartil ($Q_1$ o Percentil 25):** Deja por debajo al 25% de los datos.
-    *   **Segundo Cuartil ($Q_2$, Percentil 50 o Mediana):** Divide la distribución a la mitad (50% superior y 50% inferior).
-    *   **Tercer Cuartil ($Q_3$ o Percentil 75):** Deja por debajo al 75% de las observaciones.
-*   **Deciles:** Dividen la distribución en diez partes iguales (del $D_1$ al $D_9$, representando incrementos de 10%).
-*   **Percentiles:** Dividen la distribución en cien partes iguales (del $P_1$ al $P_{99}$, representando incrementos de 1%).
-
-::: {.callout-tip}
-### JASP Tip: Cálculo de Cuantiles y Rango Intercuartílico (IQR)
-Para calcular los cuartiles o percentiles específicos en JASP:
-
-1. Abre la pestaña descriptiva de la variable cuantitativa.
-2. Ve a `Statistics` y busca la sección **`Quantiles`**.
-3. Marca la casilla **`Quartiles`** para obtener de manera directa los percentiles 25, 50 y 75.
-4. Si necesitas percentiles específicos (ej. el percentil 90), marca la casilla **`Percentiles:`** y digita el número `90`.
-5. Si deseas medir el **rango intercuartílico** ($IQR = Q_3 - Q_1$), marca la casilla **`IQR`** bajo la sección de **`Dispersion`**.
-:::
-
 ## Medidas de dispersión
 
 Las **medidas de dispersión** indican el grado en que los datos se alejan de su centro, permitiendo evaluar la homogeneidad de la muestra.
 
 *   **Rango:** La diferencia directa entre el valor máximo y el valor mínimo de la variable ($R = X_{\text{max}} - X_{\text{min}}$). Es muy sensible a valores extremos y poco robusto.
-*   **Varianza ($s^2$):** Promedio de las desviaciones cuadráticas respecto a la media. En JASP, para corregir el sesgo muestral, se divide entre $n - 1$:
+*   **Varianza muestral ($s^2=v(X)$):** Promedio de las desviaciones cuadráticas respecto a la media.
     $$s^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n - 1}$$
+*   **Varianza poblacional ($\sigma^2=V(X)$):** Promedio de las desviaciones cuadráticas respecto a la media.
+    $$\sigma^2 = \frac{\sum_{i=1}^{N} (X_i - \mu)^2}{N}$$    
+    
 *   **Desviación Estándar ($s$):** Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.
 *   **Coeficiente de Variación ($CV$):** Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes:
     $$CV = \left( \frac{s}{\bar{X}} \right) \times 100$$
@@ -192,6 +173,28 @@ La **forma de la distribución** describe cómo se agrupan las puntuaciones en r
 2.  **Curva 2 (Asimetría Negativa):** Las calificaciones de un examen de Psicoestadística extremadamente sencillo, donde casi toda la clase obtuvo notas de aprobación muy altas y solo un par de estudiantes obtuvo notas muy bajas.
 
 Muestren sus dibujos a su compañero para verificar si las "colas" de las curvas apuntan en la dirección correcta según la teoría.
+:::
+
+## Medidas de posición: Cuantiles
+
+Los **cuantiles** son puntos de corte que dividen una distribución de datos ordenados en intervalos que contienen la misma proporción de observaciones. Son fundamentales para comprender la posición de una puntuación individual en relación con su grupo de referencia.
+
+*   **Cuartiles:** Dividen los datos en cuatro partes iguales (cada una contiene el 25% de las observaciones).
+    *   **Primer Cuartil ($Q_1$ o Percentil 25):** Deja por debajo al 25% de los datos.
+    *   **Segundo Cuartil ($Q_2$, Percentil 50 o Mediana):** Divide la distribución a la mitad (50% superior y 50% inferior).
+    *   **Tercer Cuartil ($Q_3$ o Percentil 75):** Deja por debajo al 75% de las observaciones.
+*   **Deciles:** Dividen la distribución en diez partes iguales (del $D_1$ al $D_9$, representando incrementos de 10%).
+*   **Percentiles:** Dividen la distribución en cien partes iguales (del $P_1$ al $P_{99}$, representando incrementos de 1%).
+
+::: {.callout-tip}
+### JASP Tip: Cálculo de Cuantiles y Rango Intercuartílico (IQR)
+Para calcular los cuartiles o percentiles específicos en JASP:
+
+1. Abre la pestaña descriptiva de la variable cuantitativa.
+2. Ve a `Statistics` y busca la sección **`Quantiles`**.
+3. Marca la casilla **`Quartiles`** para obtener de manera directa los percentiles 25, 50 y 75.
+4. Si necesitas percentiles específicos (ej. el percentil 90), marca la casilla **`Percentiles:`** y digita el número `90`.
+5. Si deseas medir el **rango intercuartílico** ($IQR = Q_3 - Q_1$), marca la casilla **`IQR`** bajo la sección de **`Dispersion`**.
 :::
 
 ## Visualización univariante

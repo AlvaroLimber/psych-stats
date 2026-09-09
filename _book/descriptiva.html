@@ -380,9 +380,9 @@ window.Quarto = {
   <li><a href="#ordenación-de-los-datos" id="toc-ordenación-de-los-datos" class="nav-link active" data-scroll-target="#ordenación-de-los-datos"><span class="header-section-number">2.1</span> Ordenación de los datos</a></li>
   <li><a href="#estadísticas-para-variables-cualitativas" id="toc-estadísticas-para-variables-cualitativas" class="nav-link" data-scroll-target="#estadísticas-para-variables-cualitativas"><span class="header-section-number">2.2</span> Estadísticas para variables cualitativas</a></li>
   <li><a href="#medidas-de-resumen-tendencia-central" id="toc-medidas-de-resumen-tendencia-central" class="nav-link" data-scroll-target="#medidas-de-resumen-tendencia-central"><span class="header-section-number">2.3</span> Medidas de resumen (Tendencia central)</a></li>
-  <li><a href="#medidas-de-posición-cuantiles" id="toc-medidas-de-posición-cuantiles" class="nav-link" data-scroll-target="#medidas-de-posición-cuantiles"><span class="header-section-number">2.4</span> Medidas de posición: Cuantiles</a></li>
-  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="header-section-number">2.5</span> Medidas de dispersión</a></li>
-  <li><a href="#medidas-de-forma" id="toc-medidas-de-forma" class="nav-link" data-scroll-target="#medidas-de-forma"><span class="header-section-number">2.6</span> Medidas de forma</a></li>
+  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="header-section-number">2.4</span> Medidas de dispersión</a></li>
+  <li><a href="#medidas-de-forma" id="toc-medidas-de-forma" class="nav-link" data-scroll-target="#medidas-de-forma"><span class="header-section-number">2.5</span> Medidas de forma</a></li>
+  <li><a href="#medidas-de-posición-cuantiles" id="toc-medidas-de-posición-cuantiles" class="nav-link" data-scroll-target="#medidas-de-posición-cuantiles"><span class="header-section-number">2.6</span> Medidas de posición: Cuantiles</a></li>
   <li><a href="#visualización-univariante" id="toc-visualización-univariante" class="nav-link" data-scroll-target="#visualización-univariante"><span class="header-section-number">2.7</span> Visualización univariante</a>
   <ul class="collapse">
   <li><a href="#gráficos-recomendados-para-variables-cualitativas" id="toc-gráficos-recomendados-para-variables-cualitativas" class="nav-link" data-scroll-target="#gráficos-recomendados-para-variables-cualitativas"><span class="header-section-number">2.7.1</span> Gráficos recomendados para variables cualitativas</a></li>
@@ -603,48 +603,15 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="medidas-de-posición-cuantiles" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="medidas-de-posición-cuantiles"><span class="header-section-number">2.4</span> Medidas de posición: Cuantiles</h2>
-<p>Los <strong>cuantiles</strong> son puntos de corte que dividen una distribución de datos ordenados en intervalos que contienen la misma proporción de observaciones. Son fundamentales para comprender la posición de una puntuación individual en relación con su grupo de referencia.</p>
-<ul>
-<li><strong>Cuartiles:</strong> Dividen los datos en cuatro partes iguales (cada una contiene el 25% de las observaciones).
-<ul>
-<li><strong>Primer Cuartil (<span class="math inline">\(Q_1\)</span> o Percentil 25):</strong> Deja por debajo al 25% de los datos.</li>
-<li><strong>Segundo Cuartil (<span class="math inline">\(Q_2\)</span>, Percentil 50 o Mediana):</strong> Divide la distribución a la mitad (50% superior y 50% inferior).</li>
-<li><strong>Tercer Cuartil (<span class="math inline">\(Q_3\)</span> o Percentil 75):</strong> Deja por debajo al 75% de las observaciones.</li>
-</ul></li>
-<li><strong>Deciles:</strong> Dividen la distribución en diez partes iguales (del <span class="math inline">\(D_1\)</span> al <span class="math inline">\(D_9\)</span>, representando incrementos de 10%).</li>
-<li><strong>Percentiles:</strong> Dividen la distribución en cien partes iguales (del <span class="math inline">\(P_1\)</span> al <span class="math inline">\(P_{99}\)</span>, representando incrementos de 1%).</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>JASP Tip: Cálculo de Cuantiles y Rango Intercuartílico (IQR)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Para calcular los cuartiles o percentiles específicos en JASP:</p>
-<ol type="1">
-<li>Abre la pestaña descriptiva de la variable cuantitativa.</li>
-<li>Ve a <code>Statistics</code> y busca la sección <strong><code>Quantiles</code></strong>.</li>
-<li>Marca la casilla <strong><code>Quartiles</code></strong> para obtener de manera directa los percentiles 25, 50 y 75.</li>
-<li>Si necesitas percentiles específicos (ej. el percentil 90), marca la casilla <strong><code>Percentiles:</code></strong> y digita el número <code>90</code>.</li>
-<li>Si deseas medir el <strong>rango intercuartílico</strong> (<span class="math inline">\(IQR = Q_3 - Q_1\)</span>), marca la casilla <strong><code>IQR</code></strong> bajo la sección de <strong><code>Dispersion</code></strong>.</li>
-</ol>
-</div>
-</div>
-</section>
-<section id="medidas-de-dispersión" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">2.5</span> Medidas de dispersión</h2>
+<section id="medidas-de-dispersión" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">2.4</span> Medidas de dispersión</h2>
 <p>Las <strong>medidas de dispersión</strong> indican el grado en que los datos se alejan de su centro, permitiendo evaluar la homogeneidad de la muestra.</p>
 <ul>
-<li><strong>Rango:</strong> La diferencia directa entre el valor máximo y el valor mínimo de la variable (<span class="math inline">\(R = X_{\text{max}} - X_{\text{min}}\)</span>). Es muy sensible a valores extremos y poco robusto.</li>
-<li><strong>Varianza (<span class="math inline">\(s^2\)</span>):</strong> Promedio de las desviaciones cuadráticas respecto a la media. En JASP, para corregir el sesgo muestral, se divide entre <span class="math inline">\(n - 1\)</span>: <span class="math display">\[s^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n - 1}\]</span></li>
-<li><strong>Desviación Estándar (<span class="math inline">\(s\)</span>):</strong> Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.</li>
-<li><strong>Coeficiente de Variación (<span class="math inline">\(CV\)</span>):</strong> Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes: <span class="math display">\[CV = \left( \frac{s}{\bar{X}} \right) \times 100\]</span></li>
+<li><p><strong>Rango:</strong> La diferencia directa entre el valor máximo y el valor mínimo de la variable (<span class="math inline">\(R = X_{\text{max}} - X_{\text{min}}\)</span>). Es muy sensible a valores extremos y poco robusto.</p></li>
+<li><p><strong>Varianza muestral (<span class="math inline">\(s^2=v(X)\)</span>):</strong> Promedio de las desviaciones cuadráticas respecto a la media. <span class="math display">\[s^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n - 1}\]</span></p></li>
+<li><p><strong>Varianza poblacional (<span class="math inline">\(\sigma^2=V(X)\)</span>):</strong> Promedio de las desviaciones cuadráticas respecto a la media. <span class="math display">\[\sigma^2 = \frac{\sum_{i=1}^{N} (X_i - \mu)^2}{N}\]</span></p></li>
+<li><p><strong>Desviación Estándar (<span class="math inline">\(s\)</span>):</strong> Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.</p></li>
+<li><p><strong>Coeficiente de Variación (<span class="math inline">\(CV\)</span>):</strong> Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes: <span class="math display">\[CV = \left( \frac{s}{\bar{X}} \right) \times 100\]</span></p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -669,8 +636,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="medidas-de-forma" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="medidas-de-forma"><span class="header-section-number">2.6</span> Medidas de forma</h2>
+<section id="medidas-de-forma" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="medidas-de-forma"><span class="header-section-number">2.5</span> Medidas de forma</h2>
 <p>La <strong>forma de la distribución</strong> describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra.</p>
 <ul>
 <li><strong>Asimetría (Skewness):</strong> Evalúa el grado de simetría de la distribución de frecuencias respecto a su media.
@@ -702,6 +669,40 @@ window.Quarto = {
 <li><strong>Curva 2 (Asimetría Negativa):</strong> Las calificaciones de un examen de Psicoestadística extremadamente sencillo, donde casi toda la clase obtuvo notas de aprobación muy altas y solo un par de estudiantes obtuvo notas muy bajas.</li>
 </ol>
 <p>Muestren sus dibujos a su compañero para verificar si las “colas” de las curvas apuntan en la dirección correcta según la teoría.</p>
+</div>
+</div>
+</section>
+<section id="medidas-de-posición-cuantiles" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="medidas-de-posición-cuantiles"><span class="header-section-number">2.6</span> Medidas de posición: Cuantiles</h2>
+<p>Los <strong>cuantiles</strong> son puntos de corte que dividen una distribución de datos ordenados en intervalos que contienen la misma proporción de observaciones. Son fundamentales para comprender la posición de una puntuación individual en relación con su grupo de referencia.</p>
+<ul>
+<li><strong>Cuartiles:</strong> Dividen los datos en cuatro partes iguales (cada una contiene el 25% de las observaciones).
+<ul>
+<li><strong>Primer Cuartil (<span class="math inline">\(Q_1\)</span> o Percentil 25):</strong> Deja por debajo al 25% de los datos.</li>
+<li><strong>Segundo Cuartil (<span class="math inline">\(Q_2\)</span>, Percentil 50 o Mediana):</strong> Divide la distribución a la mitad (50% superior y 50% inferior).</li>
+<li><strong>Tercer Cuartil (<span class="math inline">\(Q_3\)</span> o Percentil 75):</strong> Deja por debajo al 75% de las observaciones.</li>
+</ul></li>
+<li><strong>Deciles:</strong> Dividen la distribución en diez partes iguales (del <span class="math inline">\(D_1\)</span> al <span class="math inline">\(D_9\)</span>, representando incrementos de 10%).</li>
+<li><strong>Percentiles:</strong> Dividen la distribución en cien partes iguales (del <span class="math inline">\(P_1\)</span> al <span class="math inline">\(P_{99}\)</span>, representando incrementos de 1%).</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Cálculo de Cuantiles y Rango Intercuartílico (IQR)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para calcular los cuartiles o percentiles específicos en JASP:</p>
+<ol type="1">
+<li>Abre la pestaña descriptiva de la variable cuantitativa.</li>
+<li>Ve a <code>Statistics</code> y busca la sección <strong><code>Quantiles</code></strong>.</li>
+<li>Marca la casilla <strong><code>Quartiles</code></strong> para obtener de manera directa los percentiles 25, 50 y 75.</li>
+<li>Si necesitas percentiles específicos (ej. el percentil 90), marca la casilla <strong><code>Percentiles:</code></strong> y digita el número <code>90</code>.</li>
+<li>Si deseas medir el <strong>rango intercuartílico</strong> (<span class="math inline">\(IQR = Q_3 - Q_1\)</span>), marca la casilla <strong><code>IQR</code></strong> bajo la sección de <strong><code>Dispersion</code></strong>.</li>
+</ol>
 </div>
 </div>
 </section>
