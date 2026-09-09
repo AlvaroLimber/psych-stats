@@ -137,10 +137,10 @@ Las **medidas de dispersión** indican el grado en que los datos se alejan de su
     
 *   **Desviación Estándar ($s$):** Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.
 *   **Coeficiente de Variación ($CV$):** Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes:
-    $$CV = \left( \frac{s}{\bar{X}} \right) \times 100$$
+    $$CV% = \left( \frac{s}{\bar{X}} \right) \times 100$$
 
 ::: {.callout-note}
-### Actividad Grupal: Diseñando la Variabilidad (10 min)
+### Actividad Grupal: Diseñando la Variabilidad
 **Instrucciones:** Imaginen que están evaluando los niveles de ansiedad clínica (escala de 0 a 50) de dos grupos de pacientes en consulta externa de psicología. Ambos grupos tienen exactamente la misma **media de ansiedad de 25 puntos**. Sin embargo:
 
 *   El **Grupo A** tiene una desviación estándar ($s$) de **2 puntos**.
@@ -164,16 +164,6 @@ La **forma de la distribución** describe cómo se agrupan las puntuaciones en r
     *   **Curtosis > 0 (Leptocúrtica):** Distribución muy apuntada en el centro y con colas pesadas.
     *   **Curtosis < 0 (Platicúrtica):** Distribución achatada, plana en su zona central.
     *   **Curtosis = 0 (Mesocúrtica):** Grado de apuntamiento idéntico al de una distribución normal.
-
-::: {.callout-note}
-### Actividad Práctica: Dibujando Distribuciones (8 min)
-**Instrucciones:** En una hoja en blanco, dibujen a mano alzada dos curvas de distribución de frecuencias para representar las siguientes situaciones de psicología clínica y educativa:
-
-1.  **Curva 1 (Asimetría Positiva):** Los puntajes de un test de sintomatología depresiva grave aplicado a estudiantes sanos antes de empezar el semestre (donde la gran mayoría tiene puntajes muy bajos, pero hay unos pocos casos graves con puntajes extremadamente altos).
-2.  **Curva 2 (Asimetría Negativa):** Las calificaciones de un examen de Psicoestadística extremadamente sencillo, donde casi toda la clase obtuvo notas de aprobación muy altas y solo un par de estudiantes obtuvo notas muy bajas.
-
-Muestren sus dibujos a su compañero para verificar si las "colas" de las curvas apuntan en la dirección correcta según la teoría.
-:::
 
 ## Medidas de posición: Cuantiles
 
