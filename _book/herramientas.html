@@ -130,7 +130,10 @@ window.Quarto = {
 
 <meta name="twitter:title" content="4&nbsp; Herramientas Estadísticas – Psicoestadística">
 <meta name="twitter:description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alvarolimber.github.io/psych-stats/_book/fig/pasos_hipotesis.png">
+<meta name="twitter:image-height" content="1425">
+<meta name="twitter:image-width" content="2400">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
@@ -431,37 +434,38 @@ window.Quarto = {
   <li><a href="#prueba-de-hipótesis-para-la-media-mu" id="toc-prueba-de-hipótesis-para-la-media-mu" class="nav-link" data-scroll-target="#prueba-de-hipótesis-para-la-media-mu"><span class="header-section-number">4.1.5</span> Prueba de hipótesis para la media (<span class="math inline">\(\mu\)</span>)</a></li>
   <li><a href="#tamaño-de-muestra-para-pruebas-de-hipótesis-potencia" id="toc-tamaño-de-muestra-para-pruebas-de-hipótesis-potencia" class="nav-link" data-scroll-target="#tamaño-de-muestra-para-pruebas-de-hipótesis-potencia"><span class="header-section-number">4.1.6</span> Tamaño de muestra para pruebas de hipótesis (potencia)</a></li>
   </ul></li>
-  <li><a href="#análisis-de-datos-categóricos-prueba-chi2" id="toc-análisis-de-datos-categóricos-prueba-chi2" class="nav-link" data-scroll-target="#análisis-de-datos-categóricos-prueba-chi2"><span class="header-section-number">4.2</span> Análisis de datos categóricos: prueba <span class="math inline">\(\chi^2\)</span></a>
+  <li><a href="#qué-prueba-estadística-uso" id="toc-qué-prueba-estadística-uso" class="nav-link" data-scroll-target="#qué-prueba-estadística-uso"><span class="header-section-number">4.2</span> ¿Qué prueba estadística uso?</a></li>
+  <li><a href="#análisis-de-datos-categóricos-prueba-chi2" id="toc-análisis-de-datos-categóricos-prueba-chi2" class="nav-link" data-scroll-target="#análisis-de-datos-categóricos-prueba-chi2"><span class="header-section-number">4.3</span> Análisis de datos categóricos: prueba <span class="math inline">\(\chi^2\)</span></a>
   <ul class="collapse">
-  <li><a href="#prueba-de-bondad-de-ajuste" id="toc-prueba-de-bondad-de-ajuste" class="nav-link" data-scroll-target="#prueba-de-bondad-de-ajuste"><span class="header-section-number">4.2.1</span> Prueba de bondad de ajuste</a></li>
-  <li><a href="#prueba-de-independencia" id="toc-prueba-de-independencia" class="nav-link" data-scroll-target="#prueba-de-independencia"><span class="header-section-number">4.2.2</span> Prueba de independencia</a></li>
-  <li><a href="#consideraciones-y-recomendaciones-prácticas" id="toc-consideraciones-y-recomendaciones-prácticas" class="nav-link" data-scroll-target="#consideraciones-y-recomendaciones-prácticas"><span class="header-section-number">4.2.3</span> Consideraciones y recomendaciones prácticas</a></li>
-  <li><a href="#resumen-comparativo" id="toc-resumen-comparativo" class="nav-link" data-scroll-target="#resumen-comparativo"><span class="header-section-number">4.2.4</span> Resumen comparativo</a></li>
+  <li><a href="#prueba-de-bondad-de-ajuste" id="toc-prueba-de-bondad-de-ajuste" class="nav-link" data-scroll-target="#prueba-de-bondad-de-ajuste"><span class="header-section-number">4.3.1</span> Prueba de bondad de ajuste</a></li>
+  <li><a href="#prueba-de-independencia" id="toc-prueba-de-independencia" class="nav-link" data-scroll-target="#prueba-de-independencia"><span class="header-section-number">4.3.2</span> Prueba de independencia</a></li>
+  <li><a href="#consideraciones-y-recomendaciones-prácticas" id="toc-consideraciones-y-recomendaciones-prácticas" class="nav-link" data-scroll-target="#consideraciones-y-recomendaciones-prácticas"><span class="header-section-number">4.3.3</span> Consideraciones y recomendaciones prácticas</a></li>
+  <li><a href="#resumen-comparativo" id="toc-resumen-comparativo" class="nav-link" data-scroll-target="#resumen-comparativo"><span class="header-section-number">4.3.4</span> Resumen comparativo</a></li>
   </ul></li>
-  <li><a href="#comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" id="toc-comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" class="nav-link" data-scroll-target="#comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas"><span class="header-section-number">4.3</span> Comparación de dos medias: pruebas z, t y no paramétricas</a>
+  <li><a href="#comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" id="toc-comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" class="nav-link" data-scroll-target="#comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas"><span class="header-section-number">4.4</span> Comparación de dos medias: pruebas z, t y no paramétricas</a>
   <ul class="collapse">
-  <li><a href="#prueba-z-para-dos-medias-caso-teórico" id="toc-prueba-z-para-dos-medias-caso-teórico" class="nav-link" data-scroll-target="#prueba-z-para-dos-medias-caso-teórico"><span class="header-section-number">4.3.1</span> Prueba z para dos medias (caso teórico)</a></li>
-  <li><a href="#prueba-t-para-dos-medias" id="toc-prueba-t-para-dos-medias" class="nav-link" data-scroll-target="#prueba-t-para-dos-medias"><span class="header-section-number">4.3.2</span> Prueba t para dos medias</a></li>
-  <li><a href="#supuestos-de-las-pruebas-t" id="toc-supuestos-de-las-pruebas-t" class="nav-link" data-scroll-target="#supuestos-de-las-pruebas-t"><span class="header-section-number">4.3.3</span> Supuestos de las pruebas t</a></li>
-  <li><a href="#pruebas-no-paramétricas-equivalentes" id="toc-pruebas-no-paramétricas-equivalentes" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-equivalentes"><span class="header-section-number">4.3.4</span> Pruebas no paramétricas equivalentes</a></li>
-  <li><a href="#interpretación-y-tamaño-del-efecto" id="toc-interpretación-y-tamaño-del-efecto" class="nav-link" data-scroll-target="#interpretación-y-tamaño-del-efecto"><span class="header-section-number">4.3.5</span> Interpretación y tamaño del efecto</a></li>
+  <li><a href="#prueba-z-para-dos-medias-caso-teórico" id="toc-prueba-z-para-dos-medias-caso-teórico" class="nav-link" data-scroll-target="#prueba-z-para-dos-medias-caso-teórico"><span class="header-section-number">4.4.1</span> Prueba z para dos medias (caso teórico)</a></li>
+  <li><a href="#prueba-t-para-dos-medias" id="toc-prueba-t-para-dos-medias" class="nav-link" data-scroll-target="#prueba-t-para-dos-medias"><span class="header-section-number">4.4.2</span> Prueba t para dos medias</a></li>
+  <li><a href="#supuestos-de-las-pruebas-t" id="toc-supuestos-de-las-pruebas-t" class="nav-link" data-scroll-target="#supuestos-de-las-pruebas-t"><span class="header-section-number">4.4.3</span> Supuestos de las pruebas t</a></li>
+  <li><a href="#pruebas-no-paramétricas-equivalentes" id="toc-pruebas-no-paramétricas-equivalentes" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-equivalentes"><span class="header-section-number">4.4.4</span> Pruebas no paramétricas equivalentes</a></li>
+  <li><a href="#interpretación-y-tamaño-del-efecto" id="toc-interpretación-y-tamaño-del-efecto" class="nav-link" data-scroll-target="#interpretación-y-tamaño-del-efecto"><span class="header-section-number">4.4.5</span> Interpretación y tamaño del efecto</a></li>
   </ul></li>
-  <li><a href="#correlación-y-regresión-lineal" id="toc-correlación-y-regresión-lineal" class="nav-link" data-scroll-target="#correlación-y-regresión-lineal"><span class="header-section-number">4.4</span> Correlación y regresión lineal</a>
+  <li><a href="#correlación-y-regresión-lineal" id="toc-correlación-y-regresión-lineal" class="nav-link" data-scroll-target="#correlación-y-regresión-lineal"><span class="header-section-number">4.5</span> Correlación y regresión lineal</a>
   <ul class="collapse">
-  <li><a href="#correlación-de-pearson-r" id="toc-correlación-de-pearson-r" class="nav-link" data-scroll-target="#correlación-de-pearson-r"><span class="header-section-number">4.4.1</span> Correlación de Pearson (<span class="math inline">\(r\)</span>)</a></li>
-  <li><a href="#correlación-no-paramétrica-spearman-rho" id="toc-correlación-no-paramétrica-spearman-rho" class="nav-link" data-scroll-target="#correlación-no-paramétrica-spearman-rho"><span class="header-section-number">4.4.2</span> Correlación no paramétrica: Spearman (<span class="math inline">\(\rho\)</span>)</a></li>
-  <li><a href="#regresión-lineal-simple" id="toc-regresión-lineal-simple" class="nav-link" data-scroll-target="#regresión-lineal-simple"><span class="header-section-number">4.4.3</span> Regresión lineal simple</a></li>
-  <li><a href="#bondad-de-ajuste" id="toc-bondad-de-ajuste" class="nav-link" data-scroll-target="#bondad-de-ajuste"><span class="header-section-number">4.4.4</span> Bondad de ajuste</a></li>
-  <li><a href="#supuestos-principales" id="toc-supuestos-principales" class="nav-link" data-scroll-target="#supuestos-principales"><span class="header-section-number">4.4.5</span> Supuestos principales</a></li>
+  <li><a href="#correlación-de-pearson-r" id="toc-correlación-de-pearson-r" class="nav-link" data-scroll-target="#correlación-de-pearson-r"><span class="header-section-number">4.5.1</span> Correlación de Pearson (<span class="math inline">\(r\)</span>)</a></li>
+  <li><a href="#correlación-no-paramétrica-spearman-rho" id="toc-correlación-no-paramétrica-spearman-rho" class="nav-link" data-scroll-target="#correlación-no-paramétrica-spearman-rho"><span class="header-section-number">4.5.2</span> Correlación no paramétrica: Spearman (<span class="math inline">\(\rho\)</span>)</a></li>
+  <li><a href="#regresión-lineal-simple" id="toc-regresión-lineal-simple" class="nav-link" data-scroll-target="#regresión-lineal-simple"><span class="header-section-number">4.5.3</span> Regresión lineal simple</a></li>
+  <li><a href="#bondad-de-ajuste" id="toc-bondad-de-ajuste" class="nav-link" data-scroll-target="#bondad-de-ajuste"><span class="header-section-number">4.5.4</span> Bondad de ajuste</a></li>
+  <li><a href="#supuestos-principales" id="toc-supuestos-principales" class="nav-link" data-scroll-target="#supuestos-principales"><span class="header-section-number">4.5.5</span> Supuestos principales</a></li>
   </ul></li>
-  <li><a href="#comparar-varias-medias-anova-de-una-vía" id="toc-comparar-varias-medias-anova-de-una-vía" class="nav-link" data-scroll-target="#comparar-varias-medias-anova-de-una-vía"><span class="header-section-number">4.5</span> Comparar varias medias: ANOVA de una vía</a>
+  <li><a href="#comparar-varias-medias-anova-de-una-vía" id="toc-comparar-varias-medias-anova-de-una-vía" class="nav-link" data-scroll-target="#comparar-varias-medias-anova-de-una-vía"><span class="header-section-number">4.6</span> Comparar varias medias: ANOVA de una vía</a>
   <ul class="collapse">
-  <li><a href="#hipótesis-5" id="toc-hipótesis-5" class="nav-link" data-scroll-target="#hipótesis-5"><span class="header-section-number">4.5.1</span> Hipótesis</a></li>
-  <li><a href="#lógica-del-anova" id="toc-lógica-del-anova" class="nav-link" data-scroll-target="#lógica-del-anova"><span class="header-section-number">4.5.2</span> Lógica del ANOVA</a></li>
-  <li><a href="#tamaño-del-efecto-eta-cuadrado-eta2" id="toc-tamaño-del-efecto-eta-cuadrado-eta2" class="nav-link" data-scroll-target="#tamaño-del-efecto-eta-cuadrado-eta2"><span class="header-section-number">4.5.3</span> Tamaño del efecto: eta cuadrado (<span class="math inline">\(\eta^2\)</span>)</a></li>
-  <li><a href="#ejemplo-5" id="toc-ejemplo-5" class="nav-link" data-scroll-target="#ejemplo-5"><span class="header-section-number">4.5.4</span> Ejemplo</a></li>
-  <li><a href="#pruebas-post-hoc" id="toc-pruebas-post-hoc" class="nav-link" data-scroll-target="#pruebas-post-hoc"><span class="header-section-number">4.5.5</span> Pruebas post hoc</a></li>
-  <li><a href="#supuestos" id="toc-supuestos" class="nav-link" data-scroll-target="#supuestos"><span class="header-section-number">4.5.6</span> Supuestos</a></li>
+  <li><a href="#hipótesis-5" id="toc-hipótesis-5" class="nav-link" data-scroll-target="#hipótesis-5"><span class="header-section-number">4.6.1</span> Hipótesis</a></li>
+  <li><a href="#lógica-del-anova" id="toc-lógica-del-anova" class="nav-link" data-scroll-target="#lógica-del-anova"><span class="header-section-number">4.6.2</span> Lógica del ANOVA</a></li>
+  <li><a href="#tamaño-del-efecto-eta-cuadrado-eta2" id="toc-tamaño-del-efecto-eta-cuadrado-eta2" class="nav-link" data-scroll-target="#tamaño-del-efecto-eta-cuadrado-eta2"><span class="header-section-number">4.6.3</span> Tamaño del efecto: eta cuadrado (<span class="math inline">\(\eta^2\)</span>)</a></li>
+  <li><a href="#ejemplo-5" id="toc-ejemplo-5" class="nav-link" data-scroll-target="#ejemplo-5"><span class="header-section-number">4.6.4</span> Ejemplo</a></li>
+  <li><a href="#pruebas-post-hoc" id="toc-pruebas-post-hoc" class="nav-link" data-scroll-target="#pruebas-post-hoc"><span class="header-section-number">4.6.5</span> Pruebas post hoc</a></li>
+  <li><a href="#supuestos" id="toc-supuestos" class="nav-link" data-scroll-target="#supuestos"><span class="header-section-number">4.6.6</span> Supuestos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -515,6 +519,12 @@ window.Quarto = {
 <li><strong>Construir el estadístico de prueba:</strong> se calcula un valor estandarizado (ej. <span class="math inline">\(Z\)</span>, <span class="math inline">\(t\)</span>) que mide qué tan lejos está el estimador muestral del valor propuesto en <span class="math inline">\(H_0\)</span>.</li>
 <li><strong>Evaluar y concluir:</strong> se compara el estadístico de prueba con los valores críticos (o se usa el <em>p</em>-valor) para decidir si se <strong>rechaza</strong> o <strong>no se rechaza</strong> la hipótesis nula.</li>
 </ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/pasos_hipotesis.png" class="img-fluid figure-img"></p>
+<figcaption>Pasos de la prueba de hipótesis</figcaption>
+</figure>
+</div>
 </section>
 <section id="formulación-de-hipótesis" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="formulación-de-hipótesis"><span class="header-section-number">4.1.2</span> Formulación de hipótesis</h3>
@@ -556,6 +566,12 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/errores_hipotesis.png" class="img-fluid figure-img"></p>
+<figcaption>Errores en la prueba de hipótesis</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -710,11 +726,21 @@ n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot \sigma^2}{(\mu_1 - \mu_0)^2}
 </section>
 </section>
 </section>
-<section id="análisis-de-datos-categóricos-prueba-chi2" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="análisis-de-datos-categóricos-prueba-chi2"><span class="header-section-number">4.2</span> Análisis de datos categóricos: prueba <span class="math inline">\(\chi^2\)</span></h2>
+<section id="qué-prueba-estadística-uso" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="qué-prueba-estadística-uso"><span class="header-section-number">4.2</span> ¿Qué prueba estadística uso?</h2>
+<p>La elección de la herramienta depende del <strong>objetivo</strong> del análisis y del <strong>tipo de variables</strong> involucradas. El siguiente esquema resume las pruebas que veremos en el resto del capítulo, con su alternativa no paramétrica y la ruta en JASP.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/eleccion_prueba.png" class="img-fluid figure-img"></p>
+<figcaption>Guía para elegir la prueba estadística</figcaption>
+</figure>
+</div>
+</section>
+<section id="análisis-de-datos-categóricos-prueba-chi2" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="análisis-de-datos-categóricos-prueba-chi2"><span class="header-section-number">4.3</span> Análisis de datos categóricos: prueba <span class="math inline">\(\chi^2\)</span></h2>
 <p>Cuando las variables son <strong>categóricas</strong> (nominales u ordinales), la información se resume en términos de <strong>frecuencias</strong>. La <strong>prueba chi-cuadrado (<span class="math inline">\(\chi^2\)</span>)</strong> permite evaluar si las frecuencias observadas difieren de las que esperaríamos bajo una hipótesis teórica. Es una de las herramientas más utilizadas en psicología para analizar respuestas en categorías o preferencias <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
-<section id="prueba-de-bondad-de-ajuste" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="prueba-de-bondad-de-ajuste"><span class="header-section-number">4.2.1</span> Prueba de bondad de ajuste</h3>
+<section id="prueba-de-bondad-de-ajuste" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="prueba-de-bondad-de-ajuste"><span class="header-section-number">4.3.1</span> Prueba de bondad de ajuste</h3>
 <p>Evalúa si las frecuencias observadas de una variable categórica <strong>se ajustan a un modelo teórico</strong> o distribución esperada.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Decisión</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Ejemplo</a></li></ul>
@@ -793,8 +819,8 @@ H_1 &amp;: \text{Las frecuencias observadas difieren de las esperadas.}
 </div>
 </div>
 </section>
-<section id="prueba-de-independencia" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="prueba-de-independencia"><span class="header-section-number">4.2.2</span> Prueba de independencia</h3>
+<section id="prueba-de-independencia" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="prueba-de-independencia"><span class="header-section-number">4.3.2</span> Prueba de independencia</h3>
 <p>Evalúa si <strong>dos variables categóricas están asociadas</strong> o son <strong>independientes</strong>. Se trabaja con una <strong>tabla de contingencia</strong> de tamaño <span class="math inline">\(r \times c\)</span> (<span class="math inline">\(r\)</span> filas y <span class="math inline">\(c\)</span> columnas).</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Decisión</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Ejemplo</a></li></ul>
@@ -870,8 +896,8 @@ E_{11} = \frac{50 \cdot 30}{100} = 15, \quad E_{12} = \frac{50 \cdot 70}{100} = 
 </div>
 </div>
 </section>
-<section id="consideraciones-y-recomendaciones-prácticas" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="consideraciones-y-recomendaciones-prácticas"><span class="header-section-number">4.2.3</span> Consideraciones y recomendaciones prácticas</h3>
+<section id="consideraciones-y-recomendaciones-prácticas" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="consideraciones-y-recomendaciones-prácticas"><span class="header-section-number">4.3.3</span> Consideraciones y recomendaciones prácticas</h3>
 <ul>
 <li>Cada frecuencia esperada debe ser al menos <strong>5</strong> para la validez de la prueba.</li>
 <li>En tablas 2×2 puede aplicarse la <strong>corrección de continuidad de Yates</strong>.</li>
@@ -879,8 +905,8 @@ E_{11} = \frac{50 \cdot 30}{100} = 15, \quad E_{12} = \frac{50 \cdot 70}{100} = 
 <li>La prueba <span class="math inline">\(\chi^2\)</span> <strong>no indica la magnitud de la asociación</strong>, solo su existencia. Para cuantificarla se usan medidas como la <strong>V de Cramér</strong> o el <strong>coeficiente de contingencia (C)</strong>.</li>
 </ul>
 <p><em>Ejemplo interpretativo:</em> en un estudio sobre estilos de afrontamiento y sexo se obtiene <span class="math inline">\(\chi^2(2) = 10.5\)</span>, <span class="math inline">\(p &lt; .01\)</span>. Esto sugiere una relación significativa entre el sexo y el estilo de afrontamiento.</p>
-<section id="v-de-cramér" class="level4" data-number="4.2.3.1">
-<h4 data-number="4.2.3.1" class="anchored" data-anchor-id="v-de-cramér"><span class="header-section-number">4.2.3.1</span> V de Cramér</h4>
+<section id="v-de-cramér" class="level4" data-number="4.3.3.1">
+<h4 data-number="4.3.3.1" class="anchored" data-anchor-id="v-de-cramér"><span class="header-section-number">4.3.3.1</span> V de Cramér</h4>
 <p>Mide la intensidad de la asociación entre dos variables cualitativas:</p>
 <p><span class="math display">\[
 V=\sqrt{\frac{\chi^2_0}{n \cdot (k-1)}}
@@ -893,8 +919,8 @@ V=\sqrt{\frac{\chi^2_0}{n \cdot (k-1)}}
 <p><em>En el ejemplo anterior:</em> <span class="math inline">\(V = \sqrt{4.76 / (100 \cdot 1)} = 0.22\)</span>, una asociación débil a moderada.</p>
 </section>
 </section>
-<section id="resumen-comparativo" class="level3" data-number="4.2.4">
-<h3 data-number="4.2.4" class="anchored" data-anchor-id="resumen-comparativo"><span class="header-section-number">4.2.4</span> Resumen comparativo</h3>
+<section id="resumen-comparativo" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="resumen-comparativo"><span class="header-section-number">4.3.4</span> Resumen comparativo</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -981,8 +1007,8 @@ Tip
 </div>
 </section>
 </section>
-<section id="comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas"><span class="header-section-number">4.3</span> Comparación de dos medias: pruebas z, t y no paramétricas</h2>
+<section id="comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas"><span class="header-section-number">4.4</span> Comparación de dos medias: pruebas z, t y no paramétricas</h2>
 <p>En investigación psicológica y social es común comparar <strong>las medias de dos grupos</strong> o condiciones (por ejemplo, niveles de ansiedad entre hombres y mujeres, o antes y después de una intervención). El objetivo es determinar si las diferencias observadas reflejan una diferencia real en la población o son producto del azar <span class="citation" data-cites="LSJ2025 Moore2013">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>; <a href="references.html#ref-Moore2013" role="doc-biblioref">Moore et&nbsp;al. 2013</a>)</span>.</p>
 <p>Las tres familias de pruebas más comunes son:</p>
 <ol type="1">
@@ -990,8 +1016,8 @@ Tip
 <li><strong>Prueba t:</strong> cuando la varianza poblacional es desconocida (caso real).</li>
 <li><strong>Pruebas no paramétricas:</strong> cuando los datos no cumplen los supuestos de normalidad o la variable es ordinal.</li>
 </ol>
-<section id="prueba-z-para-dos-medias-caso-teórico" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="prueba-z-para-dos-medias-caso-teórico"><span class="header-section-number">4.3.1</span> Prueba z para dos medias (caso teórico)</h3>
+<section id="prueba-z-para-dos-medias-caso-teórico" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="prueba-z-para-dos-medias-caso-teórico"><span class="header-section-number">4.4.1</span> Prueba z para dos medias (caso teórico)</h3>
 <p>Se aplica cuando:</p>
 <ul>
 <li>la variable es cuantitativa continua,</li>
@@ -1022,15 +1048,15 @@ z_0 = \frac{520 - 540}{\sqrt{\dfrac{50^2}{30} + \dfrac{60^2}{30}}} = \frac{-20}{
 </div>
 </div>
 </section>
-<section id="prueba-t-para-dos-medias" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="prueba-t-para-dos-medias"><span class="header-section-number">4.3.2</span> Prueba t para dos medias</h3>
+<section id="prueba-t-para-dos-medias" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="prueba-t-para-dos-medias"><span class="header-section-number">4.4.2</span> Prueba t para dos medias</h3>
 <p>En la práctica, las varianzas poblacionales <strong>no son conocidas</strong>, por lo que se emplea la <strong>distribución t de Student</strong>. Existen dos tipos principales:</p>
 <ol type="1">
 <li><strong>t para muestras independientes</strong></li>
 <li><strong>t para muestras relacionadas (dependientes o pareadas)</strong></li>
 </ol>
-<section id="t-para-muestras-independientes" class="level4" data-number="4.3.2.1">
-<h4 data-number="4.3.2.1" class="anchored" data-anchor-id="t-para-muestras-independientes"><span class="header-section-number">4.3.2.1</span> t para muestras independientes</h4>
+<section id="t-para-muestras-independientes" class="level4" data-number="4.4.2.1">
+<h4 data-number="4.4.2.1" class="anchored" data-anchor-id="t-para-muestras-independientes"><span class="header-section-number">4.4.2.1</span> t para muestras independientes</h4>
 <p>Se aplica cuando se comparan dos grupos distintos de personas.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Ejemplo</a></li></ul>
@@ -1063,8 +1089,8 @@ t_0 = \frac{35.4 - 40.1}{7.91 \sqrt{\dfrac{1}{25} + \dfrac{1}{25}}} = \frac{-4.7
 </div>
 </div>
 </section>
-<section id="t-para-muestras-relacionadas" class="level4" data-number="4.3.2.2">
-<h4 data-number="4.3.2.2" class="anchored" data-anchor-id="t-para-muestras-relacionadas"><span class="header-section-number">4.3.2.2</span> t para muestras relacionadas</h4>
+<section id="t-para-muestras-relacionadas" class="level4" data-number="4.4.2.2">
+<h4 data-number="4.4.2.2" class="anchored" data-anchor-id="t-para-muestras-relacionadas"><span class="header-section-number">4.4.2.2</span> t para muestras relacionadas</h4>
 <p>Se aplica cuando las observaciones provienen de los <strong>mismos participantes</strong> medidos dos veces (pretest–postest, condición A/B).</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Ejemplo</a></li></ul>
@@ -1111,8 +1137,8 @@ t_0 = \frac{4.2}{6.0/\sqrt{20}} = 3.13
 </div>
 </section>
 </section>
-<section id="supuestos-de-las-pruebas-t" class="level3" data-number="4.3.3">
-<h3 data-number="4.3.3" class="anchored" data-anchor-id="supuestos-de-las-pruebas-t"><span class="header-section-number">4.3.3</span> Supuestos de las pruebas t</h3>
+<section id="supuestos-de-las-pruebas-t" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="supuestos-de-las-pruebas-t"><span class="header-section-number">4.4.3</span> Supuestos de las pruebas t</h3>
 <ul>
 <li>Escala de intervalo o razón.</li>
 <li>Normalidad de la variable en cada grupo (o de las diferencias, en muestras relacionadas).</li>
@@ -1121,8 +1147,8 @@ t_0 = \frac{4.2}{6.0/\sqrt{20}} = 3.13
 </ul>
 <p>Cuando no se cumple la homogeneidad de varianzas, se usa la <strong>corrección de Welch</strong>. Cuando no se cumple la normalidad (sobre todo con muestras pequeñas) o la variable es ordinal, se recurre a pruebas <strong>no paramétricas</strong>.</p>
 </section>
-<section id="pruebas-no-paramétricas-equivalentes" class="level3" data-number="4.3.4">
-<h3 data-number="4.3.4" class="anchored" data-anchor-id="pruebas-no-paramétricas-equivalentes"><span class="header-section-number">4.3.4</span> Pruebas no paramétricas equivalentes</h3>
+<section id="pruebas-no-paramétricas-equivalentes" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="pruebas-no-paramétricas-equivalentes"><span class="header-section-number">4.4.4</span> Pruebas no paramétricas equivalentes</h3>
 <p>Las pruebas no paramétricas no requieren normalidad ni homocedasticidad, y trabajan sobre rangos o signos.</p>
 <table class="caption-top table">
 <colgroup>
@@ -1160,11 +1186,11 @@ t_0 = \frac{4.2}{6.0/\sqrt{20}} = 3.13
 </table>
 <p><em>Ejemplo:</em> en un estudio sobre satisfacción laboral antes y después de una capacitación (escala ordinal), se aplica la <strong>prueba de Wilcoxon</strong>: <span class="math inline">\(W = 15\)</span>, <span class="math inline">\(p = .02\)</span>, lo que indica una diferencia significativa entre las mediciones.</p>
 </section>
-<section id="interpretación-y-tamaño-del-efecto" class="level3" data-number="4.3.5">
-<h3 data-number="4.3.5" class="anchored" data-anchor-id="interpretación-y-tamaño-del-efecto"><span class="header-section-number">4.3.5</span> Interpretación y tamaño del efecto</h3>
+<section id="interpretación-y-tamaño-del-efecto" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="interpretación-y-tamaño-del-efecto"><span class="header-section-number">4.4.5</span> Interpretación y tamaño del efecto</h3>
 <p>La significación estadística indica si es plausible que la diferencia no se deba al azar, pero <strong>no informa sobre su magnitud</strong>. Por ello se recomienda reportar siempre el <strong>tamaño del efecto</strong>.</p>
-<section id="d-de-cohen" class="level4" data-number="4.3.5.1">
-<h4 data-number="4.3.5.1" class="anchored" data-anchor-id="d-de-cohen"><span class="header-section-number">4.3.5.1</span> d de Cohen</h4>
+<section id="d-de-cohen" class="level4" data-number="4.4.5.1">
+<h4 data-number="4.4.5.1" class="anchored" data-anchor-id="d-de-cohen"><span class="header-section-number">4.4.5.1</span> d de Cohen</h4>
 <p><span class="math display">\[
 d = \frac{\bar{X}_1 - \bar{X}_2}{s_p}
 \]</span></p>
@@ -1260,11 +1286,11 @@ Tip
 </section>
 </section>
 </section>
-<section id="correlación-y-regresión-lineal" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="correlación-y-regresión-lineal"><span class="header-section-number">4.4</span> Correlación y regresión lineal</h2>
+<section id="correlación-y-regresión-lineal" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="correlación-y-regresión-lineal"><span class="header-section-number">4.5</span> Correlación y regresión lineal</h2>
 <p>La correlación y la regresión lineal permiten cuantificar y modelar la relación entre dos variables cuantitativas. En psicología son herramientas fundamentales para analizar vínculos entre constructos como ansiedad y rendimiento, estrés y calidad del sueño, o autoeficacia y desempeño académico <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
-<section id="correlación-de-pearson-r" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="correlación-de-pearson-r"><span class="header-section-number">4.4.1</span> Correlación de Pearson (<span class="math inline">\(r\)</span>)</h3>
+<section id="correlación-de-pearson-r" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="correlación-de-pearson-r"><span class="header-section-number">4.5.1</span> Correlación de Pearson (<span class="math inline">\(r\)</span>)</h3>
 <p>La correlación lineal de Pearson mide la <strong>fuerza</strong> y la <strong>dirección</strong> de una asociación lineal entre dos variables. Toma valores entre <span class="math inline">\(-1\)</span> y <span class="math inline">\(+1\)</span>:</p>
 <p><span class="math display">\[
 r = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum (X_i - \bar{X})^2 \sum (Y_i - \bar{Y})^2}}
@@ -1311,8 +1337,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="correlación-no-paramétrica-spearman-rho" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="correlación-no-paramétrica-spearman-rho"><span class="header-section-number">4.4.2</span> Correlación no paramétrica: Spearman (<span class="math inline">\(\rho\)</span>)</h3>
+<section id="correlación-no-paramétrica-spearman-rho" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="correlación-no-paramétrica-spearman-rho"><span class="header-section-number">4.5.2</span> Correlación no paramétrica: Spearman (<span class="math inline">\(\rho\)</span>)</h3>
 <p>Se usa cuando:</p>
 <ul>
 <li>los datos son ordinales,</li>
@@ -1321,8 +1347,8 @@ Tip
 </ul>
 <p>Se basa en los <strong>rangos</strong> de los datos, no en sus valores originales.</p>
 </section>
-<section id="regresión-lineal-simple" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="regresión-lineal-simple"><span class="header-section-number">4.4.3</span> Regresión lineal simple</h3>
+<section id="regresión-lineal-simple" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="regresión-lineal-simple"><span class="header-section-number">4.5.3</span> Regresión lineal simple</h3>
 <p>La regresión lineal modela cómo cambia una variable dependiente <span class="math inline">\(Y\)</span> cuando cambia una variable predictora <span class="math inline">\(X\)</span>:</p>
 <p><span class="math display">\[
 Y = \beta_0 + \beta_1 X + \varepsilon
@@ -1334,8 +1360,8 @@ Y = \beta_0 + \beta_1 X + \varepsilon
 </ul>
 <p><strong>Interpretación típica:</strong> si <span class="math inline">\(\beta_1 = -0.60\)</span> en un modelo donde <span class="math inline">\(Y\)</span> = calidad del sueño y <span class="math inline">\(X\)</span> = estrés, entonces <strong>por cada punto adicional de estrés, la calidad del sueño disminuye en promedio 0.60 puntos</strong>.</p>
 </section>
-<section id="bondad-de-ajuste" class="level3" data-number="4.4.4">
-<h3 data-number="4.4.4" class="anchored" data-anchor-id="bondad-de-ajuste"><span class="header-section-number">4.4.4</span> Bondad de ajuste</h3>
+<section id="bondad-de-ajuste" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="bondad-de-ajuste"><span class="header-section-number">4.5.4</span> Bondad de ajuste</h3>
 <ul>
 <li><strong><span class="math inline">\(R^2\)</span>:</strong> proporción de la varianza de <span class="math inline">\(Y\)</span> explicada por <span class="math inline">\(X\)</span>.
 <ul>
@@ -1344,8 +1370,8 @@ Y = \beta_0 + \beta_1 X + \varepsilon
 <li><strong><em>p</em>-valor de <span class="math inline">\(\beta_1\)</span>:</strong> indica si la relación es estadísticamente significativa (<span class="math inline">\(H_0: \beta_1 = 0\)</span>).</li>
 </ul>
 </section>
-<section id="supuestos-principales" class="level3" data-number="4.4.5">
-<h3 data-number="4.4.5" class="anchored" data-anchor-id="supuestos-principales"><span class="header-section-number">4.4.5</span> Supuestos principales</h3>
+<section id="supuestos-principales" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="supuestos-principales"><span class="header-section-number">4.5.5</span> Supuestos principales</h3>
 <ul>
 <li>Linealidad.</li>
 <li>Independencia de las observaciones.</li>
@@ -1398,8 +1424,8 @@ Y = \beta_0 + \beta_1 X + \varepsilon
 </div>
 </section>
 </section>
-<section id="comparar-varias-medias-anova-de-una-vía" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="comparar-varias-medias-anova-de-una-vía"><span class="header-section-number">4.5</span> Comparar varias medias: ANOVA de una vía</h2>
+<section id="comparar-varias-medias-anova-de-una-vía" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="comparar-varias-medias-anova-de-una-vía"><span class="header-section-number">4.6</span> Comparar varias medias: ANOVA de una vía</h2>
 <p>El ANOVA de una vía (<em>one-way ANOVA</em>) evalúa si <strong>tres o más grupos</strong> difieren en su media poblacional <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
 <p>Ejemplos en psicología:</p>
 <ul>
@@ -1407,8 +1433,8 @@ Y = \beta_0 + \beta_1 X + \varepsilon
 <li>Comparación de memoria según grupo etario.</li>
 <li>Diferencias en motivación según nivel educativo.</li>
 </ul>
-<section id="hipótesis-5" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="hipótesis-5"><span class="header-section-number">4.5.1</span> Hipótesis</h3>
+<section id="hipótesis-5" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="hipótesis-5"><span class="header-section-number">4.6.1</span> Hipótesis</h3>
 <p><span class="math display">\[
 \begin{aligned}
 H_0 &amp;: \mu_1 = \mu_2 = \ldots = \mu_k\\
@@ -1429,8 +1455,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="lógica-del-anova" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="lógica-del-anova"><span class="header-section-number">4.5.2</span> Lógica del ANOVA</h3>
+<section id="lógica-del-anova" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="lógica-del-anova"><span class="header-section-number">4.6.2</span> Lógica del ANOVA</h3>
 <p>El ANOVA compara dos fuentes de variabilidad:</p>
 <ul>
 <li><strong>Variabilidad entre grupos</strong> (debida al efecto del factor).</li>
@@ -1442,15 +1468,15 @@ F = \frac{MS_{\text{entre}}}{MS_{\text{dentro}}}
 \]</span></p>
 <p>Si <span class="math inline">\(F\)</span> es grande (la variabilidad entre grupos supera claramente a la variabilidad dentro de ellos), hay evidencia contra <span class="math inline">\(H_0\)</span>.</p>
 </section>
-<section id="tamaño-del-efecto-eta-cuadrado-eta2" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="tamaño-del-efecto-eta-cuadrado-eta2"><span class="header-section-number">4.5.3</span> Tamaño del efecto: eta cuadrado (<span class="math inline">\(\eta^2\)</span>)</h3>
+<section id="tamaño-del-efecto-eta-cuadrado-eta2" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="tamaño-del-efecto-eta-cuadrado-eta2"><span class="header-section-number">4.6.3</span> Tamaño del efecto: eta cuadrado (<span class="math inline">\(\eta^2\)</span>)</h3>
 <p><span class="math display">\[
 \eta^2 = \frac{SS_{\text{entre}}}{SS_{\text{total}}}
 \]</span></p>
 <p>Representa la proporción de la varianza total explicada por el factor. Como referencia <span class="citation" data-cites="Cohen1988">(<a href="references.html#ref-Cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>: 0.01 pequeño, 0.06 mediano y 0.14 grande.</p>
 </section>
-<section id="ejemplo-5" class="level3" data-number="4.5.4">
-<h3 data-number="4.5.4" class="anchored" data-anchor-id="ejemplo-5"><span class="header-section-number">4.5.4</span> Ejemplo</h3>
+<section id="ejemplo-5" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="ejemplo-5"><span class="header-section-number">4.6.4</span> Ejemplo</h3>
 <p>Se comparan tres métodos de relajación en 60 participantes (20 por grupo). El ANOVA arroja:</p>
 <ul>
 <li><span class="math inline">\(F(2, 57) = 4.91\)</span></li>
@@ -1459,8 +1485,8 @@ F = \frac{MS_{\text{entre}}}{MS_{\text{dentro}}}
 </ul>
 <p>Esto indica que <strong>los métodos difieren en su efecto sobre el nivel de estrés</strong>; el método explica alrededor del 15% de la variabilidad del estrés.</p>
 </section>
-<section id="pruebas-post-hoc" class="level3" data-number="4.5.5">
-<h3 data-number="4.5.5" class="anchored" data-anchor-id="pruebas-post-hoc"><span class="header-section-number">4.5.5</span> Pruebas post hoc</h3>
+<section id="pruebas-post-hoc" class="level3" data-number="4.6.5">
+<h3 data-number="4.6.5" class="anchored" data-anchor-id="pruebas-post-hoc"><span class="header-section-number">4.6.5</span> Pruebas post hoc</h3>
 <p>Si el ANOVA es significativo, se realizan comparaciones por pares para identificar <strong>qué grupos difieren entre sí</strong>, ajustando el nivel de significación:</p>
 <ul>
 <li>Tukey HSD</li>
@@ -1468,8 +1494,8 @@ F = \frac{MS_{\text{entre}}}{MS_{\text{dentro}}}
 <li>Holm</li>
 </ul>
 </section>
-<section id="supuestos" class="level3" data-number="4.5.6">
-<h3 data-number="4.5.6" class="anchored" data-anchor-id="supuestos"><span class="header-section-number">4.5.6</span> Supuestos</h3>
+<section id="supuestos" class="level3" data-number="4.6.6">
+<h3 data-number="4.6.6" class="anchored" data-anchor-id="supuestos"><span class="header-section-number">4.6.6</span> Supuestos</h3>
 <ul>
 <li>Independencia de las observaciones.</li>
 <li>Normalidad dentro de cada grupo.</li>

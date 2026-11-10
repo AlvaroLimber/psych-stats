@@ -20,6 +20,8 @@ Una **prueba de hipótesis** es un procedimiento estadístico formal para tomar 
 3.  **Construir el estadístico de prueba:** se calcula un valor estandarizado (ej. $Z$, $t$) que mide qué tan lejos está el estimador muestral del valor propuesto en $H_0$.
 4.  **Evaluar y concluir:** se compara el estadístico de prueba con los valores críticos (o se usa el *p*-valor) para decidir si se **rechaza** o **no se rechaza** la hipótesis nula.
 
+![Pasos de la prueba de hipótesis](fig/pasos_hipotesis.png)
+
 ### Formulación de hipótesis
 
 1.  **Hipótesis nula ($H_0$):** es la afirmación que se somete a prueba; asume que **no hay efecto, cambio o diferencia**. Siempre incluye un signo de igualdad (ej. $\mu = 10$).
@@ -34,6 +36,8 @@ Una **prueba de hipótesis** es un procedimiento estadístico formal para tomar 
 | :--- | :--- | :--- |
 | **Error de tipo I ($\alpha$)** | **Rechazar** $H_0$ cuando en realidad es **verdadera**. | Falso positivo. Se controla con el nivel de significación ($\alpha$). |
 | **Error de tipo II ($\beta$)** | **No rechazar** $H_0$ cuando en realidad es **falsa**. | Falso negativo. Se relaciona con la potencia de la prueba ($1-\beta$). |
+
+![Errores en la prueba de hipótesis](fig/errores_hipotesis.png)
 
 ::: {.callout-note}
 ### Actividad: El juicio estadístico (8 min)
@@ -153,6 +157,12 @@ Un equipo quiere probar si un programa de *mindfulness* reduce el estrés en 5 p
 ### JASP Tip: Análisis de potencia
 Las versiones recientes de JASP incluyen el módulo **`Power`** (actívalo con el ícono `+`). Permite calcular el tamaño de muestra necesario para una prueba *t* indicando el tamaño del efecto esperado (*d* de Cohen), el nivel $\alpha$ y la potencia deseada, y muestra curvas de potencia para distintos tamaños de muestra.
 :::
+
+## ¿Qué prueba estadística uso?
+
+La elección de la herramienta depende del **objetivo** del análisis y del **tipo de variables** involucradas. El siguiente esquema resume las pruebas que veremos en el resto del capítulo, con su alternativa no paramétrica y la ruta en JASP.
+
+![Guía para elegir la prueba estadística](fig/eleccion_prueba.png)
 
 ## Análisis de datos categóricos: prueba $\chi^2$
 
