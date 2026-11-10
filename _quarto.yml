@@ -1,9 +1,13 @@
 project:
   type: book
 
+lang: es
+
 book:
   title: "Psicoestadística"
-  author: "Alvaro Chirino Gutierrez"
+  subtitle: "Apuntes para la carrera de Psicología"
+  author: "MSc. Alvaro Chirino Gutierrez"
+  description: "Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz."
   date: "2026-01-01"
   date-format: "YYYY"
   #favicon: logo.png
@@ -11,26 +15,30 @@ book:
   reader-mode: true
   site-url: https://alvarolimber.github.io/psych-stats/_book
   search: true
-  repo-url: https://github.com/psych-stats/
+  repo-url: https://github.com/alvarolimber/psych-stats
   downloads: [pdf]
   sharing: [twitter, facebook]
   cover-image: cover.png
-  page-footer: 
-    left: "Copyright 2026, Alvaro Chirino" 
-    right: 
+  page-footer:
+    left: "Copyright 2026, Alvaro Chirino. CC BY-NC-SA 4.0"
+    right:
       - icon: github
-        href: https://github.com/
-      - icon: bluesky 
-        href: https://bsky.app/ 
+        href: https://github.com/alvarolimber/psych-stats
   chapters:
     - index.qmd # Prefacio / Introducción general
     - part: "Parte I: Diseño estadístico y estadística descriptiva"
-      chapters: 
+      chapters:
         - fundamentos.qmd
         - descriptiva.qmd
+    - part: "Parte II: Estadística teórica e inferencial"
+      chapters:
+        - teorica.qmd
+        - herramientas.qmd
     - references.qmd
 
 bibliography: references.bib
+nocite: |
+  @*
 
 format:
   html:

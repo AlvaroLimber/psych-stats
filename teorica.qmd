@@ -1,0 +1,467 @@
+# Estadística Teórica
+
+La **estadística teórica** proporciona los fundamentos matemáticos que sustentan la inferencia estadística. A través de la **probabilidad**, los **modelos de distribución** y los **teoremas fundamentales**, permite cuantificar la incertidumbre y estimar parámetros poblacionales a partir de muestras. En su aspecto teórico, permite establecer y entender la relación entre la **Población Objetivo (P.O.)** y la **muestra** [@LSJ2025; @Moore2013]. Trata sobre la probabilidad y la variable aleatoria, caracterizada por el azar, e incluye las distribuciones muestrales, que es donde la teoría se conecta con la práctica y la realidad.
+
+## Fundamentos de probabilidad y axiomas
+
+La **probabilidad** es una **medida de incertidumbre** y constituye la base teórica de la inferencia estadística [@Feller1968].
+
+### Experimento aleatorio y espacio muestral
+
+Un **experimento aleatorio** es un proceso del cual **no se conoce el resultado** antes de su realización. Los conceptos de aleatoriedad e incertidumbre están relacionados.
+
+*Ejemplo en Psicología:* Observar si un paciente abandona la terapia ($X=1$) o la continúa ($X=0$).
+
+El **espacio muestral ($\Omega$)** es el conjunto de **todos** los resultados posibles que puede arrojar un experimento aleatorio.
+
+* **Espacio muestral discreto:** si $\Omega$ es finito o infinito numerable.
+    * *Ejemplo:* Medir la **calificación** obtenida en un examen (valores posibles: 0, 1, 2, ..., 10). $\Omega = \{0, 1, 2, \dots, 10\}$.
+* **Espacio muestral continuo:** si $\Omega$ incluye todos los valores dentro de un intervalo (no numerable).
+    * *Ejemplo:* Medir el **tiempo de reacción** (en segundos) de una persona ante un estímulo visual. $\Omega = [0, \infty)$.
+
+Un **evento ($A$)** es cualquier subconjunto del espacio muestral ($\Omega$). Representa la ocurrencia o no ocurrencia de un resultado específico o de un grupo de resultados. Cuando un evento es imposible, su probabilidad es **igual a 0**.
+
+* *Ejemplos de eventos (calificación en un examen):*
+    * Evento $A$: Aprobar el examen (obtener una calificación mayor a 5). $A = \{6, 7, 8, 9, 10\}$.
+    * Evento $B$: Obtener una calificación perfecta. $B = \{10\}$.
+
+::: {.callout-note}
+### Actividad: Construyendo espacios muestrales (5 min)
+En parejas, definan el **espacio muestral ($\Omega$)** y clasifíquenlo como discreto o continuo para cada experimento:
+
+1. Número de sesiones a las que asiste un paciente en un mes.
+2. Tiempo (en minutos) que tarda un estudiante en completar un test de atención.
+3. Respuesta a la pregunta "¿Ha consultado alguna vez a un psicólogo?" (Sí/No).
+
+Luego, para el experimento 1, definan un **evento** de interés clínico (ej. "asistir a menos de 2 sesiones").
+:::
+
+### Axiomas de la probabilidad (Kolmogórov)
+
+Formalmente, un espacio probabilístico $(\Omega, \mathcal{A}, P)$ se define con base en los siguientes axiomas:
+
+1.  **No negatividad:** la probabilidad de cualquier evento $A$ es mayor o igual a cero: $P(A) \ge 0$.
+2.  **Unidad (normalización):** la probabilidad del espacio muestral es siempre **igual a 1**: $P(\Omega) = 1$.
+3.  **Aditividad:** para una secuencia de eventos mutuamente excluyentes ($A_1, A_2, \dots$), la probabilidad de su unión es la suma de sus probabilidades:
+    $$
+    P\left(\bigcup_i A_i\right) = \sum_i P(A_i)
+    $$
+
+::: {.callout-tip}
+De los axiomas se deduce que, para cualquier evento, $0 \le P(A) \le 1$, y que la probabilidad del complemento es $P(A^c) = 1 - P(A)$.
+:::
+
+### Enfoques conceptuales de la probabilidad
+
+Existen tres enfoques principales para interpretar la probabilidad, cada uno con implicaciones distintas en la aplicación de la estadística [@LSJ2025; @Moore2013]:
+
+::: {.panel-tabset}
+
+#### Teórica (clásica)
+
+Deriva del razonamiento lógico o combinatorio y asume que todos los resultados posibles son **igualmente probables (equiprobables)**.
+
+$$
+P(A) = \frac{\text{número de casos favorables}}{\text{número total de casos posibles}}
+$$
+
+* **Desarrollo:** este enfoque es útil principalmente para experimentos ideales, juegos de azar o situaciones muy controladas donde la simetría de los resultados es evidente. Es la definición más limitada en ciencias empíricas como la psicología, pues rara vez se puede asumir equiprobabilidad en los fenómenos de la vida real.
+* *Ejemplo en Psicología:* asumir que la probabilidad de que un sujeto elija la Opción A o la Opción B en una tarea simple, sin sesgos previos, es $P(A) = 1/2$.
+
+#### Frecuentista (empírica)
+
+Se define como el **límite de la frecuencia relativa** con que ocurre un evento en un número grande de repeticiones independientes del experimento.
+
+$$
+P(A) = \lim_{n \to \infty} \frac{f_A}{n}
+$$
+
+* **Desarrollo:** es el enfoque más utilizado en la inferencia estadística clásica y en la investigación psicológica. La probabilidad se estima a partir de la **observación empírica y la experiencia acumulada**. La precisión de la estimación mejora a medida que aumenta el número de observaciones ($n \to \infty$), tal como lo establece la **Ley de los Grandes Números**.
+* *Ejemplo en Psicología:* si de 1,000 pacientes con un trastorno específico, 650 responden positivamente a un tipo de terapia, la probabilidad frecuentista de respuesta positiva es $P(\text{Respuesta positiva}) \approx 650/1000 = 0.65$.
+
+#### Bayesiana (subjetiva)
+
+Interpreta la probabilidad como el **grado de creencia racional** sobre la ocurrencia de un evento, dado un conjunto de evidencias.
+
+* **Desarrollo:** parte de una **probabilidad inicial** (*a priori*) que se actualiza con nueva evidencia (datos) para generar una **probabilidad posterior** (*a posteriori*). Se formaliza mediante el **Teorema de Bayes**:
+
+$$
+P(A \mid B) = \frac{P(B \mid A)\,P(A)}{P(B)}
+$$
+
+* *Ejemplo en Psicología:* un clínico estima *a priori* que un 10% de los consultantes presenta depresión; tras observar un puntaje alto en un test de tamizaje, actualiza esa probabilidad considerando la sensibilidad y especificidad del test.
+
+:::
+
+::: {.callout-note}
+### Actividad: ¿Qué enfoque es? (5 min)
+Clasifiquen cada afirmación según el enfoque de probabilidad (**clásico, frecuentista o bayesiano**):
+
+1. "En los registros del centro de salud, 3 de cada 10 pacientes abandonan la terapia antes de la quinta sesión."
+2. "Al lanzar un dado, la probabilidad de obtener un 6 es 1/6."
+3. "Antes de la entrevista creía que el paciente tenía un 20% de probabilidad de presentar ansiedad; después de la entrevista, creo que es del 60%."
+:::
+
+::: {.callout-tip}
+### Conexión JASP: El enfoque bayesiano
+JASP es uno de los pocos programas que ofrece, lado a lado, versiones **clásicas** y **bayesianas** de casi todos los análisis (por ejemplo, `T-Tests -> Bayesian Independent Samples T-Test`). En este curso trabajaremos principalmente con el enfoque clásico (frecuentista), pero es útil saber que la alternativa bayesiana está a un clic de distancia.
+:::
+
+## Variable aleatoria y distribuciones
+
+### Variable aleatoria (v.a. = X)
+
+Una **variable aleatoria ($X$)** es una función que asigna un valor numérico a cada resultado posible de un experimento aleatorio. Es el soporte cuantitativo de las probabilidades.
+
+La distinción entre $X$ (mayúscula) y $x$ (minúscula) es crucial:
+
+* **$X$ (mayúscula):** representa la **variable aleatoria** en sí, es decir, la *regla* o *función* que describe el conjunto de resultados posibles. Es la variable **antes** de que se realice el experimento.
+* **$x$ (minúscula):** representa una **realización**, un **valor específico** que la variable aleatoria $X$ toma después de que el experimento ha ocurrido.
+
+*Ejemplo en Psicología:*
+
+* **Variable aleatoria ($X$):** el **puntaje de ansiedad** que obtendrá un sujeto en el próximo test.
+* **Realización ($x$):** el puntaje de 42 que *obtuvo* el sujeto al completar el test.
+
+La probabilidad de que la variable aleatoria $X$ tome un valor específico $x$ se escribe $P(X = x)$.
+
+### Distribuciones discretas
+
+Las distribuciones discretas describen variables aleatorias cuyo recorrido es finito o numerable (valores enteros, no continuos).
+
+#### Experimento y variable aleatoria Bernoulli
+
+Un **experimento Bernoulli** es el modelo de probabilidad más simple. Tiene solo **dos resultados posibles** mutuamente excluyentes: **éxito** ($X=1$) o **fracaso** ($X=0$). La probabilidad de éxito ($p$) se mantiene constante en cada ensayo.
+
+* **Fórmula (función de masa de probabilidad):**
+    $$
+    P(X = x) = p^x (1-p)^{1-x} \quad \text{para } x \in \{0, 1\}
+    $$
+* *Ejemplo en Psicología:* determinar si un paciente **abandona la terapia** (éxito, $X=1$) o **continúa** (fracaso, $X=0$). Si la probabilidad histórica de abandono es $p=0.3$, entonces $P(X=1) = 0.3$ y $P(X=0) = 0.7$.
+
+::: {.callout-tip}
+En estadística, "éxito" no significa algo positivo: es simplemente el resultado que decidimos contar (en el ejemplo, el abandono).
+:::
+
+#### Distribución y experimento binomial
+
+Un **experimento binomial** es una **serie de $n$ repeticiones independientes de un experimento Bernoulli**. La **distribución binomial** cuenta cuántos **éxitos** ($x$) ocurren en ese número fijo de ensayos ($n$), con una probabilidad de éxito $p$ constante.
+
+* **Fórmula (función de masa de probabilidad):**
+    $$
+    P(X = x) = \binom{n}{x} p^x (1-p)^{n-x} \quad \text{para } x \in \{0, 1, \dots, n\}
+    $$
+    donde $\binom{n}{x} = \frac{n!}{x!(n-x)!}$ es el número de formas de obtener $x$ éxitos en $n$ ensayos.
+
+* **Valor esperado (media) de la binomial:** el **valor esperado** o **esperanza matemática** ($E[X]$) de una variable aleatoria es el promedio teórico a largo plazo si el experimento se repitiera infinitas veces. Para la distribución binomial, representa el número esperado de éxitos:
+    $$
+    E[X] = n \cdot p
+    $$
+
+*Ejemplo completo en Psicología:* una investigadora aplica un test de **razonamiento moral** con $n=20$ ítems de respuesta Sí/No. Asume que la probabilidad de responder correctamente al azar es $p=0.5$.
+
+1. **Valor esperado:** el número esperado de respuestas correctas por azar es
+    $$
+    E[X] = n \cdot p = 20 \cdot 0.5 = 10
+    $$
+    Se espera que, en promedio, una persona que responde al azar acierte 10 de las 20 preguntas.
+2. **Cálculo de probabilidad:** la probabilidad de que un sujeto responda **exactamente 15** preguntas correctamente al azar ($x=15$) es
+    $$
+    P(X = 15) = \binom{20}{15} (0.5)^{15} (1-0.5)^{20-15} = 15504 \cdot (0.0000305) \cdot (0.03125) \approx 0.0148
+    $$
+    La probabilidad de obtener exactamente 15 aciertos al azar es muy baja (aproximadamente 1.48%). Esto sugiere que puntajes muy superiores a 10 difícilmente se deben solo al azar.
+
+::: {.callout-note}
+### Actividad: Adivinando en el examen (8 min)
+Un examen de opción múltiple tiene $n=10$ preguntas con 4 opciones cada una (solo una correcta). Un estudiante no estudió y responde todo al azar.
+
+1. ¿Cuál es la probabilidad de acertar una pregunta ($p$)?
+2. ¿Cuántas respuestas correctas se esperan por azar ($E[X]$)?
+3. Calculen la probabilidad de que acierte **exactamente 0** preguntas.
+4. Discutan: si un estudiante obtiene 9 de 10, ¿es razonable pensar que respondió al azar?
+:::
+
+### Distribución normal (Campana de Gauss)
+
+La **distribución normal** (o **Campana de Gauss**) es la distribución de probabilidad continua más importante de la estadística inferencial. Describe variables que tienden a concentrarse simétricamente alrededor de un valor central, con frecuencias que disminuyen hacia los extremos.
+
+* **Fórmula (función de densidad de probabilidad):**
+    $$
+    f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+    $$
+    La forma de la campana está completamente determinada por dos parámetros: la **media ($\mu$)**, que define la posición central, y la **desviación estándar ($\sigma$)**, que define la dispersión (el ancho de la campana).
+
+* **Propiedades clave:**
+    1.  **Forma de campana:** es perfectamente simétrica respecto a la media; la media, la mediana y la moda coinciden en $\mu$.
+    2.  **Determinada por $\mu$ y $\sigma$:** cambios en $\mu$ desplazan la curva horizontalmente, mientras que cambios en $\sigma$ la hacen más ancha y baja (mayor dispersión) o más estrecha y alta (menor dispersión).
+    3.  **Regla empírica (68-95-99.7):**
+        * Aproximadamente el **68%** de los datos está a $\pm 1$ desviación estándar de la media ($\mu \pm 1\sigma$).
+        * Aproximadamente el **95%** está a $\pm 2$ desviaciones estándar ($\mu \pm 2\sigma$).
+        * Aproximadamente el **99.7%** está a $\pm 3$ desviaciones estándar ($\mu \pm 3\sigma$).
+
+*Ejemplo en Psicología:* las puntuaciones del **Coeficiente Intelectual (CI)** en grandes poblaciones siguen aproximadamente una distribución normal con $\mu=100$ y $\sigma=15$. Según la regla empírica, cerca del 95% de la población tiene un CI entre 70 y 130 ($100 \pm 2 \times 15$).
+
+::: {.callout-note}
+### Actividad: La regla 68-95-99.7 en acción (7 min)
+Usando la distribución del CI ($\mu=100$, $\sigma=15$), respondan:
+
+1. ¿Entre qué valores se encuentra aproximadamente el 68% central de la población?
+2. ¿Qué porcentaje aproximado de personas tiene un CI **mayor a 130**?
+3. Una persona obtiene un CI de 145. ¿A cuántas desviaciones estándar está de la media? ¿Es un resultado frecuente o raro?
+:::
+
+::: {.callout-tip}
+### JASP Tip: Explorar distribuciones
+JASP incluye el módulo **`Distributions`** (actívalo con el ícono `+` de la barra superior). Allí puedes elegir, por ejemplo, `Normal` o `Binomial`, modificar los parámetros ($\mu$, $\sigma$, $n$, $p$) y ver en tiempo real cómo cambia la forma de la distribución y las probabilidades de cualquier intervalo.
+:::
+
+## Muestreo, teoremas fundamentales y estimación
+
+### Muestreo e inferencia estadística
+
+El **muestreo** es el procedimiento para extraer una muestra. Es fundamental porque uno de los objetivos principales de la estadística es la **inferencia estadística**: el proceso de utilizar información limitada de una muestra para sacar conclusiones o hacer generalizaciones sobre una población más grande.
+
+#### Concepto de muestra y población
+
+* **Población Objetivo (P.O.):** conjunto completo de elementos, individuos o eventos sobre los cuales el investigador desea obtener información y generalizar sus conclusiones.
+* **Muestra:** **subconjunto** de la Población Objetivo que realmente se observa y mide en el estudio. Se usa en lugar de la P.O. por razones prácticas (costo, tiempo, imposibilidad de medir a todos).
+
+#### El rol del muestreo aleatorio
+
+Para que el proceso de inferencia sea válido, el muestreo debe ser **aleatorio** (probabilístico).
+
+* **Muestreo aleatorio:** incorpora el **azar** en la selección, asegurando que cada unidad de la P.O. tenga una probabilidad conocida (y distinta de cero) de ser incluida en la muestra.
+    * **Importancia:** el muestreo aleatorio minimiza el **sesgo de selección** y es la condición bajo la cual los principios de la probabilidad (como el Teorema del Límite Central) pueden aplicarse, permitiendo que la muestra sea **representativa** de la población.
+* **Muestreo no aleatorio:** se basa en la conveniencia, la accesibilidad o el juicio del investigador, lo que **limita o anula** la capacidad de generalizar estadísticamente a la P.O.
+
+#### Conceptos de estimación
+
+La **estimación** es la actividad central de la inferencia: el investigador busca aproximar un valor desconocido de la población (el **parámetro**) usando un valor conocido de la muestra (el **estimador**).
+
+| Concepto | Definición | Conexión con la inferencia | Símbolo |
+| :--- | :--- | :--- | :--- |
+| **Parámetro** | Medida descriptiva calculada sobre la **P.O.** Es fijo y único, pero generalmente **desconocido**. | Es el **objetivo** de la inferencia: lo que queremos descubrir. | $\theta$ (ej. $\mu$) |
+| **Estimador** | Medida análoga calculada sobre la **muestra**. Es una variable aleatoria que **varía de muestra a muestra**. | Es la **herramienta** de la inferencia: lo que usamos para aproximar el parámetro. | $\hat{\theta}$ (ej. $\bar{X}$) |
+
+***Ejemplo general: nivel de burnout en psicólogos***
+
+* **Población Objetivo (P.O.):** todos los psicólogos colegiados de una región.
+* **Muestra:** se seleccionan aleatoriamente 150 psicólogos para la encuesta.
+* **Parámetro ($\mu$):** la media real (desconocida) del nivel de *burnout* de **todos** los psicólogos de la región.
+* **Estimador ($\bar{X}$):** la media del nivel de *burnout* calculada en la muestra de 150 psicólogos (ej. $\bar{X}=35.2$). El objetivo es usar $\bar{X}=35.2$ para inferir el valor de $\mu$.
+
+El proceso de inferencia busca evaluar la **calidad** y la **precisión** del estimador ($\hat{\theta}$) en su intento de acercarse al verdadero valor del parámetro ($\theta$).
+
+::: {.callout-note}
+### Actividad: ¿Parámetro o estimador? (5 min)
+Para cada enunciado, indiquen si se trata de un **parámetro** o de un **estimador**, y escriban su símbolo:
+
+1. "El 23% de los 400 estudiantes encuestados de la UCB reporta insomnio."
+2. "La edad promedio de **todos** los estudiantes matriculados en Psicología en Bolivia."
+3. "En una muestra de 60 pacientes, el puntaje medio de depresión fue de 18.4."
+
+Luego discutan: si la encuesta del punto 1 se hubiera hecho solo a quienes asisten a clases de 7:00 a.m., ¿qué tipo de muestreo sería y qué consecuencias tendría?
+:::
+
+### Distribuciones muestrales
+
+Una **distribución muestral** es la distribución de probabilidad de un **estadístico** (como la media $\bar{X}$ o la proporción $\hat{p}$) cuando se calcula a partir de **todas las muestras posibles** de un tamaño fijo ($n$) extraídas de una población.
+
+* **Diferencia clave:** una distribución de probabilidad describe cómo se comporta una variable **individual** ($X$), mientras que la distribución muestral describe cómo se comporta un **estimador** ($\hat{\theta}$) de muestra a muestra.
+
+#### Distribución muestral de la media ($\bar{X}$)
+
+Dos propiedades clave definen su comportamiento:
+
+1.  **Media de la distribución muestral ($\mu_{\bar{X}}$):** el promedio de todas las medias muestrales posibles es igual a la media poblacional. Por ello, la media muestral es un estimador **insesgado**.
+    $$
+    \mu_{\bar{X}} = \mu
+    $$
+
+2.  **Error estándar ($\sigma_{\bar{X}}$):** la desviación estándar de la distribución muestral de la media se llama **error estándar** y mide la **variabilidad** (la precisión) del estimador $\bar{X}$.
+    $$
+    \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
+    $$
+
+::: {.callout-tip}
+### Ejemplo: Gastos de transporte
+Consideremos una **población pequeña ($N=5$)** de estudiantes universitarios con los siguientes gastos diarios de transporte (en Bs.): $X = \{2, 4, 6, 8, 10\}$.
+
+1.  **Parámetro poblacional ($\mu$):**
+    $$\mu = \frac{2 + 4 + 6 + 8 + 10}{5} = 6$$
+
+2.  **Muestreo ($n=3$):** se extraen **todas** las muestras posibles de tamaño $n=3$ (sin reemplazo). Existen $\binom{5}{3} = 10$ muestras posibles.
+
+| Muestra | Gastos ($X$) | Media muestral ($\bar{X}$) |
+|:---:|:---:|:---:|
+| 1 | {2, 4, 6} | 4.00 |
+| 2 | {2, 4, 8} | 4.67 |
+| 3 | {2, 4, 10} | 5.33 |
+| 4 | {2, 6, 8} | 5.33 |
+| 5 | {2, 6, 10} | 6.00 |
+| 6 | {2, 8, 10} | 6.67 |
+| 7 | {4, 6, 8} | 6.00 |
+| 8 | {4, 6, 10} | 6.67 |
+| 9 | {4, 8, 10} | 7.33 |
+| 10 | {6, 8, 10} | 8.00 |
+
+3.  **Verificación de la media de las medias ($\mu_{\bar{X}}$):**
+    $$\mu_{\bar{X}} = \frac{4.00 + 4.67 + \dots + 8.00}{10} = \frac{60}{10} = 6$$
+
+**Conclusión:** la **media de la distribución muestral ($\mu_{\bar{X}}=6$) es idéntica a la media poblacional ($\mu=6$)**. Las medias de las muestras individuales varían (entre 4 y 8), pero su promedio coincide exactamente con el parámetro. La dispersión de esos 10 valores alrededor de 6 es lo que mide el **error estándar**.
+:::
+
+::: {.callout-note}
+### Actividad: Simulando el muestreo en el aula (10 min)
+1. Cada estudiante escribe en un papel cuántas horas durmió anoche.
+2. Formen grupos de 4 y calculen la media de su grupo ($\bar{X}$).
+3. Anoten en la pizarra la media de cada grupo y, al final, el promedio de todas las medias.
+4. Comparen ese promedio con la media de **todo** el curso ($\mu$). ¿Qué observan? ¿Las medias de los grupos varían más o menos que los datos individuales?
+:::
+
+### Ley de los Grandes Números (LGN)
+
+Establece que, a medida que el tamaño de la muestra ($n$) aumenta, la media muestral ($\bar{X}$) se aproxima cada vez más a la media poblacional ($\mu$) [@Moore2013]:
+
+$$
+\lim_{n \to \infty} P(|\bar{X} - \mu| < \varepsilon) = 1 \quad \text{para todo } \varepsilon > 0
+$$
+
+*Aplicación:* para obtener una estimación precisa del nivel promedio de **satisfacción laboral** en una empresa, se necesita encuestar a muchos empleados. Cuanto mayor sea $n$, más cerca estará $\bar{X}$ del valor real $\mu$.
+
+### Teorema del Límite Central (TLC)
+
+Si se toma una **muestra aleatoria suficientemente grande** (como regla práctica, $n \ge 30$) de **cualquier población** con media $\mu$ y desviación estándar $\sigma$, la distribución de la **media muestral ($\bar{X}$)** será **aproximadamente normal** [@LSJ2025]. Si la población ya es normal, $\bar{X}$ es normal para cualquier $n$.
+
+La media muestral estandarizada sigue aproximadamente una distribución normal estándar:
+
+$$
+Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)
+$$
+
+::: {.callout-tip}
+Para ver el TLC en acción, explora la sección *Probability Distributions → Central Limit Theorem* de [Seeing Theory](https://seeing-theory.brown.edu/), donde puedes simular miles de muestras con un clic.
+:::
+
+## Estimación de parámetros
+
+La **estimación** es el proceso de aproximar un valor desconocido de la población ($\theta$) a partir de un dato de la muestra ($\hat{\theta}$).
+
+### Estimación puntual para la media
+
+Se utiliza un **valor único** (el estadístico muestral) como mejor aproximación del parámetro poblacional:
+
+$$
+\hat{\mu} = \bar{X}
+$$
+
+*Ejemplo:* si la media de **autoeficacia percibida** en una muestra de 50 estudiantes es $\bar{X} = 75$, la estimación puntual de la media poblacional ($\mu$) es 75.
+
+### Estimación por intervalo de confianza (IC) para la media
+
+Es un **rango de valores** que, con un **nivel de confianza ($1-\alpha$)** determinado, se espera que contenga el parámetro poblacional.
+
+Si $\sigma$ es conocida:
+
+$$
+IC_{(1-\alpha)} = \bar{X} \pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}}
+$$
+
+* **Valores de $Z_{\alpha/2}$ para niveles de confianza comunes:**
+    * **90% de confianza:** $Z_{\alpha/2} = 1.645$
+    * **95% de confianza:** $Z_{\alpha/2} = 1.96$
+    * **99% de confianza:** $Z_{\alpha/2} = 2.576$ (o 2.58)
+
+Si $\sigma$ no se conoce (lo habitual en la práctica), se estima mediante la desviación estándar muestral $s$ y se reemplaza $Z_{\alpha/2}$ por el valor de la distribución $t$ de Student con $n-1$ grados de libertad:
+
+$$
+IC_{(1-\alpha)} = \bar{X} \pm t_{\alpha/2,\, n-1} \frac{s}{\sqrt{n}}
+$$
+
+*Ejemplo:* un IC al 95% para la media de **estrés postraumático** es $(24.3,\ 27.1)$. Esto significa que, si repitiéramos el muestreo muchas veces, el 95% de los intervalos así construidos contendrían la verdadera media poblacional.
+
+::: {.callout-note}
+### Actividad: Calculando un intervalo de confianza (8 min)
+En una muestra aleatoria de $n=36$ estudiantes, la media de horas de estudio semanal es $\bar{X}=12$. Suponga que $\sigma=6$ horas es conocida.
+
+1. Calculen el error estándar $\sigma/\sqrt{n}$.
+2. Construyan el IC al 95% para la media poblacional.
+3. ¿Qué pasaría con el ancho del intervalo si la muestra fuera de $n=144$? ¿Y si el nivel de confianza fuera del 99%?
+:::
+
+::: {.callout-tip}
+### JASP Tip: Intervalo de confianza para la media
+Una forma rápida de obtener el IC de una media en JASP:
+
+1. Ve a `T-Tests -> One Sample T-Test`.
+2. Pasa tu variable al cuadro de variables.
+3. En `Additional Statistics`, marca **`Location parameter`** y **`Confidence interval`** (95% por defecto).
+4. Marca también **`Descriptives`** para ver la media, la desviación estándar y el error estándar.
+:::
+
+## Tamaño de muestra
+
+El cálculo del **tamaño de muestra ($n$)** es uno de los pasos iniciales más críticos de cualquier investigación que emplee muestreo, pues define la capacidad del estudio para obtener conclusiones válidas y precisas.
+
+### Relevancia de la aleatoriedad y el equilibrio logístico
+
+* **Pertinencia del cálculo:** el cálculo del tamaño de muestra solo tiene sentido cuando se utiliza un **muestreo aleatorio**. Si la muestra es no aleatoria (por conveniencia), la inferencia estadística está comprometida, independientemente del tamaño calculado.
+* **Balance estadístico vs. logístico:** determinar $n$ requiere equilibrar:
+    * **Necesidad estadística:** el tamaño mínimo requerido para alcanzar la precisión deseada (reducir el error estándar y, con él, el ancho del intervalo de confianza).
+    * **Factibilidad logística:** los recursos disponibles (tiempo, costo, personal) para recolectar los datos.
+
+### Cálculo para fines de inferencia descriptiva (margen de error)
+
+Para la inferencia descriptiva, el cálculo se basa en el **margen de error ($e$)** o precisión deseada, que es la máxima diferencia aceptable entre el estimador muestral ($\hat{\theta}$) y el parámetro poblacional ($\theta$).
+
+::: {.panel-tabset}
+
+#### Para la media
+
+Se utiliza cuando se desea estimar un promedio ($\mu$):
+
+$$
+n = \frac{Z^2 \cdot \sigma^2}{e^2} = \left(\frac{Z \cdot \sigma}{e}\right)^2
+$$
+
+Donde:
+
+* $Z$: valor crítico asociado al nivel de confianza deseado ($Z_{\alpha/2}$).
+* $\sigma^2$: varianza de la población (a menudo estimada mediante estudios piloto o estudios previos).
+* $e$: margen de error o precisión máxima aceptable, en las unidades de la variable.
+
+*Ejemplo:* para estimar el puntaje medio de ansiedad con $\sigma = 10$, un margen de error de $e = 2$ puntos y 95% de confianza: $n = (1.96 \cdot 10 / 2)^2 = 96.04 \approx 97$ (siempre se redondea hacia arriba).
+
+#### Para la proporción
+
+Se utiliza cuando se desea estimar un porcentaje o proporción ($p$):
+
+$$
+n = \frac{Z^2 \cdot p(1-p)}{e^2}
+$$
+
+Donde:
+
+* $Z$: valor crítico asociado al nivel de confianza.
+* $p$: proporción poblacional esperada (si se desconoce, se usa $p=0.5$, que maximiza el tamaño de muestra).
+* $e$: margen de error expresado como proporción (usualmente $0.05$).
+
+*Ejemplo:* con $p = 0.5$, $e = 0.05$ y 95% de confianza: $n = \frac{1.96^2 \cdot 0.25}{0.05^2} = 384.16 \approx 385$.
+
+:::
+
+::: {.callout-note}
+### Actividad: Planificando una encuesta (10 min)
+El centro de bienestar estudiantil de la UCB quiere estimar el **porcentaje de estudiantes con síntomas de ansiedad**.
+
+1. Calculen el tamaño de muestra necesario con 95% de confianza, $e=0.05$ y $p=0.5$.
+2. Recalculen con $e=0.03$. ¿Cuánto aumenta la muestra?
+3. Un estudio previo indica que $p \approx 0.20$. Recalculen con $e=0.05$. ¿Por qué la muestra es menor?
+4. Discutan: si el presupuesto solo alcanza para 150 encuestas, ¿qué margen de error tendrían que aceptar?
+:::
+
+::: {.callout-tip}
+El margen de error $e$ es exactamente la mitad del ancho del intervalo de confianza: $e = Z_{\alpha/2}\,\sigma/\sqrt{n}$. Despejando $n$ de esta expresión se obtiene la fórmula del tamaño de muestra para la media. Es decir, **calcular el tamaño de muestra es decidir de antemano qué tan angosto queremos que sea el intervalo**.
+
+Cuando el objetivo no es estimar sino **contrastar hipótesis**, el tamaño de muestra se calcula con otro criterio (la potencia), que veremos en el siguiente capítulo.
+:::

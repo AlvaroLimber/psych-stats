@@ -1,10 +1,10 @@
 # Estadística Descriptiva
 
-La **estadística descriptiva** se ocupa de resumir, organizar y presentar la información de un conjunto de datos, sin pretender hacer inferencias sobre una población mayor. Sus herramientas permiten transformar datos brutos en información comprensible a través de **tablas, medidas numéricas y representaciones gráficas**.
+La **estadística descriptiva** se ocupa de resumir, organizar y presentar la información de un conjunto de datos, sin pretender hacer inferencias sobre una población mayor [@LSJ2025]. Sus herramientas permiten transformar datos brutos en información comprensible a través de **tablas, medidas numéricas y representaciones gráficas** [@Moore2013].
 
 ## Ordenación de los datos
 
-El primer paso en la estadística descriptiva es la **organización de los datos**, es decir, cómo se disponen en una estructura clara que permita analizarlos. El enfoque más común es el **enfoque tabular**, que dispone la información en:
+El primer paso en la estadística descriptiva es la **organización de los datos**, es decir, cómo se disponen en una estructura clara que permita analizarlos [@LSJ2025]. El enfoque más común es el **enfoque tabular**, que dispone la información en:
 
 *   **Filas:** Cada fila corresponde a una **unidad de análisis** (por ejemplo, un estudiante, un paciente, una observación experimental).
 *   **Columnas:** Cada columna corresponde a una **variable** (por ejemplo, edad, sexo, puntaje en una escala).
@@ -26,7 +26,7 @@ Para comenzar cualquier análisis en JASP, el formato preferido es el archivo de
 
 ## Estadísticas para variables cualitativas
 
-Cuando los datos son cualitativos o categóricos (expresan atributos sin magnitud numérica intrínseca), los resúmenes estadísticos se enfocan en contar y comparar las categorías.
+Cuando los datos son cualitativos o categóricos (expresan atributos sin magnitud numérica intrínseca), los resúmenes estadísticos se enfocan en contar y comparar las categorías [@Agresti2018].
 
 ::: {.panel-tabset}
 
@@ -60,8 +60,8 @@ Imaginemos el estudio de preferencias en una comunidad **Z**, donde se evaluaron
     *   $f_{\text{mujeres}} = 87$
     *   $n = 180$
 *   **Frecuencias relativas / proporciones ($r_i$) y porcentajes ($\%$):**
-    *   Proporción de hombres: $r_{\text{humanos}} = \frac{93}{180} = 0.517$ (equivalente al $51.7\%$)
-    *   Proporción de mujeres: $r_{\text{robots}} = \frac{87}{180} = 0.483$ (equivalente al $48.3\%$)
+    *   Proporción de hombres: $r_{\text{hombres}} =\frac{93}{180} = 0.517$ (equivalente al $51.7\%$)
+    *   Proporción de mujeres: $r_{\text{mujeres}} =\frac{87}{180} = 0.483$ (equivalente al $48.3\%$)
 *   **Razón ($R$):** 
     *   Razón hombre/mujer: $R = \frac{93}{87} = 1.07$
     *   *Interpretación:* Hay **1.07 hombres por cada mujer** en esta muestra de la comunidad Z.
@@ -76,7 +76,7 @@ Imaginemos el estudio de preferencias en una comunidad **Z**, donde se evaluaron
 2. Usando sus calculadoras, determinen:
    *   El **porcentaje** de mujeres y hombres en el aula.
    *   La **razón** de mujeres por cada hombre (o viceversa).
-3. Reflexionen en parejas: Si quisiéramos comparar la deserción académica en la UCB este semestre, ¿por qué una *tasa* sería más útil que reportar únicamente el *conteo absoluto* de abandonos?.
+3. Reflexionen en parejas: Si quisiéramos comparar la deserción académica en la UCB este semestre, ¿por qué una *tasa* sería más útil que reportar únicamente el *conteo absoluto* de abandonos?
 :::
 
 ::: {.callout-tip}
@@ -86,6 +86,7 @@ Para generar tablas de frecuencias cualitativas en JASP:
 1. Haz clic en `Descriptives -> Descriptive Statistics`.
 2. Pasa tu variable cualitativa al cuadro `Variables`.
 3. Despliega la opción `Tables` en el panel de control izquierdo y marca la casilla **`Frequency tables`**.
+
 JASP creará una tabla con la frecuencia absoluta ($f_i$), el porcentaje (%) y el porcentaje acumulado para tu variable.
 :::
 
@@ -102,6 +103,45 @@ Las **medidas de tendencia central** resumen en un solo valor el "centro" o el v
         $$\mu = \frac{\sum_{i=1}^{N} X_i}{N}$$
 *   **Mediana:** Valor que divide el conjunto ordenado de datos en dos mitades de igual tamaño. Es altamente resistente ante la presencia de valores atípicos (*outliers*).
 *   **Moda:** El valor que ocurre con mayor frecuencia en la muestra. Es la única medida aplicable directamente a variables nominales.
+
+*Ejemplo:* en los puntajes 5, 6, 6, 7, 10:
+
+*   Media $= \frac{5+6+6+7+10}{5} = 6.8$
+*   Mediana $= 6$
+*   Moda $= 6$
+
+::: {.callout-tip}
+La media actúa como el "centro de gravedad" de los datos: si los representáramos físicamente sobre una regla, sería el punto de equilibrio exacto.
+:::
+
+::: {.callout-note}
+### Ejercicio Práctico: El efecto de los valores extremos (*outliers*) (10 min)
+**Contexto:** Como futuros psicólogos, deben entender que los datos representan realidades. El tiempo de traslado a la universidad puede verse afectado por factores externos como marchas o bloqueos, generando datos "atípicos" que distorsionan nuestro análisis estadístico.
+
+**Instrucciones:** En grupos, utilicen sus calculadoras para analizar el nivel de **Estrés Percibido** (escala 1-100) de un grupo de estudiantes de 4.º semestre de la UCB antes de un examen parcial.
+
+**El grupo típico.** Calculen la media de estrés de estos 5 estudiantes:
+
+* Estudiante A = 45 pts
+* Estudiante B = 52 pts
+* Estudiante C = 48 pts
+* Estudiante D = 50 pts
+* Estudiante E = 47 pts
+
+1. Suma total ($\sum X_i$): ________
+2. Media ($\bar{X}_1$): ________
+
+**El impacto del *outlier*.** Un sexto estudiante llega al aula. Tuvo un accidente menor en el Teleférico y llega en crisis, con un puntaje de estrés de **98 pts**. Calculen la nueva media para el grupo ($n=6$):
+
+1. Nueva suma: ________
+2. Nueva media ($\bar{X}_2$): ________
+
+**Discusión:**
+
+1. ¿La nueva media ($\bar{X}_2$) describe realmente el nivel de estrés del "estudiante promedio" de este grupo, o el valor extremo está "arrastrando" la media hacia arriba de forma engañosa?
+2. Si fueras el psicólogo de bienestar estudiantil de la UCB y solo vieras el promedio de los 6 estudiantes, ¿qué decisión tomarías sobre el grupo?
+3. ¿Qué medida alternativa existe? ¿Por qué?
+:::
 
 ::: {.callout-note}
 ### Actividad de Reflexión: El dilema de la Media vs Mediana (5 min)
@@ -122,6 +162,7 @@ En JASP, por defecto, se calcula la media al ingresar variables continuas. Si de
 1. Ve al menú de análisis descriptivo.
 2. Despliega la pestaña **`Statistics`**.
 3. En la sección **`Central Tendency`**, selecciona las casillas **`Median`** y **`Mode`**.
+
 JASP actualizará tu tabla descriptiva en tiempo real en el panel derecho.
 :::
 
@@ -137,7 +178,22 @@ Las **medidas de dispersión** indican el grado en que los datos se alejan de su
     
 *   **Desviación Estándar ($s$):** Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.
 *   **Coeficiente de Variación ($CV$):** Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes:
-    $$CV% = \left( \frac{s}{\bar{X}} \right) \times 100$$
+    $$CV = \frac{s}{\bar{X}} \qquad CV\% = \left( \frac{s}{\bar{X}} \right) \times 100$$
+    Mientras más cercano a cero sea el $CV$, menor es la dispersión relativa de los datos.
+
+*Ejemplo:* en los datos 5, 6, 6, 7, 10 (media $= 6.8$):
+
+*   Rango $= 10 - 5 = 5$
+*   Varianza: $s^2 = \frac{(-1.8)^2 + (-0.8)^2 + (-0.8)^2 + (0.2)^2 + (3.2)^2}{5-1} = \frac{14.8}{4} = 3.7$
+*   Desviación estándar: $s = \sqrt{3.7} \approx 1.92$
+*   Coeficiente de variación: $CV = 1.92 / 6.8 \approx 0.283$, es decir, $CV\% = 28.3\%$
+
+::: {.callout-tip}
+### Notas
+*   Las medidas de tendencia central y de dispersión deben interpretarse en conjunto.
+*   Una media sin su dispersión puede ser engañosa; la dispersión muestra la heterogeneidad de los datos.
+*   En investigación psicológica es clave reportar ambas dimensiones (por ejemplo, $M = 6.8$, $DE = 1.92$) para dar una imagen completa de los resultados.
+:::
 
 ::: {.callout-note}
 ### Actividad Grupal: Diseñando la Variabilidad
@@ -154,7 +210,7 @@ En su grupo de trabajo, discutan y respondan en una hoja:
 
 ## Medidas de forma
 
-La **forma de la distribución** describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra.
+La **forma de la distribución** describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra. Permite evaluar si una variable se distribuye de manera simétrica o presenta concentraciones atípicas de valores [@LSJ2025; @Moore2013].
 
 *   **Asimetría (Skewness):** Evalúa el grado de simetría de la distribución de frecuencias respecto a su media.
     *   **Asimetría > 0 (Positiva / Sesgo a la derecha):** La cola larga de la distribución se estira hacia los valores más altos.
@@ -164,6 +220,36 @@ La **forma de la distribución** describe cómo se agrupan las puntuaciones en r
     *   **Curtosis > 0 (Leptocúrtica):** Distribución muy apuntada en el centro y con colas pesadas.
     *   **Curtosis < 0 (Platicúrtica):** Distribución achatada, plana en su zona central.
     *   **Curtosis = 0 (Mesocúrtica):** Grado de apuntamiento idéntico al de una distribución normal.
+
+**Fórmulas (coeficientes de Fisher):**
+
+$$
+AS = \frac{\frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^3}{s^3}
+\qquad
+KU = \frac{\frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^4}{s^4} - 3
+$$
+
+donde $s$ es la desviación estándar. En la fórmula de la curtosis se resta 3 (exceso de curtosis) para que la distribución normal tenga $KU = 0$.
+
+*Ejemplo aplicado:* en un test de ansiedad aplicado a 200 estudiantes se obtiene **AS = 1.2** (asimetría positiva) y **KU = 1.5** (leptocúrtica). Esto indica que la mayoría de los estudiantes tiene niveles bajos a moderados, pero existe un pequeño grupo con niveles muy altos que genera una cola larga hacia la derecha.
+
+::: {.callout-tip}
+### Notas didácticas
+*   La asimetría y la curtosis complementan las medidas de tendencia central y dispersión, aportando información sobre la forma.
+*   En investigación psicológica ayudan a verificar el supuesto de normalidad antes de aplicar pruebas paramétricas.
+*   Valores extremos de asimetría o curtosis pueden afectar fuertemente las inferencias estadísticas.
+*   En la práctica, suele ser más informativo mostrar un histograma o un diagrama de caja que reportar solo estos coeficientes.
+*   En JASP, ambos se obtienen en `Statistics -> Distribution`, marcando **`Skewness`** y **`Kurtosis`**.
+:::
+
+::: {.callout-note}
+### Actividad: Imaginando formas (5 min)
+Sin hacer cálculos, dibujen a mano la forma esperada de la distribución de cada variable e indiquen el signo probable de su asimetría:
+
+1. Número de hijos por familia en La Paz.
+2. Nota en un examen muy fácil (escala de 0 a 100).
+3. Estatura de estudiantes universitarios.
+:::
 
 ## Medidas de posición: Cuantiles
 
@@ -220,4 +306,10 @@ Para generar estos gráficos de manera profesional desde JASP:
 2. Selecciona **`Distribution plots`** para visualizar histogramas acompañados de su curva de densidad estimada.
 3. Si deseas generar Boxplots, despliega la pestaña **`Customizable plots`** (o activa la sección **`Boxplots`**) y marca la casilla **`Boxplot element`**. 
 4. Puedes marcar **`Violin element`** para fusionar la caja con la forma de la densidad, o **`Jitter element`** para ver los puntos reales de tus sujetos esparcidos sobre el gráfico.
+:::
+
+::: {.callout-tip}
+### Para explorar en la web
+*   **Seeing Theory** (Brown University): [https://seeing-theory.brown.edu/](https://seeing-theory.brown.edu/). Secciones interactivas sobre distribuciones y análisis exploratorio, con histogramas, boxplots y densidades.
+*   **Seeing Data**: [http://seeingdata.org/](http://seeingdata.org/). Recursos sobre cómo leer y entender visualizaciones de datos en ciencias sociales.
 :::

@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
+
+<title>4&nbsp; Herramientas Estadísticas – Psicoestadística</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./teorica.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-be67d91eaee7ee535f133f4b8a0584b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-40d2b7ce583afdaabd40688eef35f9b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta name="twitter:title" content="4&nbsp; Herramientas Estadísticas – Psicoestadística">
+<meta name="twitter:description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./teorica.html">Parte II: Estadística teórica e inferencial</a></li><li class="breadcrumb-item"><a href="./herramientas.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Herramientas Estadísticas</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Psicoestadística</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/alvarolimber/psych-stats" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Psicoestadística.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Compartir" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Compartir"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo lector">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I: Diseño estadístico y estadística descriptiva</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fundamentos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./descriptiva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estadística Descriptiva</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II: Estadística teórica e inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./teorica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística Teórica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./herramientas.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Herramientas Estadísticas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#pruebas-de-hipótesis" id="toc-pruebas-de-hipótesis" class="nav-link active" data-scroll-target="#pruebas-de-hipótesis"><span class="header-section-number">4.1</span> Pruebas de hipótesis</a>
+  <ul class="collapse">
+  <li><a href="#pasos-de-la-prueba-de-hipótesis" id="toc-pasos-de-la-prueba-de-hipótesis" class="nav-link" data-scroll-target="#pasos-de-la-prueba-de-hipótesis"><span class="header-section-number">4.1.1</span> Pasos de la prueba de hipótesis</a></li>
+  <li><a href="#formulación-de-hipótesis" id="toc-formulación-de-hipótesis" class="nav-link" data-scroll-target="#formulación-de-hipótesis"><span class="header-section-number">4.1.2</span> Formulación de hipótesis</a></li>
+  <li><a href="#errores-en-la-prueba-de-hipótesis" id="toc-errores-en-la-prueba-de-hipótesis" class="nav-link" data-scroll-target="#errores-en-la-prueba-de-hipótesis"><span class="header-section-number">4.1.3</span> Errores en la prueba de hipótesis</a></li>
+  <li><a href="#el-p-valor" id="toc-el-p-valor" class="nav-link" data-scroll-target="#el-p-valor"><span class="header-section-number">4.1.4</span> El <em>p</em>-valor</a></li>
+  <li><a href="#prueba-de-hipótesis-para-la-media-mu" id="toc-prueba-de-hipótesis-para-la-media-mu" class="nav-link" data-scroll-target="#prueba-de-hipótesis-para-la-media-mu"><span class="header-section-number">4.1.5</span> Prueba de hipótesis para la media (<span class="math inline">\(\mu\)</span>)</a></li>
+  <li><a href="#tamaño-de-muestra-para-pruebas-de-hipótesis-potencia" id="toc-tamaño-de-muestra-para-pruebas-de-hipótesis-potencia" class="nav-link" data-scroll-target="#tamaño-de-muestra-para-pruebas-de-hipótesis-potencia"><span class="header-section-number">4.1.6</span> Tamaño de muestra para pruebas de hipótesis (potencia)</a></li>
+  </ul></li>
+  <li><a href="#análisis-de-datos-categóricos-prueba-chi2" id="toc-análisis-de-datos-categóricos-prueba-chi2" class="nav-link" data-scroll-target="#análisis-de-datos-categóricos-prueba-chi2"><span class="header-section-number">4.2</span> Análisis de datos categóricos: prueba <span class="math inline">\(\chi^2\)</span></a>
+  <ul class="collapse">
+  <li><a href="#prueba-de-bondad-de-ajuste" id="toc-prueba-de-bondad-de-ajuste" class="nav-link" data-scroll-target="#prueba-de-bondad-de-ajuste"><span class="header-section-number">4.2.1</span> Prueba de bondad de ajuste</a></li>
+  <li><a href="#prueba-de-independencia" id="toc-prueba-de-independencia" class="nav-link" data-scroll-target="#prueba-de-independencia"><span class="header-section-number">4.2.2</span> Prueba de independencia</a></li>
+  <li><a href="#consideraciones-y-recomendaciones-prácticas" id="toc-consideraciones-y-recomendaciones-prácticas" class="nav-link" data-scroll-target="#consideraciones-y-recomendaciones-prácticas"><span class="header-section-number">4.2.3</span> Consideraciones y recomendaciones prácticas</a></li>
+  <li><a href="#resumen-comparativo" id="toc-resumen-comparativo" class="nav-link" data-scroll-target="#resumen-comparativo"><span class="header-section-number">4.2.4</span> Resumen comparativo</a></li>
+  </ul></li>
+  <li><a href="#comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" id="toc-comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" class="nav-link" data-scroll-target="#comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas"><span class="header-section-number">4.3</span> Comparación de dos medias: pruebas z, t y no paramétricas</a>
+  <ul class="collapse">
+  <li><a href="#prueba-z-para-dos-medias-caso-teórico" id="toc-prueba-z-para-dos-medias-caso-teórico" class="nav-link" data-scroll-target="#prueba-z-para-dos-medias-caso-teórico"><span class="header-section-number">4.3.1</span> Prueba z para dos medias (caso teórico)</a></li>
+  <li><a href="#prueba-t-para-dos-medias" id="toc-prueba-t-para-dos-medias" class="nav-link" data-scroll-target="#prueba-t-para-dos-medias"><span class="header-section-number">4.3.2</span> Prueba t para dos medias</a></li>
+  <li><a href="#supuestos-de-las-pruebas-t" id="toc-supuestos-de-las-pruebas-t" class="nav-link" data-scroll-target="#supuestos-de-las-pruebas-t"><span class="header-section-number">4.3.3</span> Supuestos de las pruebas t</a></li>
+  <li><a href="#pruebas-no-paramétricas-equivalentes" id="toc-pruebas-no-paramétricas-equivalentes" class="nav-link" data-scroll-target="#pruebas-no-paramétricas-equivalentes"><span class="header-section-number">4.3.4</span> Pruebas no paramétricas equivalentes</a></li>
+  <li><a href="#interpretación-y-tamaño-del-efecto" id="toc-interpretación-y-tamaño-del-efecto" class="nav-link" data-scroll-target="#interpretación-y-tamaño-del-efecto"><span class="header-section-number">4.3.5</span> Interpretación y tamaño del efecto</a></li>
+  </ul></li>
+  <li><a href="#correlación-y-regresión-lineal" id="toc-correlación-y-regresión-lineal" class="nav-link" data-scroll-target="#correlación-y-regresión-lineal"><span class="header-section-number">4.4</span> Correlación y regresión lineal</a>
+  <ul class="collapse">
+  <li><a href="#correlación-de-pearson-r" id="toc-correlación-de-pearson-r" class="nav-link" data-scroll-target="#correlación-de-pearson-r"><span class="header-section-number">4.4.1</span> Correlación de Pearson (<span class="math inline">\(r\)</span>)</a></li>
+  <li><a href="#correlación-no-paramétrica-spearman-rho" id="toc-correlación-no-paramétrica-spearman-rho" class="nav-link" data-scroll-target="#correlación-no-paramétrica-spearman-rho"><span class="header-section-number">4.4.2</span> Correlación no paramétrica: Spearman (<span class="math inline">\(\rho\)</span>)</a></li>
+  <li><a href="#regresión-lineal-simple" id="toc-regresión-lineal-simple" class="nav-link" data-scroll-target="#regresión-lineal-simple"><span class="header-section-number">4.4.3</span> Regresión lineal simple</a></li>
+  <li><a href="#bondad-de-ajuste" id="toc-bondad-de-ajuste" class="nav-link" data-scroll-target="#bondad-de-ajuste"><span class="header-section-number">4.4.4</span> Bondad de ajuste</a></li>
+  <li><a href="#supuestos-principales" id="toc-supuestos-principales" class="nav-link" data-scroll-target="#supuestos-principales"><span class="header-section-number">4.4.5</span> Supuestos principales</a></li>
+  </ul></li>
+  <li><a href="#comparar-varias-medias-anova-de-una-vía" id="toc-comparar-varias-medias-anova-de-una-vía" class="nav-link" data-scroll-target="#comparar-varias-medias-anova-de-una-vía"><span class="header-section-number">4.5</span> Comparar varias medias: ANOVA de una vía</a>
+  <ul class="collapse">
+  <li><a href="#hipótesis-5" id="toc-hipótesis-5" class="nav-link" data-scroll-target="#hipótesis-5"><span class="header-section-number">4.5.1</span> Hipótesis</a></li>
+  <li><a href="#lógica-del-anova" id="toc-lógica-del-anova" class="nav-link" data-scroll-target="#lógica-del-anova"><span class="header-section-number">4.5.2</span> Lógica del ANOVA</a></li>
+  <li><a href="#tamaño-del-efecto-eta-cuadrado-eta2" id="toc-tamaño-del-efecto-eta-cuadrado-eta2" class="nav-link" data-scroll-target="#tamaño-del-efecto-eta-cuadrado-eta2"><span class="header-section-number">4.5.3</span> Tamaño del efecto: eta cuadrado (<span class="math inline">\(\eta^2\)</span>)</a></li>
+  <li><a href="#ejemplo-5" id="toc-ejemplo-5" class="nav-link" data-scroll-target="#ejemplo-5"><span class="header-section-number">4.5.4</span> Ejemplo</a></li>
+  <li><a href="#pruebas-post-hoc" id="toc-pruebas-post-hoc" class="nav-link" data-scroll-target="#pruebas-post-hoc"><span class="header-section-number">4.5.5</span> Pruebas post hoc</a></li>
+  <li><a href="#supuestos" id="toc-supuestos" class="nav-link" data-scroll-target="#supuestos"><span class="header-section-number">4.5.6</span> Supuestos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./teorica.html">Parte II: Estadística teórica e inferencial</a></li><li class="breadcrumb-item"><a href="./herramientas.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Herramientas Estadísticas</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Herramientas Estadísticas</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>En el capítulo anterior vimos cómo <strong>estimar</strong> un parámetro poblacional a partir de una muestra (estimación puntual e intervalos de confianza). En este capítulo damos el siguiente paso: usar la muestra para <strong>tomar decisiones</strong> sobre la población mediante <strong>pruebas de hipótesis</strong>, y luego aplicar esa lógica a las herramientas más usadas en psicología.</p>
+<section id="pruebas-de-hipótesis" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="pruebas-de-hipótesis"><span class="header-section-number">4.1</span> Pruebas de hipótesis</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Todo parte de una muestra aleatoria
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las pruebas de hipótesis que veremos en este capítulo (χ², z, t, correlación, ANOVA) <strong>suponen que los datos provienen de una muestra aleatoria</strong> de la población objetivo (o de una asignación aleatoria a grupos, en los experimentos). Esa aleatoriedad es lo que permite conocer la distribución muestral del estadístico de prueba y, por tanto, calcular probabilidades como el <em>p</em>-valor.</p>
+<p>Si la muestra es por conveniencia (voluntarios, solo un paralelo, una encuesta difundida por redes sociales), el <em>p</em>-valor sigue apareciendo en la tabla de JASP, pero <strong>pierde su respaldo probabilístico</strong>: no autoriza a generalizar a la población.</p>
+</div>
+</div>
+<p>Una <strong>prueba de hipótesis</strong> es un procedimiento estadístico formal para tomar una decisión sobre un parámetro poblacional (<span class="math inline">\(\theta\)</span>), contrastando dos afirmaciones opuestas con la evidencia de la muestra. Permite determinar si una conjetura sobre el parámetro está respaldada o no por los datos.</p>
+<section id="pasos-de-la-prueba-de-hipótesis" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="pasos-de-la-prueba-de-hipótesis"><span class="header-section-number">4.1.1</span> Pasos de la prueba de hipótesis</h3>
+<ol type="1">
+<li><strong>Formular las hipótesis (<span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span>):</strong> se establecen la hipótesis nula y su alternativa.</li>
+<li><strong>Establecer el nivel de significación (<span class="math inline">\(\alpha\)</span>):</strong> probabilidad máxima que estamos dispuestos a aceptar de cometer un error de tipo I (generalmente <span class="math inline">\(\alpha=0.05\)</span> o <span class="math inline">\(0.01\)</span>).</li>
+<li><strong>Construir el estadístico de prueba:</strong> se calcula un valor estandarizado (ej. <span class="math inline">\(Z\)</span>, <span class="math inline">\(t\)</span>) que mide qué tan lejos está el estimador muestral del valor propuesto en <span class="math inline">\(H_0\)</span>.</li>
+<li><strong>Evaluar y concluir:</strong> se compara el estadístico de prueba con los valores críticos (o se usa el <em>p</em>-valor) para decidir si se <strong>rechaza</strong> o <strong>no se rechaza</strong> la hipótesis nula.</li>
+</ol>
+</section>
+<section id="formulación-de-hipótesis" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="formulación-de-hipótesis"><span class="header-section-number">4.1.2</span> Formulación de hipótesis</h3>
+<ol type="1">
+<li><strong>Hipótesis nula (<span class="math inline">\(H_0\)</span>):</strong> es la afirmación que se somete a prueba; asume que <strong>no hay efecto, cambio o diferencia</strong>. Siempre incluye un signo de igualdad (ej. <span class="math inline">\(\mu = 10\)</span>).</li>
+<li><strong>Hipótesis alternativa (<span class="math inline">\(H_1\)</span> o <span class="math inline">\(H_a\)</span>):</strong> es la afirmación <strong>contraria a la nula</strong>; es lo que se sospecha o se quiere demostrar.
+<ul>
+<li><strong>Prueba bilateral:</strong> <span class="math inline">\(H_1: \mu \ne 10\)</span></li>
+<li><strong>Prueba unilateral a la derecha:</strong> <span class="math inline">\(H_1: \mu &gt; 10\)</span></li>
+<li><strong>Prueba unilateral a la izquierda:</strong> <span class="math inline">\(H_1: \mu &lt; 10\)</span></li>
+</ul></li>
+</ol>
+</section>
+<section id="errores-en-la-prueba-de-hipótesis" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="errores-en-la-prueba-de-hipótesis"><span class="header-section-number">4.1.3</span> Errores en la prueba de hipótesis</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tipo de error</th>
+<th style="text-align: left;">Definición</th>
+<th style="text-align: left;">Consecuencia (riesgo controlado)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Error de tipo I (<span class="math inline">\(\alpha\)</span>)</strong></td>
+<td style="text-align: left;"><strong>Rechazar</strong> <span class="math inline">\(H_0\)</span> cuando en realidad es <strong>verdadera</strong>.</td>
+<td style="text-align: left;">Falso positivo. Se controla con el nivel de significación (<span class="math inline">\(\alpha\)</span>).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Error de tipo II (<span class="math inline">\(\beta\)</span>)</strong></td>
+<td style="text-align: left;"><strong>No rechazar</strong> <span class="math inline">\(H_0\)</span> cuando en realidad es <strong>falsa</strong>.</td>
+<td style="text-align: left;">Falso negativo. Se relaciona con la potencia de la prueba (<span class="math inline">\(1-\beta\)</span>).</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: El juicio estadístico (8 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un tribunal juzga a un acusado bajo el principio de “inocente hasta que se demuestre lo contrario”.</p>
+<ol type="1">
+<li>Planteen <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span> para este “juicio”.</li>
+<li>¿Qué sería un error de tipo I? ¿Y un error de tipo II?</li>
+<li>Ahora trasladen la analogía a la psicología: un test de tamizaje para detectar depresión. Planteen las hipótesis y discutan cuál de los dos errores sería más grave para el paciente.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="el-p-valor" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="el-p-valor"><span class="header-section-number">4.1.4</span> El <em>p</em>-valor</h3>
+<p>El <strong><em>p</em>-valor</strong> es una medida que permite evaluar la evidencia en contra de la hipótesis nula. Representa la probabilidad de obtener un resultado tan extremo (o más) que el observado, <strong>asumiendo que la hipótesis nula es verdadera</strong>. Un <em>p</em>-valor pequeño indica que los datos son poco compatibles con <span class="math inline">\(H_0\)</span> y sugiere evidencia a favor de la alternativa.</p>
+<ul>
+<li>Si <span class="math inline">\(p &lt; \alpha\)</span>: se <strong>rechaza</strong> <span class="math inline">\(H_0\)</span>.</li>
+<li>Si <span class="math inline">\(p \ge \alpha\)</span>: <strong>no se rechaza</strong> <span class="math inline">\(H_0\)</span>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El <em>p</em>-valor <strong>no</strong> es la probabilidad de que <span class="math inline">\(H_0\)</span> sea verdadera, ni mide la importancia práctica de un efecto. Por eso siempre debe acompañarse de un tamaño del efecto <span class="citation" data-cites="Cohen1994">(<a href="references.html#ref-Cohen1994" role="doc-biblioref">Cohen 1994</a>)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Conexión JASP: El <em>p</em>-valor en las tablas de resultados
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En todas las tablas de JASP el <em>p</em>-valor aparece en la columna <strong><code>p</code></strong>. JASP hace por nosotros el paso 3 (calcular el estadístico) y nos entrega el <em>p</em>-valor; <strong>nuestro trabajo es formular bien las hipótesis, elegir la prueba adecuada e interpretar el resultado</strong>.</p>
+</div>
+</div>
+</section>
+<section id="prueba-de-hipótesis-para-la-media-mu" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="prueba-de-hipótesis-para-la-media-mu"><span class="header-section-number">4.1.5</span> Prueba de hipótesis para la media (<span class="math inline">\(\mu\)</span>)</h3>
+<p>Se utiliza para probar si la media poblacional (<span class="math inline">\(\mu\)</span>) es igual a un valor de referencia (<span class="math inline">\(\mu_0\)</span>). El estadístico de prueba mide la distancia entre la media muestral (<span class="math inline">\(\bar{X}\)</span>) y <span class="math inline">\(\mu_0\)</span> en unidades de error estándar.</p>
+<p><strong>Estadístico de prueba (para la media con <span class="math inline">\(\sigma\)</span> conocida):</strong></p>
+<p><span class="math display">\[
+Z_{0} = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}
+\]</span></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Prueba bilateral</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Unilateral derecha</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Unilateral izquierda</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Valores críticos unilaterales</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span class="math display">\[
+H_0: \mu = \mu_0 \qquad H_1: \mu \neq \mu_0
+\]</span></p>
+<p>Se rechaza <span class="math inline">\(H_0\)</span> cuando:</p>
+<p><span class="math display">\[
+Z_0 &gt; Z_{\alpha/2} \quad \text{o} \quad Z_0 &lt; -Z_{\alpha/2}
+\]</span></p>
+<p>Valores usuales de <span class="math inline">\(Z_{\alpha/2}\)</span>:</p>
+<ul>
+<li>al 10% de significación: <span class="math inline">\(Z_{\alpha/2}=1.645\)</span></li>
+<li>al 5% de significación: <span class="math inline">\(Z_{\alpha/2}=1.96\)</span></li>
+<li>al 1% de significación: <span class="math inline">\(Z_{\alpha/2}=2.576\)</span></li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><span class="math display">\[
+H_0: \mu = \mu_0 \qquad H_1: \mu &gt; \mu_0
+\]</span></p>
+<p>Se rechaza <span class="math inline">\(H_0\)</span> si <span class="math inline">\(Z_0 &gt; Z_{\alpha}\)</span>.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><span class="math display">\[
+H_0: \mu = \mu_0 \qquad H_1: \mu &lt; \mu_0
+\]</span></p>
+<p>Se rechaza <span class="math inline">\(H_0\)</span> si <span class="math inline">\(Z_0 &lt; -Z_{\alpha}\)</span>.</p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<ul>
+<li><span class="math inline">\(Z_{0.10}=1.28\)</span></li>
+<li><span class="math inline">\(Z_{0.05}=1.645\)</span></li>
+<li><span class="math inline">\(Z_{0.01}=2.33\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<p><em>Ejemplo:</em> se sabe que en la población general el puntaje medio de una escala de estrés es <span class="math inline">\(\mu_0 = 50\)</span> con <span class="math inline">\(\sigma = 10\)</span>. En una muestra de <span class="math inline">\(n=25\)</span> estudiantes en época de exámenes se obtiene <span class="math inline">\(\bar{X} = 54\)</span>. ¿Hay evidencia de que el estrés sea <strong>mayor</strong> en época de exámenes (<span class="math inline">\(\alpha = 0.05\)</span>)?</p>
+<p><span class="math display">\[
+Z_0 = \frac{54 - 50}{10/\sqrt{25}} = \frac{4}{2} = 2
+\]</span></p>
+<p>Como <span class="math inline">\(Z_0 = 2 &gt; Z_{0.05} = 1.645\)</span>, <strong>se rechaza <span class="math inline">\(H_0\)</span></strong>: hay evidencia de que el estrés medio en época de exámenes es mayor que 50.</p>
+</section>
+<section id="tamaño-de-muestra-para-pruebas-de-hipótesis-potencia" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="tamaño-de-muestra-para-pruebas-de-hipótesis-potencia"><span class="header-section-number">4.1.6</span> Tamaño de muestra para pruebas de hipótesis (potencia)</h3>
+<p>Para las pruebas de hipótesis, el tamaño de muestra se calcula para asegurar una <strong>potencia</strong> adecuada (<span class="math inline">\(1-\beta\)</span>, usualmente 0.80), es decir, para controlar el <strong>error de tipo II (<span class="math inline">\(\beta\)</span>)</strong>. Este cálculo debe considerar la magnitud del efecto que se quiere detectar <span class="citation" data-cites="Cohen1988">(<a href="references.html#ref-Cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>.</p>
+<section id="cálculo-básico-para-la-media-potencia" class="level4" data-number="4.1.6.1">
+<h4 data-number="4.1.6.1" class="anchored" data-anchor-id="cálculo-básico-para-la-media-potencia"><span class="header-section-number">4.1.6.1</span> Cálculo básico para la media (potencia)</h4>
+<p>Se busca detectar una diferencia mínima esperada (<span class="math inline">\(\mu_1 - \mu_0\)</span>, la magnitud del efecto) con una potencia (<span class="math inline">\(1-\beta\)</span>) y un nivel de significación <span class="math inline">\(\alpha\)</span>:</p>
+<p><span class="math display">\[
+n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot \sigma^2}{(\mu_1 - \mu_0)^2}
+\]</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\(Z_{\alpha/2}\)</span>: valor Z asociado al nivel de significación (<span class="math inline">\(\alpha\)</span>).</li>
+<li><span class="math inline">\(Z_{\beta}\)</span>: valor Z asociado a la probabilidad del error de tipo II (<span class="math inline">\(\beta\)</span>); para una potencia de 0.80, <span class="math inline">\(Z_{\beta} = 0.84\)</span>.</li>
+<li><span class="math inline">\((\mu_1 - \mu_0)\)</span>: magnitud mínima del efecto (diferencia clínicamente relevante) que se espera detectar.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: ¿Cuántos participantes necesito? (8 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un equipo quiere probar si un programa de <em>mindfulness</em> reduce el estrés en 5 puntos respecto al promedio poblacional (<span class="math inline">\(\mu_0 = 50\)</span>, <span class="math inline">\(\sigma = 10\)</span>).</p>
+<ol type="1">
+<li>Con <span class="math inline">\(\alpha = 0.05\)</span> (bilateral) y una potencia de 0.80 (<span class="math inline">\(Z_\beta = 0.84\)</span>), calculen el tamaño de muestra necesario.</li>
+<li>¿Qué pasa con <span class="math inline">\(n\)</span> si quieren detectar una diferencia más pequeña, de 2.5 puntos?</li>
+<li>Discutan: si solo consiguen 15 voluntarios de un mismo paralelo, ¿qué problemas tendrá el estudio además del tamaño?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Análisis de potencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las versiones recientes de JASP incluyen el módulo <strong><code>Power</code></strong> (actívalo con el ícono <code>+</code>). Permite calcular el tamaño de muestra necesario para una prueba <em>t</em> indicando el tamaño del efecto esperado (<em>d</em> de Cohen), el nivel <span class="math inline">\(\alpha\)</span> y la potencia deseada, y muestra curvas de potencia para distintos tamaños de muestra.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="análisis-de-datos-categóricos-prueba-chi2" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="análisis-de-datos-categóricos-prueba-chi2"><span class="header-section-number">4.2</span> Análisis de datos categóricos: prueba <span class="math inline">\(\chi^2\)</span></h2>
+<p>Cuando las variables son <strong>categóricas</strong> (nominales u ordinales), la información se resume en términos de <strong>frecuencias</strong>. La <strong>prueba chi-cuadrado (<span class="math inline">\(\chi^2\)</span>)</strong> permite evaluar si las frecuencias observadas difieren de las que esperaríamos bajo una hipótesis teórica. Es una de las herramientas más utilizadas en psicología para analizar respuestas en categorías o preferencias <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
+<section id="prueba-de-bondad-de-ajuste" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="prueba-de-bondad-de-ajuste"><span class="header-section-number">4.2.1</span> Prueba de bondad de ajuste</h3>
+<p>Evalúa si las frecuencias observadas de una variable categórica <strong>se ajustan a un modelo teórico</strong> o distribución esperada.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Decisión</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Ejemplo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><span class="math display">\[
+\begin{aligned}
+H_0 &amp;: \text{Las frecuencias observadas se ajustan a las frecuencias esperadas.}\\
+H_1 &amp;: \text{Las frecuencias observadas difieren de las esperadas.}
+\end{aligned}
+\]</span></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><span class="math display">\[
+\chi^2_0 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
+\]</span></p>
+<p>donde:</p>
+<ul>
+<li><span class="math inline">\(O_i\)</span>: frecuencia observada en la categoría <span class="math inline">\(i\)</span>,</li>
+<li><span class="math inline">\(E_i\)</span>: frecuencia esperada bajo <span class="math inline">\(H_0\)</span>,</li>
+<li><span class="math inline">\(k\)</span>: número de categorías.</li>
+</ul>
+<p>Los <strong>grados de libertad</strong> son <span class="math inline">\(gl = k - 1\)</span>.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Se rechaza <span class="math inline">\(H_0\)</span> si:</p>
+<p><span class="math display">\[
+\chi^2_0 &gt; \chi^2_{\alpha,\, k-1}
+\]</span></p>
+<p>o, equivalentemente, si <span class="math inline">\(p &lt; \alpha\)</span>. La prueba evalúa el <strong>grado de ajuste</strong>, no la dirección del efecto <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>Un psicólogo evalúa si las preferencias por cuatro tipos de música (pop, rock, clásica, jazz) se distribuyen uniformemente entre <span class="math inline">\(n=100\)</span> estudiantes. Las frecuencias observadas son (30, 25, 20, 25) y las esperadas, si no hubiera preferencia, serían iguales (25 cada una):</p>
+<p><span class="math display">\[
+\chi^2_0 = \frac{(30-25)^2}{25} + \frac{(25-25)^2}{25} + \frac{(20-25)^2}{25} + \frac{(25-25)^2}{25} = 2
+\]</span></p>
+<p>Con <span class="math inline">\(gl = 3\)</span> y <span class="math inline">\(\alpha = 0.05\)</span>, el valor crítico es 7.815. Como <span class="math inline">\(2 &lt; 7.815\)</span>, <strong>no se rechaza <span class="math inline">\(H_0\)</span></strong>: no hay evidencia de diferencias significativas en las preferencias.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: ¿Los días de la semana son iguales? (8 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un servicio de orientación psicológica registra 120 consultas en una semana laboral: lunes 32, martes 26, miércoles 20, jueves 18, viernes 24.</p>
+<ol type="1">
+<li>Planteen <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span>.</li>
+<li>Calculen las frecuencias esperadas si las consultas se distribuyeran uniformemente.</li>
+<li>Calculen <span class="math inline">\(\chi^2_0\)</span> y compárenlo con el valor crítico <span class="math inline">\(\chi^2_{0.05,\,4} = 9.488\)</span>.</li>
+<li>¿Conviene asignar más personal algún día específico?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Bondad de ajuste
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Ve a <code>Frequencies -&gt; Multinomial Test</code>.</li>
+<li>Pasa tu variable categórica al cuadro <strong><code>Factor</code></strong>.</li>
+<li>Por defecto JASP prueba la hipótesis de proporciones iguales. Si tienes proporciones teóricas distintas, selecciona <strong><code>Expected proportions (χ²)</code></strong> e ingrésalas.</li>
+<li>Marca <strong><code>Descriptives</code></strong> para ver las frecuencias observadas y esperadas.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="prueba-de-independencia" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="prueba-de-independencia"><span class="header-section-number">4.2.2</span> Prueba de independencia</h3>
+<p>Evalúa si <strong>dos variables categóricas están asociadas</strong> o son <strong>independientes</strong>. Se trabaja con una <strong>tabla de contingencia</strong> de tamaño <span class="math inline">\(r \times c\)</span> (<span class="math inline">\(r\)</span> filas y <span class="math inline">\(c\)</span> columnas).</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Decisión</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false" href="">Ejemplo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><span class="math display">\[
+\begin{aligned}
+H_0 &amp;: \text{Las variables son independientes.}\\
+H_1 &amp;: \text{Existe asociación entre las variables.}
+\end{aligned}
+\]</span></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><span class="math display">\[
+\chi^2_0 = \sum_{i=1}^{r}\sum_{j=1}^{c} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+\]</span></p>
+<p>donde la frecuencia esperada de cada celda es</p>
+<p><span class="math display">\[
+E_{ij} = \frac{F_{i\cdot} \cdot F_{\cdot j}}{n}
+\]</span></p>
+<p>siendo <span class="math inline">\(F_{i\cdot}\)</span> y <span class="math inline">\(F_{\cdot j}\)</span> los totales marginales por fila y columna, respectivamente, y <span class="math inline">\(n\)</span> el total general.</p>
+<p>Los grados de libertad son <span class="math inline">\(gl = (r-1)(c-1)\)</span>.</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>Se rechaza <span class="math inline">\(H_0\)</span> si:</p>
+<p><span class="math display">\[
+\chi^2_0 &gt; \chi^2_{\alpha,\, (r-1)(c-1)}
+\]</span></p>
+<p>o, equivalentemente, si <span class="math inline">\(p &lt; \alpha\)</span>.</p>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<p>Se evalúa si el <strong>sexo (hombre/mujer)</strong> está asociado con la <strong>preferencia de horario (mañana/tarde)</strong> en 100 estudiantes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Mañana</th>
+<th style="text-align: center;">Tarde</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hombre</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="even">
+<td>Mujer</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">100</td>
+</tr>
+</tbody>
+</table>
+<p>Frecuencias esperadas:</p>
+<p><span class="math display">\[
+E_{11} = \frac{50 \cdot 30}{100} = 15, \quad E_{12} = \frac{50 \cdot 70}{100} = 35, \quad E_{21} = 15, \quad E_{22} = 35
+\]</span></p>
+<p>Estadístico:</p>
+<p><span class="math display">\[
+\chi^2_0 = \frac{(20-15)^2}{15} + \frac{(30-35)^2}{35} + \frac{(10-15)^2}{15} + \frac{(40-35)^2}{35} = 1.667 + 0.714 + 1.667 + 0.714 = 4.76
+\]</span></p>
+<p>Con <span class="math inline">\(gl = 1\)</span>, el valor crítico a <span class="math inline">\(\alpha = 0.05\)</span> es 3.84. Como <span class="math inline">\(4.76 &gt; 3.84\)</span>, <strong>se rechaza <span class="math inline">\(H_0\)</span></strong>: el sexo y la preferencia de horario están asociados.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="consideraciones-y-recomendaciones-prácticas" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="consideraciones-y-recomendaciones-prácticas"><span class="header-section-number">4.2.3</span> Consideraciones y recomendaciones prácticas</h3>
+<ul>
+<li>Cada frecuencia esperada debe ser al menos <strong>5</strong> para la validez de la prueba.</li>
+<li>En tablas 2×2 puede aplicarse la <strong>corrección de continuidad de Yates</strong>.</li>
+<li>Si hay celdas con frecuencias esperadas pequeñas, se puede usar la <strong>prueba exacta de Fisher</strong>.</li>
+<li>La prueba <span class="math inline">\(\chi^2\)</span> <strong>no indica la magnitud de la asociación</strong>, solo su existencia. Para cuantificarla se usan medidas como la <strong>V de Cramér</strong> o el <strong>coeficiente de contingencia (C)</strong>.</li>
+</ul>
+<p><em>Ejemplo interpretativo:</em> en un estudio sobre estilos de afrontamiento y sexo se obtiene <span class="math inline">\(\chi^2(2) = 10.5\)</span>, <span class="math inline">\(p &lt; .01\)</span>. Esto sugiere una relación significativa entre el sexo y el estilo de afrontamiento.</p>
+<section id="v-de-cramér" class="level4" data-number="4.2.3.1">
+<h4 data-number="4.2.3.1" class="anchored" data-anchor-id="v-de-cramér"><span class="header-section-number">4.2.3.1</span> V de Cramér</h4>
+<p>Mide la intensidad de la asociación entre dos variables cualitativas:</p>
+<p><span class="math display">\[
+V=\sqrt{\frac{\chi^2_0}{n \cdot (k-1)}}
+\]</span></p>
+<p>donde <span class="math inline">\(k\)</span> es el mínimo entre el número de categorías de la variable fila y de la variable columna. Su valor está entre 0 y 1:</p>
+<ul>
+<li>Si <span class="math inline">\(V \rightarrow 0\)</span>: asociación débil.</li>
+<li>Si <span class="math inline">\(V \rightarrow 1\)</span>: asociación fuerte.</li>
+</ul>
+<p><em>En el ejemplo anterior:</em> <span class="math inline">\(V = \sqrt{4.76 / (100 \cdot 1)} = 0.22\)</span>, una asociación débil a moderada.</p>
+</section>
+</section>
+<section id="resumen-comparativo" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="resumen-comparativo"><span class="header-section-number">4.2.4</span> Resumen comparativo</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de prueba</th>
+<th>Propósito principal</th>
+<th>Hipótesis nula (<span class="math inline">\(H_0\)</span>)</th>
+<th>Grados de libertad</th>
+<th>Ejemplo típico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Bondad de ajuste</strong></td>
+<td>Contrastar una distribución observada con una esperada</td>
+<td>Los datos siguen la distribución teórica</td>
+<td><span class="math inline">\(k - 1\)</span></td>
+<td>Preferencia por tipos de música</td>
+</tr>
+<tr class="even">
+<td><strong>Independencia</strong></td>
+<td>Evaluar asociación entre dos variables categóricas</td>
+<td>Las variables son independientes</td>
+<td><span class="math inline">\((r-1)(c-1)\)</span></td>
+<td>Asociación entre sexo y estilo de afrontamiento</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La prueba <span class="math inline">\(\chi^2\)</span> es una herramienta flexible y esencial para el análisis de datos categóricos. Su interpretación debe complementarse con medidas de tamaño del efecto y con la inspección de las tablas de contingencia <span class="citation" data-cites="LSJ2025 Moore2013">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>; <a href="references.html#ref-Moore2013" role="doc-biblioref">Moore et&nbsp;al. 2013</a>)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: Tabla de contingencia en el aula (10 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Con los datos del curso, construyan una tabla 2×2 cruzando <strong>sexo</strong> con <strong>“¿Trabajas además de estudiar?” (Sí/No)</strong>.</p>
+<ol type="1">
+<li>Calculen las frecuencias esperadas de cada celda.</li>
+<li>Verifiquen si todas son mayores o iguales a 5.</li>
+<li>Calculen <span class="math inline">\(\chi^2_0\)</span> y la V de Cramér.</li>
+<li>Concluyan: ¿hay asociación entre las variables en este curso?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Prueba de independencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Ve a <code>Frequencies -&gt; Contingency Tables</code>.</li>
+<li>Pasa una variable a <strong><code>Rows</code></strong> y la otra a <strong><code>Columns</code></strong>.</li>
+<li>En <code>Statistics</code>, verifica que <strong><code>χ²</code></strong> esté marcado; agrega <strong><code>χ² continuity correction</code></strong> (Yates) para tablas 2×2 y, en <code>Nominal</code>, <strong><code>Cramer's V</code></strong>.</li>
+<li>En <code>Cells</code>, marca <strong><code>Expected</code></strong> para comprobar el supuesto de frecuencias esperadas <span class="math inline">\(\ge 5\)</span>, y <strong><code>Row</code></strong> o <strong><code>Column</code></strong> en porcentajes para interpretar el sentido de la asociación.</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="comparación-de-dos-medias-pruebas-z-t-y-no-paramétricas"><span class="header-section-number">4.3</span> Comparación de dos medias: pruebas z, t y no paramétricas</h2>
+<p>En investigación psicológica y social es común comparar <strong>las medias de dos grupos</strong> o condiciones (por ejemplo, niveles de ansiedad entre hombres y mujeres, o antes y después de una intervención). El objetivo es determinar si las diferencias observadas reflejan una diferencia real en la población o son producto del azar <span class="citation" data-cites="LSJ2025 Moore2013">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>; <a href="references.html#ref-Moore2013" role="doc-biblioref">Moore et&nbsp;al. 2013</a>)</span>.</p>
+<p>Las tres familias de pruebas más comunes son:</p>
+<ol type="1">
+<li><strong>Prueba z:</strong> cuando se conoce la varianza poblacional (caso teórico).</li>
+<li><strong>Prueba t:</strong> cuando la varianza poblacional es desconocida (caso real).</li>
+<li><strong>Pruebas no paramétricas:</strong> cuando los datos no cumplen los supuestos de normalidad o la variable es ordinal.</li>
+</ol>
+<section id="prueba-z-para-dos-medias-caso-teórico" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="prueba-z-para-dos-medias-caso-teórico"><span class="header-section-number">4.3.1</span> Prueba z para dos medias (caso teórico)</h3>
+<p>Se aplica cuando:</p>
+<ul>
+<li>la variable es cuantitativa continua,</li>
+<li>las observaciones son independientes,</li>
+<li>y se <strong>conocen las desviaciones estándar poblacionales</strong>.</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Ejemplo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><span class="math display">\[
+H_0: \mu_1 = \mu_2 \qquad H_1: \mu_1 \neq \mu_2
+\]</span></p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><span class="math display">\[
+z_0 = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\dfrac{\sigma_1^2}{n_1} + \dfrac{\sigma_2^2}{n_2}}}
+\]</span></p>
+<p>Bajo <span class="math inline">\(H_0\)</span>, el estadístico <span class="math inline">\(z_0\)</span> sigue una distribución normal estándar <span class="math inline">\(N(0,1)\)</span>.</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p>Un investigador compara los tiempos de reacción de dos grupos en una tarea cognitiva. Las medias son 520 ms y 540 ms, con desviaciones poblacionales conocidas de 50 y 60 ms, y <span class="math inline">\(n=30\)</span> por grupo:</p>
+<p><span class="math display">\[
+z_0 = \frac{520 - 540}{\sqrt{\dfrac{50^2}{30} + \dfrac{60^2}{30}}} = \frac{-20}{14.26} = -1.40
+\]</span></p>
+<p>Como <span class="math inline">\(|z_0| = 1.40 &lt; 1.96\)</span>, <strong>no se rechaza <span class="math inline">\(H_0\)</span></strong>: no hay evidencia suficiente de una diferencia significativa.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="prueba-t-para-dos-medias" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="prueba-t-para-dos-medias"><span class="header-section-number">4.3.2</span> Prueba t para dos medias</h3>
+<p>En la práctica, las varianzas poblacionales <strong>no son conocidas</strong>, por lo que se emplea la <strong>distribución t de Student</strong>. Existen dos tipos principales:</p>
+<ol type="1">
+<li><strong>t para muestras independientes</strong></li>
+<li><strong>t para muestras relacionadas (dependientes o pareadas)</strong></li>
+</ol>
+<section id="t-para-muestras-independientes" class="level4" data-number="4.3.2.1">
+<h4 data-number="4.3.2.1" class="anchored" data-anchor-id="t-para-muestras-independientes"><span class="header-section-number">4.3.2.1</span> t para muestras independientes</h4>
+<p>Se aplica cuando se comparan dos grupos distintos de personas.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Ejemplo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p><span class="math display">\[
+H_0: \mu_1 = \mu_2 \qquad H_1: \mu_1 \neq \mu_2
+\]</span></p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><span class="math display">\[
+t_0 = \frac{\bar{X}_1 - \bar{X}_2}{s_p \sqrt{\dfrac{1}{n_1} + \dfrac{1}{n_2}}}
+\]</span></p>
+<p>donde <span class="math inline">\(s_p\)</span> es la <strong>desviación estándar combinada</strong>:</p>
+<p><span class="math display">\[
+s_p = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}}
+\]</span></p>
+<p><strong>Grados de libertad:</strong> <span class="math inline">\(gl = n_1 + n_2 - 2\)</span>.</p>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p>En un estudio sobre estrés académico, dos grupos de estudiantes (<span class="math inline">\(n=25\)</span> cada uno) obtienen medias de 35.4 y 40.1 puntos, con desviaciones estándar de 8.2 y 7.6. Como <span class="math inline">\(n_1 = n_2\)</span>:</p>
+<p><span class="math display">\[
+s_p = \sqrt{\frac{8.2^2 + 7.6^2}{2}} = 7.91
+\]</span></p>
+<p><span class="math display">\[
+t_0 = \frac{35.4 - 40.1}{7.91 \sqrt{\dfrac{1}{25} + \dfrac{1}{25}}} = \frac{-4.7}{2.24} = -2.10
+\]</span></p>
+<p>Con <span class="math inline">\(gl = 48\)</span> y <span class="math inline">\(\alpha = 0.05\)</span>, el valor crítico es <span class="math inline">\(\pm 2.01\)</span>. Como <span class="math inline">\(|t_0| = 2.10 &gt; 2.01\)</span>, <strong>se rechaza <span class="math inline">\(H_0\)</span></strong>: hay una diferencia significativa de estrés entre los grupos.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="t-para-muestras-relacionadas" class="level4" data-number="4.3.2.2">
+<h4 data-number="4.3.2.2" class="anchored" data-anchor-id="t-para-muestras-relacionadas"><span class="header-section-number">4.3.2.2</span> t para muestras relacionadas</h4>
+<p>Se aplica cuando las observaciones provienen de los <strong>mismos participantes</strong> medidos dos veces (pretest–postest, condición A/B).</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Hipótesis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Estadístico</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">Ejemplo</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p><span class="math display">\[
+H_0: \mu_D = 0 \qquad H_1: \mu_D \neq 0
+\]</span></p>
+<p>donde <span class="math inline">\(\mu_D\)</span> es la media poblacional de las diferencias <span class="math inline">\(D_i = X_{i,\text{pre}} - X_{i,\text{post}}\)</span>.</p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><span class="math display">\[
+t_0 = \frac{\bar{D}}{s_D / \sqrt{n}}
+\]</span></p>
+<p>con <span class="math inline">\(gl = n - 1\)</span>.</p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p>Un grupo de 20 personas completa un test de ansiedad antes y después de una intervención. La media de las diferencias (pre – post) es <span class="math inline">\(\bar{D} = 4.2\)</span> con <span class="math inline">\(s_D = 6.0\)</span>:</p>
+<p><span class="math display">\[
+t_0 = \frac{4.2}{6.0/\sqrt{20}} = 3.13
+\]</span></p>
+<p>Con <span class="math inline">\(gl = 19\)</span>, el valor crítico a <span class="math inline">\(\alpha = 0.05\)</span> (bilateral) es 2.09. Como <span class="math inline">\(3.13 &gt; 2.09\)</span>, <strong>se rechaza <span class="math inline">\(H_0\)</span></strong>, lo que indica una reducción significativa de la ansiedad.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: ¿Independientes o relacionadas? (5 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Indiquen qué prueba <em>t</em> corresponde a cada diseño:</p>
+<ol type="1">
+<li>Comparar la autoestima de estudiantes de colegios públicos y privados.</li>
+<li>Medir la atención de los mismos participantes con y sin música de fondo.</li>
+<li>Comparar el puntaje de depresión de pacientes antes y después de 8 sesiones de terapia cognitivo-conductual.</li>
+<li>Comparar el tiempo de reacción entre gemelos (uno de cada par asignado a cada condición).</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="supuestos-de-las-pruebas-t" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="supuestos-de-las-pruebas-t"><span class="header-section-number">4.3.3</span> Supuestos de las pruebas t</h3>
+<ul>
+<li>Escala de intervalo o razón.</li>
+<li>Normalidad de la variable en cada grupo (o de las diferencias, en muestras relacionadas).</li>
+<li>Homogeneidad de varianzas (para muestras independientes).</li>
+<li>Independencia entre observaciones.</li>
+</ul>
+<p>Cuando no se cumple la homogeneidad de varianzas, se usa la <strong>corrección de Welch</strong>. Cuando no se cumple la normalidad (sobre todo con muestras pequeñas) o la variable es ordinal, se recurre a pruebas <strong>no paramétricas</strong>.</p>
+</section>
+<section id="pruebas-no-paramétricas-equivalentes" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="pruebas-no-paramétricas-equivalentes"><span class="header-section-number">4.3.4</span> Pruebas no paramétricas equivalentes</h3>
+<p>Las pruebas no paramétricas no requieren normalidad ni homocedasticidad, y trabajan sobre rangos o signos.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 19%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de comparación</th>
+<th style="text-align: center;">Prueba paramétrica</th>
+<th style="text-align: center;">Prueba no paramétrica</th>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Ejemplo psicológico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dos grupos independientes</td>
+<td style="text-align: center;">t de Student</td>
+<td style="text-align: center;">U de Mann–Whitney</td>
+<td style="text-align: left;">Ordinal / no normal</td>
+<td style="text-align: left;">Comparar puntajes de ansiedad entre grupos experimentales</td>
+</tr>
+<tr class="even">
+<td>Dos grupos relacionados</td>
+<td style="text-align: center;">t pareada</td>
+<td style="text-align: center;">Wilcoxon de rangos con signo</td>
+<td style="text-align: left;">Ordinal / no normal</td>
+<td style="text-align: left;">Evaluar el cambio pre–post en autoeficacia</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ejemplo:</em> en un estudio sobre satisfacción laboral antes y después de una capacitación (escala ordinal), se aplica la <strong>prueba de Wilcoxon</strong>: <span class="math inline">\(W = 15\)</span>, <span class="math inline">\(p = .02\)</span>, lo que indica una diferencia significativa entre las mediciones.</p>
+</section>
+<section id="interpretación-y-tamaño-del-efecto" class="level3" data-number="4.3.5">
+<h3 data-number="4.3.5" class="anchored" data-anchor-id="interpretación-y-tamaño-del-efecto"><span class="header-section-number">4.3.5</span> Interpretación y tamaño del efecto</h3>
+<p>La significación estadística indica si es plausible que la diferencia no se deba al azar, pero <strong>no informa sobre su magnitud</strong>. Por ello se recomienda reportar siempre el <strong>tamaño del efecto</strong>.</p>
+<section id="d-de-cohen" class="level4" data-number="4.3.5.1">
+<h4 data-number="4.3.5.1" class="anchored" data-anchor-id="d-de-cohen"><span class="header-section-number">4.3.5.1</span> d de Cohen</h4>
+<p><span class="math display">\[
+d = \frac{\bar{X}_1 - \bar{X}_2}{s_p}
+\]</span></p>
+<p>Interpretación general <span class="citation" data-cites="Cohen1988">(<a href="references.html#ref-Cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\lvert d \rvert\)</span></th>
+<th style="text-align: center;">Magnitud del efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">Pequeño</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">Mediano</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.8</td>
+<td style="text-align: center;">Grande</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para interpretar la magnitud no se toma en cuenta el signo. El signo indica la dirección: si es positivo, la media del grupo 1 es mayor que la del grupo 2; si es negativo, ocurre lo opuesto.</p>
+</div>
+</div>
+<p><em>Ejemplo:</em> si <span class="math inline">\(\bar{X}_1 - \bar{X}_2 = 5\)</span> y <span class="math inline">\(s_p = 10\)</span>, entonces <span class="math inline">\(d = 0.5\)</span>: efecto <strong>mediano</strong>. En el ejemplo de estrés académico anterior, <span class="math inline">\(d = -4.7 / 7.91 = -0.59\)</span>, también un efecto mediano.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las pruebas z, t y sus equivalentes no paramétricos permiten contrastar diferencias entre grupos bajo distintos supuestos. En psicología, su interpretación debe acompañarse del <strong><em>p</em>-valor</strong>, el <strong>tamaño del efecto (<span class="math inline">\(d\)</span>)</strong> y, cuando sea posible, un <strong>intervalo de confianza</strong> para la diferencia <span class="citation" data-cites="LSJ2025 Cohen1994">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>; <a href="references.html#ref-Cohen1994" role="doc-biblioref">Cohen 1994</a>)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: Redactando resultados en formato APA (10 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Con los resultados del ejemplo de estrés académico (<span class="math inline">\(t(48) = -2.10\)</span>, <span class="math inline">\(p = .041\)</span>, <span class="math inline">\(d = -0.59\)</span>), redacten en un párrafo la conclusión del estudio como si fuera la sección de resultados de un artículo. Incluyan:</p>
+<ol type="1">
+<li>Las medias y desviaciones estándar de cada grupo.</li>
+<li>El estadístico, los grados de libertad y el <em>p</em>-valor.</li>
+<li>El tamaño del efecto y su interpretación.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Pruebas t y sus alternativas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Muestras independientes:</strong></p>
+<ol type="1">
+<li>Ve a <code>T-Tests -&gt; Independent Samples T-Test</code>.</li>
+<li>Pasa la variable cuantitativa a <strong><code>Dependent Variables</code></strong> y la variable de agrupación a <strong><code>Grouping Variable</code></strong>.</li>
+<li>En <code>Tests</code>, marca <strong><code>Student</code></strong>; agrega <strong><code>Welch</code></strong> si dudas de la homogeneidad de varianzas y <strong><code>Mann-Whitney</code></strong> como alternativa no paramétrica.</li>
+<li>En <code>Assumption Checks</code>, marca <strong><code>Normality</code></strong> (Shapiro-Wilk) y <strong><code>Equality of variances</code></strong> (Levene).</li>
+<li>En <code>Additional Statistics</code>, marca <strong><code>Effect size</code></strong> (<em>d</em> de Cohen) y <strong><code>Descriptives</code></strong>.</li>
+</ol>
+<p><strong>Muestras relacionadas:</strong> usa <code>T-Tests -&gt; Paired Samples T-Test</code>, pasa el par de variables (pre y post) y marca <strong><code>Wilcoxon signed-rank</code></strong> si necesitas la alternativa no paramétrica.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="correlación-y-regresión-lineal" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="correlación-y-regresión-lineal"><span class="header-section-number">4.4</span> Correlación y regresión lineal</h2>
+<p>La correlación y la regresión lineal permiten cuantificar y modelar la relación entre dos variables cuantitativas. En psicología son herramientas fundamentales para analizar vínculos entre constructos como ansiedad y rendimiento, estrés y calidad del sueño, o autoeficacia y desempeño académico <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
+<section id="correlación-de-pearson-r" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="correlación-de-pearson-r"><span class="header-section-number">4.4.1</span> Correlación de Pearson (<span class="math inline">\(r\)</span>)</h3>
+<p>La correlación lineal de Pearson mide la <strong>fuerza</strong> y la <strong>dirección</strong> de una asociación lineal entre dos variables. Toma valores entre <span class="math inline">\(-1\)</span> y <span class="math inline">\(+1\)</span>:</p>
+<p><span class="math display">\[
+r = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum (X_i - \bar{X})^2 \sum (Y_i - \bar{Y})^2}}
+\]</span></p>
+<p>Interpretación orientativa de la magnitud <span class="citation" data-cites="Cohen1988">(<a href="references.html#ref-Cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\lvert r \rvert\)</span></th>
+<th style="text-align: center;">Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Sin relación lineal</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.1</td>
+<td style="text-align: center;">Débil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.3</td>
+<td style="text-align: center;">Moderada</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.5 o más</td>
+<td style="text-align: center;">Fuerte</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ejemplo:</em> relación entre <strong>ansiedad</strong> y <strong>calidad del sueño</strong>: <span class="math inline">\(r = -0.42\)</span>, una asociación negativa moderada (a mayor ansiedad, peor calidad del sueño).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Correlación no implica causalidad: una asociación entre dos variables puede deberse a una tercera variable no observada (confusión) o a que la causalidad va en sentido inverso.</p>
+</div>
+</div>
+</section>
+<section id="correlación-no-paramétrica-spearman-rho" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="correlación-no-paramétrica-spearman-rho"><span class="header-section-number">4.4.2</span> Correlación no paramétrica: Spearman (<span class="math inline">\(\rho\)</span>)</h3>
+<p>Se usa cuando:</p>
+<ul>
+<li>los datos son ordinales,</li>
+<li>existen valores atípicos,</li>
+<li>la relación es monótona pero no lineal.</li>
+</ul>
+<p>Se basa en los <strong>rangos</strong> de los datos, no en sus valores originales.</p>
+</section>
+<section id="regresión-lineal-simple" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="regresión-lineal-simple"><span class="header-section-number">4.4.3</span> Regresión lineal simple</h3>
+<p>La regresión lineal modela cómo cambia una variable dependiente <span class="math inline">\(Y\)</span> cuando cambia una variable predictora <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[
+Y = \beta_0 + \beta_1 X + \varepsilon
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\beta_0\)</span>: intercepto (valor esperado de <span class="math inline">\(Y\)</span> cuando <span class="math inline">\(X = 0\)</span>).</li>
+<li><span class="math inline">\(\beta_1\)</span>: pendiente; cambio esperado en <span class="math inline">\(Y\)</span> por cada unidad de cambio en <span class="math inline">\(X\)</span>.</li>
+<li><span class="math inline">\(\varepsilon\)</span>: error aleatorio.</li>
+</ul>
+<p><strong>Interpretación típica:</strong> si <span class="math inline">\(\beta_1 = -0.60\)</span> en un modelo donde <span class="math inline">\(Y\)</span> = calidad del sueño y <span class="math inline">\(X\)</span> = estrés, entonces <strong>por cada punto adicional de estrés, la calidad del sueño disminuye en promedio 0.60 puntos</strong>.</p>
+</section>
+<section id="bondad-de-ajuste" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="bondad-de-ajuste"><span class="header-section-number">4.4.4</span> Bondad de ajuste</h3>
+<ul>
+<li><strong><span class="math inline">\(R^2\)</span>:</strong> proporción de la varianza de <span class="math inline">\(Y\)</span> explicada por <span class="math inline">\(X\)</span>.
+<ul>
+<li>Ej.: <span class="math inline">\(R^2 = 0.28\)</span> indica que el estrés explica el 28% de la variabilidad de la calidad del sueño.</li>
+</ul></li>
+<li><strong><em>p</em>-valor de <span class="math inline">\(\beta_1\)</span>:</strong> indica si la relación es estadísticamente significativa (<span class="math inline">\(H_0: \beta_1 = 0\)</span>).</li>
+</ul>
+</section>
+<section id="supuestos-principales" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="supuestos-principales"><span class="header-section-number">4.4.5</span> Supuestos principales</h3>
+<ul>
+<li>Linealidad.</li>
+<li>Independencia de las observaciones.</li>
+<li>Normalidad de los residuos.</li>
+<li>Homocedasticidad (varianza constante de los residuos).</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: Horas de sueño y rendimiento (10 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Recojan de 8 compañeros dos datos: <strong>horas de sueño promedio</strong> y <strong>nota del último parcial</strong>.</p>
+<ol type="1">
+<li>Dibujen a mano un diagrama de dispersión.</li>
+<li>A simple vista, ¿la relación parece positiva, negativa o nula? ¿Lineal?</li>
+<li>Si tuvieran que estimar <span class="math inline">\(r\)</span>, ¿qué valor le darían?</li>
+<li>Discutan una posible variable de confusión que podría explicar la relación.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: Correlación y regresión
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Correlación:</strong></p>
+<ol type="1">
+<li>Ve a <code>Regression -&gt; Correlation</code>.</li>
+<li>Pasa las variables al cuadro de variables.</li>
+<li>Marca <strong><code>Pearson</code></strong> y/o <strong><code>Spearman</code></strong>; en <code>Plots</code>, activa <strong><code>Scatter plots</code></strong> para ver la relación.</li>
+</ol>
+<p><strong>Regresión lineal:</strong></p>
+<ol type="1">
+<li>Ve a <code>Regression -&gt; Linear Regression</code>.</li>
+<li>Pasa la variable <span class="math inline">\(Y\)</span> a <strong><code>Dependent Variable</code></strong> y <span class="math inline">\(X\)</span> a <strong><code>Covariates</code></strong>.</li>
+<li>En <code>Statistics</code>, marca <strong><code>Estimates</code></strong> y <strong><code>Model fit</code></strong> para obtener <span class="math inline">\(\beta_0\)</span>, <span class="math inline">\(\beta_1\)</span> y <span class="math inline">\(R^2\)</span>.</li>
+<li>En <code>Plots</code>, marca <strong><code>Residuals vs. predicted</code></strong> y <strong><code>Q-Q plot standardized residuals</code></strong> para revisar los supuestos.</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="comparar-varias-medias-anova-de-una-vía" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="comparar-varias-medias-anova-de-una-vía"><span class="header-section-number">4.5</span> Comparar varias medias: ANOVA de una vía</h2>
+<p>El ANOVA de una vía (<em>one-way ANOVA</em>) evalúa si <strong>tres o más grupos</strong> difieren en su media poblacional <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
+<p>Ejemplos en psicología:</p>
+<ul>
+<li>Diferencias en depresión según el tipo de terapia.</li>
+<li>Comparación de memoria según grupo etario.</li>
+<li>Diferencias en motivación según nivel educativo.</li>
+</ul>
+<section id="hipótesis-5" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="hipótesis-5"><span class="header-section-number">4.5.1</span> Hipótesis</h3>
+<p><span class="math display">\[
+\begin{aligned}
+H_0 &amp;: \mu_1 = \mu_2 = \ldots = \mu_k\\
+H_1 &amp;: \text{Al menos una media difiere}
+\end{aligned}
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>¿Por qué no hacer varias pruebas <em>t</em>? Con 3 grupos habría que hacer 3 comparaciones, y con un <span class="math inline">\(\alpha = 0.05\)</span> en cada una, la probabilidad de cometer al menos un error de tipo I sube a cerca de <span class="math inline">\(1 - 0.95^3 \approx 0.14\)</span>. El ANOVA hace una sola prueba global y controla ese riesgo.</p>
+</div>
+</div>
+</section>
+<section id="lógica-del-anova" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="lógica-del-anova"><span class="header-section-number">4.5.2</span> Lógica del ANOVA</h3>
+<p>El ANOVA compara dos fuentes de variabilidad:</p>
+<ul>
+<li><strong>Variabilidad entre grupos</strong> (debida al efecto del factor).</li>
+<li><strong>Variabilidad dentro de los grupos</strong> (debida al error o al azar).</li>
+</ul>
+<p>El estadístico es:</p>
+<p><span class="math display">\[
+F = \frac{MS_{\text{entre}}}{MS_{\text{dentro}}}
+\]</span></p>
+<p>Si <span class="math inline">\(F\)</span> es grande (la variabilidad entre grupos supera claramente a la variabilidad dentro de ellos), hay evidencia contra <span class="math inline">\(H_0\)</span>.</p>
+</section>
+<section id="tamaño-del-efecto-eta-cuadrado-eta2" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="tamaño-del-efecto-eta-cuadrado-eta2"><span class="header-section-number">4.5.3</span> Tamaño del efecto: eta cuadrado (<span class="math inline">\(\eta^2\)</span>)</h3>
+<p><span class="math display">\[
+\eta^2 = \frac{SS_{\text{entre}}}{SS_{\text{total}}}
+\]</span></p>
+<p>Representa la proporción de la varianza total explicada por el factor. Como referencia <span class="citation" data-cites="Cohen1988">(<a href="references.html#ref-Cohen1988" role="doc-biblioref">Cohen 1988</a>)</span>: 0.01 pequeño, 0.06 mediano y 0.14 grande.</p>
+</section>
+<section id="ejemplo-5" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="ejemplo-5"><span class="header-section-number">4.5.4</span> Ejemplo</h3>
+<p>Se comparan tres métodos de relajación en 60 participantes (20 por grupo). El ANOVA arroja:</p>
+<ul>
+<li><span class="math inline">\(F(2, 57) = 4.91\)</span></li>
+<li><span class="math inline">\(p = 0.011\)</span>: significativo al 5%.</li>
+<li><span class="math inline">\(\eta^2 = 0.15\)</span>: efecto grande.</li>
+</ul>
+<p>Esto indica que <strong>los métodos difieren en su efecto sobre el nivel de estrés</strong>; el método explica alrededor del 15% de la variabilidad del estrés.</p>
+</section>
+<section id="pruebas-post-hoc" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="pruebas-post-hoc"><span class="header-section-number">4.5.5</span> Pruebas post hoc</h3>
+<p>Si el ANOVA es significativo, se realizan comparaciones por pares para identificar <strong>qué grupos difieren entre sí</strong>, ajustando el nivel de significación:</p>
+<ul>
+<li>Tukey HSD</li>
+<li>Bonferroni</li>
+<li>Holm</li>
+</ul>
+</section>
+<section id="supuestos" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="supuestos"><span class="header-section-number">4.5.6</span> Supuestos</h3>
+<ul>
+<li>Independencia de las observaciones.</li>
+<li>Normalidad dentro de cada grupo.</li>
+<li>Homogeneidad de varianzas (prueba de Levene).</li>
+</ul>
+<p>Si no se cumple la normalidad, la alternativa no paramétrica es la <strong>prueba de Kruskal–Wallis</strong>; si no se cumple la homogeneidad de varianzas, se puede usar la <strong>corrección de Welch</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: Diseñando un ANOVA (8 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Propongan un estudio que compare <strong>tres o más grupos</strong> en una variable psicológica cuantitativa. Definan:</p>
+<ol type="1">
+<li>La variable dependiente y el factor (con sus niveles).</li>
+<li>Las hipótesis <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span>.</li>
+<li>Qué harían si el ANOVA resulta significativo.</li>
+<li>Qué harían si la prueba de Levene indica varianzas distintas.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>JASP Tip: ANOVA de una vía
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Ve a <code>ANOVA -&gt; ANOVA</code>.</li>
+<li>Pasa la variable cuantitativa a <strong><code>Dependent Variable</code></strong> y la variable de grupo a <strong><code>Fixed Factors</code></strong>.</li>
+<li>En <code>Display</code>, marca <strong><code>Descriptive statistics</code></strong> y, en <code>Estimates of effect size</code>, <strong><code>η²</code></strong>.</li>
+<li>En <code>Assumption Checks</code>, marca <strong><code>Homogeneity tests</code></strong> (Levene) y <strong><code>Q-Q plot of residuals</code></strong>; si hay heterogeneidad, activa la corrección <strong><code>Welch</code></strong> en <code>Homogeneity corrections</code>.</li>
+<li>En <code>Post Hoc Tests</code>, pasa el factor al cuadro de la derecha y elige <strong><code>Tukey</code></strong> (o <code>Bonferroni</code>/<code>Holm</code> en <code>Correction</code>).</li>
+<li>La alternativa no paramétrica (<strong>Kruskal–Wallis</strong>) está en la sección <code>Nonparametrics</code>.</li>
+</ol>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Agresti2018" class="csl-entry" role="listitem">
+Agresti, Alan, y Barbara Finlay. 2018. <em>Statistical Methods for the Social Sciences</em>. 5.ª ed. Pearson.
+</div>
+<div id="ref-Cohen1988" class="csl-entry" role="listitem">
+Cohen, Jacob. 1988. <em>Statistical Power Analysis for the Behavioral Sciences</em>. 2.ª ed. Lawrence Erlbaum Associates.
+</div>
+<div id="ref-Cohen1994" class="csl-entry" role="listitem">
+Cohen, Jacob. 1994. <span>«The earth is round (p &lt; .05)»</span>. <em>American Psychologist</em> 49 (12): 997-1003.
+</div>
+<div id="ref-Feller1968" class="csl-entry" role="listitem">
+Feller, William. 1968. <em>An Introduction to Probability Theory and Its Applications</em>. 3.ª ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-GelmanNolan2017" class="csl-entry" role="listitem">
+Gelman, Andrew, y Deborah Nolan. 2017. <em>Teaching Statistics: A Bag of Tricks</em>. 2.ª ed. Oxford University Press.
+</div>
+<div id="ref-Groves2009" class="csl-entry" role="listitem">
+Groves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. 2.ª ed. Wiley.
+</div>
+<div id="ref-Kish1995" class="csl-entry" role="listitem">
+Kish, Leslie. 1995. <em>Survey Sampling</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-MontgomeryRunger2014" class="csl-entry" role="listitem">
+Montgomery, Douglas C., y George C. Runger. 2014. <em>Applied Statistics and Probability for Engineers</em>. 6.ª ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-Moore2013" class="csl-entry" role="listitem">
+Moore, David S., George P. McCabe, y Bruce A. Craig. 2013. <em>Introduction to the Practice of Statistics</em>. 7.ª ed. W. H. Freeman.
+</div>
+<div id="ref-LSJ2025" class="csl-entry" role="listitem">
+Navarro, Danielle J., David R. Foxcroft, y Thomas J. Faulkenberry. 2025. <em>Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</em>. <a href="https://learnstatswithjasp.com">https://learnstatswithjasp.com</a>.
+</div>
+<div id="ref-Shadish2002" class="csl-entry" role="listitem">
+Shadish, William R., Thomas D. Cook, y Donald T. Campbell. 2002. <em>Experimental and Quasi-Experimental Designs for Generalized Causal Inference</em>. Houghton Mifflin.
+</div>
+<div id="ref-Stevens1946" class="csl-entry" role="listitem">
+Stevens, S. S. 1946. <span>«On the theory of scales of measurement»</span>. <em>Science</em> 103 (2684): 677-80.
+</div>
+<div id="ref-Wackerly2008" class="csl-entry" role="listitem">
+Wackerly, Dennis D., William Mendenhall, y Richard L. Scheaffer. 2008. <em>Mathematical Statistics with Applications</em>. 7.ª ed. Thomson Brooks/Cole.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/alvarolimber\.github\.io\/psych-stats\/_book");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./teorica.html" class="pagination-link" aria-label="Estadística Teórica">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística Teórica</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="Referencias">
+        <span class="nav-page-text">Referencias</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2026, Alvaro Chirino. CC BY-NC-SA 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/alvarolimber/psych-stats">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

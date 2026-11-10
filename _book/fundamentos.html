@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
 
 <title>1&nbsp; Diseño estadístico – Psicoestadística</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -60,12 +64,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b9f2f07ae5a8812bc508e625fed73b25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ba8e73a601a383a97ed8429bc770149b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-be67d91eaee7ee535f133f4b8a0584b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-40d2b7ce583afdaabd40688eef35f9b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,22 +84,22 @@ div.csl-indent {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -125,7 +129,7 @@ window.Quarto = {
 </script>
 
 <meta name="twitter:title" content="1&nbsp; Diseño estadístico – Psicoestadística">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
 <meta name="twitter:image" content="https://alvarolimber.github.io/psych-stats/_book/fig/po.png">
 <meta name="twitter:image-height" content="768">
 <meta name="twitter:image-width" content="1408">
@@ -298,13 +302,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamentos.html">Parte I: Diseño estadístico y estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./fundamentos.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Diseño estadístico</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -318,10 +322,10 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Psicoestadística</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/psych-stats/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Psicoestadística.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="https://github.com/alvarolimber/psych-stats" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Psicoestadística.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Compartir" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Compartir"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
@@ -337,8 +341,8 @@ window.Quarto = {
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo lector">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -348,7 +352,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -363,7 +367,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Parte I: Diseño estadístico y estadística descriptiva</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -382,10 +386,33 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II: Estadística teórica e inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./teorica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística Teórica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Herramientas Estadísticas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
     </ul>
@@ -395,7 +422,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
   <li><a href="#qué-es-la-estadística" id="toc-qué-es-la-estadística" class="nav-link active" data-scroll-target="#qué-es-la-estadística"><span class="header-section-number">1.1</span> ¿Qué es la estadística?</a></li>
@@ -447,11 +474,11 @@ window.Quarto = {
 <h2 data-number="1.1" class="anchored" data-anchor-id="qué-es-la-estadística"><span class="header-section-number">1.1</span> ¿Qué es la estadística?</h2>
 <p>La <strong>estadística</strong> ha sido definida de distintas maneras según el enfoque y el contexto de aplicación:</p>
 <ol type="1">
-<li><strong>Enfoque formal:</strong> la estadística es la ciencia que trata con la recolección, análisis, interpretación y presentación de datos <span class="citation" data-cites="Wackerly2008">(<a href="references.html#ref-Wackerly2008" role="doc-biblioref">Wackerly et al. 2008</a>)</span>.<br>
+<li><strong>Enfoque formal:</strong> la estadística es la ciencia que trata con la recolección, análisis, interpretación y presentación de datos <span class="citation" data-cites="Wackerly2008">(<a href="references.html#ref-Wackerly2008" role="doc-biblioref">Wackerly et&nbsp;al. 2008</a>)</span>.<br>
 </li>
-<li><strong>Enfoque aplicado:</strong> conjunto de métodos para planificar estudios, obtener datos y analizarlos con el propósito de tomar decisiones y resolver problemas <span class="citation" data-cites="MontgomeryRunger2014">(<a href="references.html#ref-MontgomeryRunger2014" role="doc-biblioref">Montgomery and Runger 2014</a>)</span>.<br>
+<li><strong>Enfoque aplicado:</strong> conjunto de métodos para planificar estudios, obtener datos y analizarlos con el propósito de tomar decisiones y resolver problemas <span class="citation" data-cites="MontgomeryRunger2014">(<a href="references.html#ref-MontgomeryRunger2014" role="doc-biblioref">Montgomery y Runger 2014</a>)</span>.<br>
 </li>
-<li><strong>Enfoque comunicativo:</strong> el arte de <strong>contar una historia con datos</strong>, enfatizando la comunicación clara y contextualizada de resultados <span class="citation" data-cites="GelmanNolan2017">(<a href="references.html#ref-GelmanNolan2017" role="doc-biblioref">Gelman and Nolan 2017</a>)</span>.</li>
+<li><strong>Enfoque comunicativo:</strong> el arte de <strong>contar una historia con datos</strong>, enfatizando la comunicación clara y contextualizada de resultados <span class="citation" data-cites="GelmanNolan2017">(<a href="references.html#ref-GelmanNolan2017" role="doc-biblioref">Gelman y Nolan 2017</a>)</span>.</li>
 </ol>
 <p><em>Ejemplo:</em> Analizar datos de un cuestionario de bienestar psicológico para comparar niveles de estrés entre grupos (p.&nbsp;ej., por semestre o género) y comunicar hallazgos que orienten intervenciones.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -460,7 +487,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Contando una historia con datos (5 min)
+<span class="screen-reader-only">Nota</span>Actividad: Contando una historia con datos (5 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -488,7 +515,7 @@ U=\{u_1, u_2, \ldots, u_N\}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Definiendo el Universo (5 min)
+<span class="screen-reader-only">Nota</span>Actividad: Definiendo el Universo (5 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -518,7 +545,7 @@ U=\{u_1, u_2, \ldots, u_N\}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: El mapa del estudio (7 min)
+<span class="screen-reader-only">Nota</span>Actividad: El mapa del estudio (7 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -526,7 +553,7 @@ U=\{u_1, u_2, \ldots, u_N\}
 <ol type="1">
 <li><strong>Cobertura geográfica:</strong> ¿En qué sedes o campus?</li>
 <li><strong>Cobertura temporal:</strong> ¿Qué meses del año 2025 o 2026?</li>
-<li><strong>Cobertura temática:</strong> ¿Qué variables específicas medirán (ej. horas de sueño, promedio académico, interés por la clínica)?.</li>
+<li><strong>Cobertura temática:</strong> ¿Qué variables específicas medirán (ej. horas de sueño, promedio académico, interés por la clínica)?</li>
 </ol>
 </div>
 </div>
@@ -553,7 +580,7 @@ U=\{u_1, u_2, \ldots, u_N\}
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: ¿Quién es quién? (5 min)
+<span class="screen-reader-only">Nota</span>Actividad: ¿Quién es quién? (5 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -599,7 +626,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Selección de fuente (10 min)
+<span class="screen-reader-only">Nota</span>Actividad: Selección de fuente (10 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -690,7 +717,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Clasificación de objetivos (8 min)
+<span class="screen-reader-only">Nota</span>Actividad: Clasificación de objetivos (8 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -708,11 +735,11 @@ Tip
 <h2 data-number="1.7" class="anchored" data-anchor-id="validez-interna-y-externa"><span class="header-section-number">1.7</span> Validez interna y externa</h2>
 <ul>
 <li><p><strong>Validez interna:</strong> indica en qué medida los resultados de un estudio son correctos y válidos <strong>para el conjunto específico de unidades, condiciones y periodo observados</strong>.<br>
-Una alta validez interna significa que la relación observada entre variables refleja de forma precisa el fenómeno estudiado en ese contexto, sin distorsiones por factores no controlados <span class="citation" data-cites="Shadish2002">(<a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et al. 2002</a>)</span>.<br>
+Una alta validez interna significa que la relación observada entre variables refleja de forma precisa el fenómeno estudiado en ese contexto, sin distorsiones por factores no controlados <span class="citation" data-cites="Shadish2002">(<a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et&nbsp;al. 2002</a>)</span>.<br>
 No implica necesariamente que los resultados puedan extrapolarse a otros contextos.<br>
 <em>Ejemplo:</em> Un experimento controlado en un laboratorio que evalúa el efecto de una intervención psicológica en un grupo concreto de estudiantes.</p></li>
 <li><p><strong>Validez externa:</strong> se refiere a la <strong>capacidad de generalizar</strong> los resultados más allá de las condiciones del estudio, hacia otras poblaciones, contextos o momentos en el tiempo.<br>
-Depende de la representatividad de la muestra, de la cobertura geográfica y temporal, y de la similitud entre el contexto del estudio y el contexto al que se quiere generalizar <span class="citation" data-cites="Kish1995 Shadish2002">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et al. 2002</a>)</span>.<br>
+Depende de la representatividad de la muestra, de la cobertura geográfica y temporal, y de la similitud entre el contexto del estudio y el contexto al que se quiere generalizar <span class="citation" data-cites="Kish1995 Shadish2002">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et&nbsp;al. 2002</a>)</span>.<br>
 <em>Ejemplo:</em> Un estudio representativo a nivel nacional sobre depresión en adolescentes que permite inferir resultados para toda la población adolescente del país.</p></li>
 </ul>
 <section id="fuentes-de-información-tipos-de-validez" class="level3" data-number="1.7.1">
@@ -765,14 +792,14 @@ Depende de la representatividad de la muestra, de la cobertura geográfica y tem
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: El dilema del laboratorio (10 min)
+<span class="screen-reader-only">Nota</span>Actividad: El dilema del laboratorio (10 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Discutan en grupos: Un experimento realizado con 20 voluntarios en una sala con ambiente controlado en la UCB tiene una <strong>alta validez interna</strong> pero una <strong>baja validez externa</strong>.</p>
 <ul>
 <li>¿Por qué el control ayuda a la validez interna?</li>
-<li>¿Qué le falta para que los resultados se puedan generalizar a todos los jóvenes de Bolivia?.</li>
+<li>¿Qué le falta para que los resultados se puedan generalizar a todos los jóvenes de Bolivia?</li>
 </ul>
 </div>
 </div>
@@ -780,22 +807,22 @@ Depende de la representatividad de la muestra, de la cobertura geográfica y tem
 </section>
 <section id="sesgos-posibles-en-la-producción-de-datos" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="sesgos-posibles-en-la-producción-de-datos"><span class="header-section-number">1.8</span> Sesgos posibles en la producción de datos</h2>
-<p>En todo proceso estadístico pueden introducirse <strong>sesgos</strong> que afectan la validez de los resultados. Un sesgo es un error sistemático que produce estimaciones que se apartan consistentemente del valor real <span class="citation" data-cites="Kish1995 Groves2009">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et al. 2009</a>)</span>.</p>
+<p>En todo proceso estadístico pueden introducirse <strong>sesgos</strong> que afectan la validez de los resultados. Un sesgo es un error sistemático que produce estimaciones que se apartan consistentemente del valor real <span class="citation" data-cites="Kish1995 Groves2009">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et&nbsp;al. 2009</a>)</span>.</p>
 <ol type="1">
 <li><p><strong>Sesgo de cobertura</strong><br>
 Ocurre cuando ciertas unidades de la población objetivo no tienen posibilidad de ser incluidas en el marco muestral <span class="citation" data-cites="Kish1995">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>)</span>.<br>
 <em>Ejemplo:</em> Encuesta en línea que excluye a personas sin acceso a internet.</p></li>
 <li><p><strong>Sesgo de no respuesta</strong><br>
-Se produce cuando las personas seleccionadas para participar no responden, y su ausencia está relacionada con la variable de interés <span class="citation" data-cites="Groves2009">(<a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et al. 2009</a>)</span>.<br>
+Se produce cuando las personas seleccionadas para participar no responden, y su ausencia está relacionada con la variable de interés <span class="citation" data-cites="Groves2009">(<a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et&nbsp;al. 2009</a>)</span>.<br>
 <em>Ejemplo:</em> Personas con alta carga laboral no responden cuestionarios sobre estrés.</p></li>
 <li><p><strong>Sesgo de medición</strong><br>
-Proviene de errores en la forma de recolectar la información, ya sea por el instrumento, el entrevistador o el encuestado <span class="citation" data-cites="Groves2009">(<a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et al. 2009</a>)</span>.<br>
+Proviene de errores en la forma de recolectar la información, ya sea por el instrumento, el entrevistador o el encuestado <span class="citation" data-cites="Groves2009">(<a href="references.html#ref-Groves2009" role="doc-biblioref">Groves et&nbsp;al. 2009</a>)</span>.<br>
 <em>Ejemplo:</em> Preguntas mal redactadas que inducen una respuesta.</p></li>
 <li><p><strong>Sesgo de recuerdo</strong><br>
 Aparece cuando el encuestado no recuerda con precisión eventos pasados.<br>
 <em>Ejemplo:</em> Preguntar cuántas veces visitó un psicólogo en el último año.</p></li>
 <li><p><strong>Sesgo de selección</strong><br>
-Surge cuando la selección de participantes no es aleatoria y está asociada con el fenómeno de interés <span class="citation" data-cites="Shadish2002">(<a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et al. 2002</a>)</span>.<br>
+Surge cuando la selección de participantes no es aleatoria y está asociada con el fenómeno de interés <span class="citation" data-cites="Shadish2002">(<a href="references.html#ref-Shadish2002" role="doc-biblioref">Shadish et&nbsp;al. 2002</a>)</span>.<br>
 <em>Ejemplo:</em> Seleccionar voluntarios para un experimento sobre motivación.</p></li>
 <li><p><strong>Sesgo del observador</strong><br>
 Influencia que ejerce el investigador en la medición u observación del fenómeno.<br>
@@ -898,7 +925,7 @@ Introducido durante la codificación, digitación o análisis de los datos.<br>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Cacería de sesgos (10 min)
+<span class="screen-reader-only">Nota</span>Actividad: Cacería de sesgos (10 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -909,9 +936,9 @@ Introducido durante la codificación, digitación o análisis de los datos.<br>
 </section>
 <section id="variables-y-tipología" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="variables-y-tipología"><span class="header-section-number">1.9</span> Variables y tipología</h2>
-<p>Cada unidad del universo estadístico <span class="math inline">\(u_i \in U\)</span> posee una serie de <strong>características</strong> o <strong>atributos</strong> que pueden observarse o medirse <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.<br>
+<p>Cada unidad del universo estadístico <span class="math inline">\(u_i \in U\)</span> posee una serie de <strong>características</strong> o <strong>atributos</strong> que pueden observarse o medirse <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.<br>
 En estadística, estas características se denominan <strong>variables</strong> y constituyen la base de la información que se analiza.</p>
-<p>Una variable es una propiedad que puede tomar distintos valores entre unidades de la población o a lo largo del tiempo <span class="citation" data-cites="Kish1995 LSJ2025">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.<br>
+<p>Una variable es una propiedad que puede tomar distintos valores entre unidades de la población o a lo largo del tiempo <span class="citation" data-cites="Kish1995 LSJ2025">(<a href="references.html#ref-Kish1995" role="doc-biblioref">Kish 1995</a>; <a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.<br>
 Según su naturaleza y el tipo de análisis que permiten, las variables pueden clasificarse en:</p>
 <ul>
 <li><strong>Cualitativas o categóricas</strong>: expresan atributos o categorías sin magnitud numérica intrínseca.
@@ -926,8 +953,18 @@ Según su naturaleza y el tipo de análisis que permiten, las variables pueden c
 <li><em>Continuas (decimales)</em>: pueden tomar cualquier valor en un rango, incluyendo decimales, resultado de una medición (p.&nbsp;ej., peso en kg, tiempo de reacción en segundos).</li>
 </ul></li>
 </ul>
-<div class=".callout-tip">
-<p>La tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</p>
+</div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -941,7 +978,7 @@ Según su naturaleza y el tipo de análisis que permiten, las variables pueden c
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Identificación relámpago (5 min)
+<span class="screen-reader-only">Nota</span>Actividad: Identificación relámpago (5 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -957,7 +994,7 @@ Según su naturaleza y el tipo de análisis que permiten, las variables pueden c
 </section>
 <section id="medición" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="medición"><span class="header-section-number">1.10</span> Medición</h2>
-<p>La <strong>medición</strong> es el proceso de asignar valores o categorías a las variables observadas en las unidades de análisis, siguiendo reglas previamente definidas y aceptadas <span class="citation" data-cites="LSJ2025 Stevens1946">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>; <a href="references.html#ref-Stevens1946" role="doc-biblioref">Stevens 1946</a>)</span>.<br>
+<p>La <strong>medición</strong> es el proceso de asignar valores o categorías a las variables observadas en las unidades de análisis, siguiendo reglas previamente definidas y aceptadas <span class="citation" data-cites="LSJ2025 Stevens1946">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>; <a href="references.html#ref-Stevens1946" role="doc-biblioref">Stevens 1946</a>)</span>.<br>
 Su objetivo es representar un fenómeno de forma cuantitativa o cualitativa para su análisis estadístico, asegurando comparabilidad, consistencia y validez de la información recogida.</p>
 <p>Pasos clave en la medición:</p>
 <ol type="1">
@@ -967,7 +1004,7 @@ Su objetivo es representar un fenómeno de forma cuantitativa o cualitativa para
 </li>
 <li><strong>Determinar el nivel de medición</strong> de cada variable (nominal, ordinal, intervalo, razón) <span class="citation" data-cites="Stevens1946">(<a href="references.html#ref-Stevens1946" role="doc-biblioref">Stevens 1946</a>)</span>.<br>
 </li>
-<li><strong>Estandarizar los procedimientos</strong> de recolección para minimizar sesgos y garantizar la calidad de los datos <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et al. 2025</a>)</span>.</li>
+<li><strong>Estandarizar los procedimientos</strong> de recolección para minimizar sesgos y garantizar la calidad de los datos <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>.</li>
 </ol>
 <p><em>Ejemplo:</em> Medir el estrés académico en estudiantes universitarios utilizando una escala validada, aplicada bajo las mismas condiciones para todos los participantes y con un protocolo claro de codificación.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -982,7 +1019,7 @@ Su objetivo es representar un fenómeno de forma cuantitativa o cualitativa para
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad: Operacionalizando el constructo (10 min)
+<span class="screen-reader-only">Nota</span>Actividad: Operacionalizando el constructo (10 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -997,29 +1034,44 @@ Su objetivo es representar un fenómeno de forma cuantitativa o cualitativa para
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Agresti2018" class="csl-entry" role="listitem">
+Agresti, Alan, y Barbara Finlay. 2018. <em>Statistical Methods for the Social Sciences</em>. 5.ª ed. Pearson.
+</div>
+<div id="ref-Cohen1988" class="csl-entry" role="listitem">
+Cohen, Jacob. 1988. <em>Statistical Power Analysis for the Behavioral Sciences</em>. 2.ª ed. Lawrence Erlbaum Associates.
+</div>
+<div id="ref-Cohen1994" class="csl-entry" role="listitem">
+Cohen, Jacob. 1994. <span>«The earth is round (p &lt; .05)»</span>. <em>American Psychologist</em> 49 (12): 997-1003.
+</div>
+<div id="ref-Feller1968" class="csl-entry" role="listitem">
+Feller, William. 1968. <em>An Introduction to Probability Theory and Its Applications</em>. 3.ª ed. John Wiley &amp; Sons.
+</div>
 <div id="ref-GelmanNolan2017" class="csl-entry" role="listitem">
-Gelman, Andrew, and Deborah Nolan. 2017. <em>Teaching Statistics: A Bag of Tricks</em>. 2nd ed. Oxford University Press.
+Gelman, Andrew, y Deborah Nolan. 2017. <em>Teaching Statistics: A Bag of Tricks</em>. 2.ª ed. Oxford University Press.
 </div>
 <div id="ref-Groves2009" class="csl-entry" role="listitem">
-Groves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski, Eleanor Singer, and Roger Tourangeau. 2009. <em>Survey Methodology</em>. 2nd ed. Wiley.
+Groves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. 2.ª ed. Wiley.
 </div>
 <div id="ref-Kish1995" class="csl-entry" role="listitem">
 Kish, Leslie. 1995. <em>Survey Sampling</em>. John Wiley &amp; Sons.
 </div>
 <div id="ref-MontgomeryRunger2014" class="csl-entry" role="listitem">
-Montgomery, Douglas C., and George C. Runger. 2014. <em>Applied Statistics and Probability for Engineers</em>. 6th ed. John Wiley &amp; Sons.
+Montgomery, Douglas C., y George C. Runger. 2014. <em>Applied Statistics and Probability for Engineers</em>. 6.ª ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-Moore2013" class="csl-entry" role="listitem">
+Moore, David S., George P. McCabe, y Bruce A. Craig. 2013. <em>Introduction to the Practice of Statistics</em>. 7.ª ed. W. H. Freeman.
 </div>
 <div id="ref-LSJ2025" class="csl-entry" role="listitem">
-Navarro, Danielle J., David R. Foxcroft, and Thomas J. Faulkenberry. 2025. <em>Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</em>. <a href="https://learnstatswithjasp.com">https://learnstatswithjasp.com</a>.
+Navarro, Danielle J., David R. Foxcroft, y Thomas J. Faulkenberry. 2025. <em>Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</em>. <a href="https://learnstatswithjasp.com">https://learnstatswithjasp.com</a>.
 </div>
 <div id="ref-Shadish2002" class="csl-entry" role="listitem">
-Shadish, William R., Thomas D. Cook, and Donald T. Campbell. 2002. <em>Experimental and Quasi-Experimental Designs for Generalized Causal Inference</em>. Houghton Mifflin.
+Shadish, William R., Thomas D. Cook, y Donald T. Campbell. 2002. <em>Experimental and Quasi-Experimental Designs for Generalized Causal Inference</em>. Houghton Mifflin.
 </div>
 <div id="ref-Stevens1946" class="csl-entry" role="listitem">
-Stevens, S. S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science</em> 103 (2684): 677–80.
+Stevens, S. S. 1946. <span>«On the theory of scales of measurement»</span>. <em>Science</em> 103 (2684): 677-80.
 </div>
 <div id="ref-Wackerly2008" class="csl-entry" role="listitem">
-Wackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008. <em>Mathematical Statistics with Applications</em>. 7th ed. Thomson Brooks/Cole.
+Wackerly, Dennis D., William Mendenhall, y Richard L. Scheaffer. 2008. <em>Mathematical Statistics with Applications</em>. 7.ª ed. Thomson Brooks/Cole.
 </div>
 </div>
 </section>
@@ -1063,12 +1115,12 @@ Wackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008. <em>Mat
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1454,7 +1506,7 @@ Wackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008. <em>Mat
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2026, Alvaro Chirino</p>
+<p>Copyright 2026, Alvaro Chirino. CC BY-NC-SA 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -1462,14 +1514,8 @@ Wackerly, Dennis D., William Mendenhall, and Richard L. Scheaffer. 2008. <em>Mat
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/">
+    <a class="nav-link active" href="https://github.com/alvarolimber/psych-stats" aria-current="page">
       <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/">
-      <i class="bi bi-bluesky" role="img">
 </i> 
     </a>
   </li>  

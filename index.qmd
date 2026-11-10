@@ -16,3 +16,22 @@ El análisis cuantitativo no es un fin en sí mismo, sino la herramienta más ro
 Manos a la obra.
 
 **Alvaro Chirino Gutierrez**
+
+## Audiencia {.unnumbered}
+
+Este libro está destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.
+
+## Estructura del libro {.unnumbered}
+
+* **Parte I: Diseño estadístico y estadística descriptiva**
+    1. Diseño estadístico
+    2. Estadística descriptiva
+* **Parte II: Estadística teórica e inferencial**
+    3. Estadística teórica
+    4. Herramientas estadísticas
+
+Cada capítulo incluye **actividades para el aula** (recuadros de nota) y **tips de JASP** (recuadros de sugerencia) que conectan la teoría con la práctica.
+
+## Licencia {.unnumbered}
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Este documento de Alvaro Chirino está bajo una licencia [Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/).

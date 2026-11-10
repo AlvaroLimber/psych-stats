@@ -52,7 +52,7 @@ Para el estudio de "Motivación en Psicología" definido anteriormente, redacten
 
 1. **Cobertura geográfica:** ¿En qué sedes o campus?
 2. **Cobertura temporal:** ¿Qué meses del año 2025 o 2026?
-3. **Cobertura temática:** ¿Qué variables específicas medirán (ej. horas de sueño, promedio académico, interés por la clínica)?.
+3. **Cobertura temática:** ¿Qué variables específicas medirán (ej. horas de sueño, promedio académico, interés por la clínica)?
 :::
 
 ## Unidades estadísticas
@@ -165,7 +165,7 @@ Clasifiquen los siguientes objetivos de investigación según el enfoque de aná
 Discutan en grupos: Un experimento realizado con 20 voluntarios en una sala con ambiente controlado en la UCB tiene una **alta validez interna** pero una **baja validez externa**. 
 
 - ¿Por qué el control ayuda a la validez interna?
-- ¿Qué le falta para que los resultados se puedan generalizar a todos los jóvenes de Bolivia?.
+- ¿Qué le falta para que los resultados se puedan generalizar a todos los jóvenes de Bolivia?
 :::
 
 ## Sesgos posibles en la producción de datos
@@ -237,7 +237,7 @@ Según su naturaleza y el tipo de análisis que permiten, las variables pueden c
   - *Discretas*: toman valores enteros, generalmente resultado de un conteo (p. ej., número de hijos, cantidad de sesiones de terapia).
   - *Continuas (decimales)*: pueden tomar cualquier valor en un rango, incluyendo decimales, resultado de una medición (p. ej., peso en kg, tiempo de reacción en segundos).
 
-::: .callout-tip
+::: {.callout-tip}
 La tipología de variables condiciona los métodos de análisis estadístico que pueden emplearse y afecta la validez de las inferencias [@LSJ2025].
 :::
 

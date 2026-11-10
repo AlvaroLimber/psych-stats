@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
 
 <title>2&nbsp; Estadística Descriptiva – Psicoestadística</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -23,7 +27,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -33,7 +56,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./teorica.html" rel="next">
 <link href="./fundamentos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -41,12 +64,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b9f2f07ae5a8812bc508e625fed73b25.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ba8e73a601a383a97ed8429bc770149b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-be67d91eaee7ee535f133f4b8a0584b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-40d2b7ce583afdaabd40688eef35f9b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -61,22 +84,22 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -106,7 +129,7 @@ window.Quarto = {
 </script>
 
 <meta name="twitter:title" content="2&nbsp; Estadística Descriptiva – Psicoestadística">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="Libro destinado a la materia de Psicoestadística de la carrera de Psicología de la Universidad Católica Boliviana, sede La Paz.">
 <meta name="twitter:image" content="https://alvarolimber.github.io/psych-stats/_book/fig/cuali.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -277,13 +300,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamentos.html">Parte I: Diseño estadístico y estadística descriptiva</a></li><li class="breadcrumb-item"><a href="./descriptiva.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Estadística Descriptiva</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -297,10 +320,10 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Psicoestadística</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/psych-stats/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Psicoestadística.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="https://github.com/alvarolimber/psych-stats" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Psicoestadística.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Compartir" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Compartir"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
@@ -316,8 +339,8 @@ window.Quarto = {
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo lector">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -327,7 +350,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -342,7 +365,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Parte I: Diseño estadístico y estadística descriptiva</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -361,10 +384,33 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II: Estadística teórica e inferencial</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./teorica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística Teórica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./herramientas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Herramientas Estadísticas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
     </ul>
@@ -374,7 +420,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
   <li><a href="#ordenación-de-los-datos" id="toc-ordenación-de-los-datos" class="nav-link active" data-scroll-target="#ordenación-de-los-datos"><span class="header-section-number">2.1</span> Ordenación de los datos</a></li>
@@ -414,10 +460,10 @@ window.Quarto = {
 </header>
 
 
-<p>La <strong>estadística descriptiva</strong> se ocupa de resumir, organizar y presentar la información de un conjunto de datos, sin pretender hacer inferencias sobre una población mayor. Sus herramientas permiten transformar datos brutos en información comprensible a través de <strong>tablas, medidas numéricas y representaciones gráficas</strong>.</p>
+<p>La <strong>estadística descriptiva</strong> se ocupa de resumir, organizar y presentar la información de un conjunto de datos, sin pretender hacer inferencias sobre una población mayor <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>. Sus herramientas permiten transformar datos brutos en información comprensible a través de <strong>tablas, medidas numéricas y representaciones gráficas</strong> <span class="citation" data-cites="Moore2013">(<a href="references.html#ref-Moore2013" role="doc-biblioref">Moore et&nbsp;al. 2013</a>)</span>.</p>
 <section id="ordenación-de-los-datos" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="ordenación-de-los-datos"><span class="header-section-number">2.1</span> Ordenación de los datos</h2>
-<p>El primer paso en la estadística descriptiva es la <strong>organización de los datos</strong>, es decir, cómo se disponen en una estructura clara que permita analizarlos. El enfoque más común es el <strong>enfoque tabular</strong>, que dispone la información en:</p>
+<p>El primer paso en la estadística descriptiva es la <strong>organización de los datos</strong>, es decir, cómo se disponen en una estructura clara que permita analizarlos <span class="citation" data-cites="LSJ2025">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>)</span>. El enfoque más común es el <strong>enfoque tabular</strong>, que dispone la información en:</p>
 <ul>
 <li><strong>Filas:</strong> Cada fila corresponde a una <strong>unidad de análisis</strong> (por ejemplo, un estudiante, un paciente, una observación experimental).</li>
 <li><strong>Columnas:</strong> Cada columna corresponde a una <strong>variable</strong> (por ejemplo, edad, sexo, puntaje en una escala).</li>
@@ -428,7 +474,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad en el Aula: El Tablero Humano (5 - 7 min)
+<span class="screen-reader-only">Nota</span>Actividad en el Aula: El Tablero Humano (5 - 7 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -456,7 +502,7 @@ window.Quarto = {
 </section>
 <section id="estadísticas-para-variables-cualitativas" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="estadísticas-para-variables-cualitativas"><span class="header-section-number">2.2</span> Estadísticas para variables cualitativas</h2>
-<p>Cuando los datos son cualitativos o categóricos (expresan atributos sin magnitud numérica intrínseca), los resúmenes estadísticos se enfocan en contar y comparar las categorías.</p>
+<p>Cuando los datos son cualitativos o categóricos (expresan atributos sin magnitud numérica intrínseca), los resúmenes estadísticos se enfocan en contar y comparar las categorías <span class="citation" data-cites="Agresti2018">(<a href="references.html#ref-Agresti2018" role="doc-biblioref">Agresti y Finlay 2018</a>)</span>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Definición</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Notación</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Ejemplo Numérico</a></li></ul>
 <div class="tab-content">
@@ -492,8 +538,8 @@ window.Quarto = {
 </ul></li>
 <li><strong>Frecuencias relativas / proporciones (<span class="math inline">\(r_i\)</span>) y porcentajes (<span class="math inline">\(\%\)</span>):</strong>
 <ul>
-<li>Proporción de hombres: <span class="math inline">\(r_{\text{humanos}} = \frac{93}{180} = 0.517\)</span> (equivalente al <span class="math inline">\(51.7\%\)</span>)</li>
-<li>Proporción de mujeres: <span class="math inline">\(r_{\text{robots}} = \frac{87}{180} = 0.483\)</span> (equivalente al <span class="math inline">\(48.3\%\)</span>)</li>
+<li>Proporción de hombres: <span class="math inline">\(r_{\text{hombres}} =\frac{93}{180} = 0.517\)</span> (equivalente al <span class="math inline">\(51.7\%\)</span>)</li>
+<li>Proporción de mujeres: <span class="math inline">\(r_{\text{mujeres}} =\frac{87}{180} = 0.483\)</span> (equivalente al <span class="math inline">\(48.3\%\)</span>)</li>
 </ul></li>
 <li><strong>Razón (<span class="math inline">\(R\)</span>):</strong>
 <ul>
@@ -510,7 +556,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad Práctica: Calculadora Humana de Razones (8 min)
+<span class="screen-reader-only">Nota</span>Actividad Práctica: Calculadora Humana de Razones (8 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -522,7 +568,7 @@ window.Quarto = {
 <li>El <strong>porcentaje</strong> de mujeres y hombres en el aula.</li>
 <li>La <strong>razón</strong> de mujeres por cada hombre (o viceversa).</li>
 </ul></li>
-<li>Reflexionen en parejas: Si quisiéramos comparar la deserción académica en la UCB este semestre, ¿por qué una <em>tasa</em> sería más útil que reportar únicamente el <em>conteo absoluto</em> de abandonos?.</li>
+<li>Reflexionen en parejas: Si quisiéramos comparar la deserción académica en la UCB este semestre, ¿por qué una <em>tasa</em> sería más útil que reportar únicamente el <em>conteo absoluto</em> de abandonos?</li>
 </ol>
 </div>
 </div>
@@ -540,8 +586,9 @@ window.Quarto = {
 <ol type="1">
 <li>Haz clic en <code>Descriptives -&gt; Descriptive Statistics</code>.</li>
 <li>Pasa tu variable cualitativa al cuadro <code>Variables</code>.</li>
-<li>Despliega la opción <code>Tables</code> en el panel de control izquierdo y marca la casilla <strong><code>Frequency tables</code></strong>. JASP creará una tabla con la frecuencia absoluta (<span class="math inline">\(f_i\)</span>), el porcentaje (%) y el porcentaje acumulado para tu variable.</li>
+<li>Despliega la opción <code>Tables</code> en el panel de control izquierdo y marca la casilla <strong><code>Frequency tables</code></strong>.</li>
 </ol>
+<p>JASP creará una tabla con la frecuencia absoluta (<span class="math inline">\(f_i\)</span>), el porcentaje (%) y el porcentaje acumulado para tu variable.</p>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -563,13 +610,69 @@ window.Quarto = {
 <li><strong>Mediana:</strong> Valor que divide el conjunto ordenado de datos en dos mitades de igual tamaño. Es altamente resistente ante la presencia de valores atípicos (<em>outliers</em>).</li>
 <li><strong>Moda:</strong> El valor que ocurre con mayor frecuencia en la muestra. Es la única medida aplicable directamente a variables nominales.</li>
 </ul>
+<p><em>Ejemplo:</em> en los puntajes 5, 6, 6, 7, 10:</p>
+<ul>
+<li>Media <span class="math inline">\(= \frac{5+6+6+7+10}{5} = 6.8\)</span></li>
+<li>Mediana <span class="math inline">\(= 6\)</span></li>
+<li>Moda <span class="math inline">\(= 6\)</span></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La media actúa como el “centro de gravedad” de los datos: si los representáramos físicamente sobre una regla, sería el punto de equilibrio exacto.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad de Reflexión: El dilema de la Media vs Mediana (5 min)
+<span class="screen-reader-only">Nota</span>Ejercicio Práctico: El efecto de los valores extremos (<em>outliers</em>) (10 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Contexto:</strong> Como futuros psicólogos, deben entender que los datos representan realidades. El tiempo de traslado a la universidad puede verse afectado por factores externos como marchas o bloqueos, generando datos “atípicos” que distorsionan nuestro análisis estadístico.</p>
+<p><strong>Instrucciones:</strong> En grupos, utilicen sus calculadoras para analizar el nivel de <strong>Estrés Percibido</strong> (escala 1-100) de un grupo de estudiantes de 4.º semestre de la UCB antes de un examen parcial.</p>
+<p><strong>El grupo típico.</strong> Calculen la media de estrés de estos 5 estudiantes:</p>
+<ul>
+<li>Estudiante A = 45 pts</li>
+<li>Estudiante B = 52 pts</li>
+<li>Estudiante C = 48 pts</li>
+<li>Estudiante D = 50 pts</li>
+<li>Estudiante E = 47 pts</li>
+</ul>
+<ol type="1">
+<li>Suma total (<span class="math inline">\(\sum X_i\)</span>): ________</li>
+<li>Media (<span class="math inline">\(\bar{X}_1\)</span>): ________</li>
+</ol>
+<p><strong>El impacto del <em>outlier</em>.</strong> Un sexto estudiante llega al aula. Tuvo un accidente menor en el Teleférico y llega en crisis, con un puntaje de estrés de <strong>98 pts</strong>. Calculen la nueva media para el grupo (<span class="math inline">\(n=6\)</span>):</p>
+<ol type="1">
+<li>Nueva suma: ________</li>
+<li>Nueva media (<span class="math inline">\(\bar{X}_2\)</span>): ________</li>
+</ol>
+<p><strong>Discusión:</strong></p>
+<ol type="1">
+<li>¿La nueva media (<span class="math inline">\(\bar{X}_2\)</span>) describe realmente el nivel de estrés del “estudiante promedio” de este grupo, o el valor extremo está “arrastrando” la media hacia arriba de forma engañosa?</li>
+<li>Si fueras el psicólogo de bienestar estudiantil de la UCB y solo vieras el promedio de los 6 estudiantes, ¿qué decisión tomarías sobre el grupo?</li>
+<li>¿Qué medida alternativa existe? ¿Por qué?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad de Reflexión: El dilema de la Media vs Mediana (5 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -598,8 +701,9 @@ window.Quarto = {
 <ol type="1">
 <li>Ve al menú de análisis descriptivo.</li>
 <li>Despliega la pestaña <strong><code>Statistics</code></strong>.</li>
-<li>En la sección <strong><code>Central Tendency</code></strong>, selecciona las casillas <strong><code>Median</code></strong> y <strong><code>Mode</code></strong>. JASP actualizará tu tabla descriptiva en tiempo real en el panel derecho.</li>
+<li>En la sección <strong><code>Central Tendency</code></strong>, selecciona las casillas <strong><code>Median</code></strong> y <strong><code>Mode</code></strong>.</li>
 </ol>
+<p>JASP actualizará tu tabla descriptiva en tiempo real en el panel derecho.</p>
 </div>
 </div>
 </section>
@@ -611,15 +715,39 @@ window.Quarto = {
 <li><p><strong>Varianza muestral (<span class="math inline">\(s^2=v(X)\)</span>):</strong> Promedio de las desviaciones cuadráticas respecto a la media. <span class="math display">\[s^2 = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n - 1}\]</span></p></li>
 <li><p><strong>Varianza poblacional (<span class="math inline">\(\sigma^2=V(X)\)</span>):</strong> Promedio de las desviaciones cuadráticas respecto a la media. <span class="math display">\[\sigma^2 = \frac{\sum_{i=1}^{N} (X_i - \mu)^2}{N}\]</span></p></li>
 <li><p><strong>Desviación Estándar (<span class="math inline">\(s\)</span>):</strong> Es la raíz cuadrada de la varianza. Expresa la dispersión en las mismas unidades originales de la variable estudiada.</p></li>
-<li><p><strong>Coeficiente de Variación (<span class="math inline">\(CV\)</span>):</strong> Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes: <span class="math display">\[CV% = \left( \frac{s}{\bar{X}} \right) \times 100\]</span></p></li>
+<li><p><strong>Coeficiente de Variación (<span class="math inline">\(CV\)</span>):</strong> Expresa la desviación estándar en relación porcentual con la media, permitiendo comparar la dispersión entre variables de escalas diferentes: <span class="math display">\[CV = \frac{s}{\bar{X}} \qquad CV\% = \left( \frac{s}{\bar{X}} \right) \times 100\]</span> Mientras más cercano a cero sea el <span class="math inline">\(CV\)</span>, menor es la dispersión relativa de los datos.</p></li>
 </ul>
+<p><em>Ejemplo:</em> en los datos 5, 6, 6, 7, 10 (media <span class="math inline">\(= 6.8\)</span>):</p>
+<ul>
+<li>Rango <span class="math inline">\(= 10 - 5 = 5\)</span></li>
+<li>Varianza: <span class="math inline">\(s^2 = \frac{(-1.8)^2 + (-0.8)^2 + (-0.8)^2 + (0.2)^2 + (3.2)^2}{5-1} = \frac{14.8}{4} = 3.7\)</span></li>
+<li>Desviación estándar: <span class="math inline">\(s = \sqrt{3.7} \approx 1.92\)</span></li>
+<li>Coeficiente de variación: <span class="math inline">\(CV = 1.92 / 6.8 \approx 0.283\)</span>, es decir, <span class="math inline">\(CV\% = 28.3\%\)</span></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Notas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Las medidas de tendencia central y de dispersión deben interpretarse en conjunto.</li>
+<li>Una media sin su dispersión puede ser engañosa; la dispersión muestra la heterogeneidad de los datos.</li>
+<li>En investigación psicológica es clave reportar ambas dimensiones (por ejemplo, <span class="math inline">\(M = 6.8\)</span>, <span class="math inline">\(DE = 1.92\)</span>) para dar una imagen completa de los resultados.</li>
+</ul>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad Grupal: Diseñando la Variabilidad
+<span class="screen-reader-only">Nota</span>Actividad Grupal: Diseñando la Variabilidad
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -638,7 +766,7 @@ window.Quarto = {
 </section>
 <section id="medidas-de-forma" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="medidas-de-forma"><span class="header-section-number">2.5</span> Medidas de forma</h2>
-<p>La <strong>forma de la distribución</strong> describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra.</p>
+<p>La <strong>forma de la distribución</strong> describe cómo se agrupan las puntuaciones en relación con la tendencia central de la muestra. Permite evaluar si una variable se distribuye de manera simétrica o presenta concentraciones atípicas de valores <span class="citation" data-cites="LSJ2025 Moore2013">(<a href="references.html#ref-LSJ2025" role="doc-biblioref">Navarro et&nbsp;al. 2025</a>; <a href="references.html#ref-Moore2013" role="doc-biblioref">Moore et&nbsp;al. 2013</a>)</span>.</p>
 <ul>
 <li><strong>Asimetría (Skewness):</strong> Evalúa el grado de simetría de la distribución de frecuencias respecto a su media.
 <ul>
@@ -653,6 +781,51 @@ window.Quarto = {
 <li><strong>Curtosis = 0 (Mesocúrtica):</strong> Grado de apuntamiento idéntico al de una distribución normal.</li>
 </ul></li>
 </ul>
+<p><strong>Fórmulas (coeficientes de Fisher):</strong></p>
+<p><span class="math display">\[
+AS = \frac{\frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^3}{s^3}
+\qquad
+KU = \frac{\frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^4}{s^4} - 3
+\]</span></p>
+<p>donde <span class="math inline">\(s\)</span> es la desviación estándar. En la fórmula de la curtosis se resta 3 (exceso de curtosis) para que la distribución normal tenga <span class="math inline">\(KU = 0\)</span>.</p>
+<p><em>Ejemplo aplicado:</em> en un test de ansiedad aplicado a 200 estudiantes se obtiene <strong>AS = 1.2</strong> (asimetría positiva) y <strong>KU = 1.5</strong> (leptocúrtica). Esto indica que la mayoría de los estudiantes tiene niveles bajos a moderados, pero existe un pequeño grupo con niveles muy altos que genera una cola larga hacia la derecha.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Notas didácticas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>La asimetría y la curtosis complementan las medidas de tendencia central y dispersión, aportando información sobre la forma.</li>
+<li>En investigación psicológica ayudan a verificar el supuesto de normalidad antes de aplicar pruebas paramétricas.</li>
+<li>Valores extremos de asimetría o curtosis pueden afectar fuertemente las inferencias estadísticas.</li>
+<li>En la práctica, suele ser más informativo mostrar un histograma o un diagrama de caja que reportar solo estos coeficientes.</li>
+<li>En JASP, ambos se obtienen en <code>Statistics -&gt; Distribution</code>, marcando <strong><code>Skewness</code></strong> y <strong><code>Kurtosis</code></strong>.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Actividad: Imaginando formas (5 min)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sin hacer cálculos, dibujen a mano la forma esperada de la distribución de cada variable e indiquen el signo probable de su asimetría:</p>
+<ol type="1">
+<li>Número de hijos por familia en La Paz.</li>
+<li>Nota en un examen muy fácil (escala de 0 a 100).</li>
+<li>Estatura de estudiantes universitarios.</li>
+</ol>
+</div>
+</div>
 </section>
 <section id="medidas-de-posición-cuantiles" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="medidas-de-posición-cuantiles"><span class="header-section-number">2.6</span> Medidas de posición: Cuantiles</h2>
@@ -710,7 +883,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Actividad Relámpago: Emparejamiento de Gráficos (5 min)
+<span class="screen-reader-only">Nota</span>Actividad Relámpago: Emparejamiento de Gráficos (5 min)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -763,8 +936,65 @@ window.Quarto = {
 </ol>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Para explorar en la web
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Seeing Theory</strong> (Brown University): <a href="https://seeing-theory.brown.edu/">https://seeing-theory.brown.edu/</a>. Secciones interactivas sobre distribuciones y análisis exploratorio, con histogramas, boxplots y densidades.</li>
+<li><strong>Seeing Data</strong>: <a href="http://seeingdata.org/">http://seeingdata.org/</a>. Recursos sobre cómo leer y entender visualizaciones de datos en ciencias sociales.</li>
+</ul>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-Agresti2018" class="csl-entry" role="listitem">
+Agresti, Alan, y Barbara Finlay. 2018. <em>Statistical Methods for the Social Sciences</em>. 5.ª ed. Pearson.
+</div>
+<div id="ref-Cohen1988" class="csl-entry" role="listitem">
+Cohen, Jacob. 1988. <em>Statistical Power Analysis for the Behavioral Sciences</em>. 2.ª ed. Lawrence Erlbaum Associates.
+</div>
+<div id="ref-Cohen1994" class="csl-entry" role="listitem">
+Cohen, Jacob. 1994. <span>«The earth is round (p &lt; .05)»</span>. <em>American Psychologist</em> 49 (12): 997-1003.
+</div>
+<div id="ref-Feller1968" class="csl-entry" role="listitem">
+Feller, William. 1968. <em>An Introduction to Probability Theory and Its Applications</em>. 3.ª ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-GelmanNolan2017" class="csl-entry" role="listitem">
+Gelman, Andrew, y Deborah Nolan. 2017. <em>Teaching Statistics: A Bag of Tricks</em>. 2.ª ed. Oxford University Press.
+</div>
+<div id="ref-Groves2009" class="csl-entry" role="listitem">
+Groves, Robert M., Floyd J. Fowler, Mick P. Couper, James M. Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. 2.ª ed. Wiley.
+</div>
+<div id="ref-Kish1995" class="csl-entry" role="listitem">
+Kish, Leslie. 1995. <em>Survey Sampling</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-MontgomeryRunger2014" class="csl-entry" role="listitem">
+Montgomery, Douglas C., y George C. Runger. 2014. <em>Applied Statistics and Probability for Engineers</em>. 6.ª ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-Moore2013" class="csl-entry" role="listitem">
+Moore, David S., George P. McCabe, y Bruce A. Craig. 2013. <em>Introduction to the Practice of Statistics</em>. 7.ª ed. W. H. Freeman.
+</div>
+<div id="ref-LSJ2025" class="csl-entry" role="listitem">
+Navarro, Danielle J., David R. Foxcroft, y Thomas J. Faulkenberry. 2025. <em>Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</em>. <a href="https://learnstatswithjasp.com">https://learnstatswithjasp.com</a>.
+</div>
+<div id="ref-Shadish2002" class="csl-entry" role="listitem">
+Shadish, William R., Thomas D. Cook, y Donald T. Campbell. 2002. <em>Experimental and Quasi-Experimental Designs for Generalized Causal Inference</em>. Houghton Mifflin.
+</div>
+<div id="ref-Stevens1946" class="csl-entry" role="listitem">
+Stevens, S. S. 1946. <span>«On the theory of scales of measurement»</span>. <em>Science</em> 103 (2684): 677-80.
+</div>
+<div id="ref-Wackerly2008" class="csl-entry" role="listitem">
+Wackerly, Dennis D., William Mendenhall, y Richard L. Scheaffer. 2008. <em>Mathematical Statistics with Applications</em>. 7.ª ed. Thomson Brooks/Cole.
+</div>
+</div>
 </section>
 </section>
 
@@ -807,12 +1037,12 @@ window.Quarto = {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiado");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiado");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1189,8 +1419,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./teorica.html" class="pagination-link" aria-label="Estadística Teórica">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estadística Teórica</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1198,7 +1428,7 @@ window.Quarto = {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2026, Alvaro Chirino</p>
+<p>Copyright 2026, Alvaro Chirino. CC BY-NC-SA 4.0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -1206,14 +1436,8 @@ window.Quarto = {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/">
+    <a class="nav-link" href="https://github.com/alvarolimber/psych-stats">
       <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/">
-      <i class="bi bi-bluesky" role="img">
 </i> 
     </a>
   </li>  
